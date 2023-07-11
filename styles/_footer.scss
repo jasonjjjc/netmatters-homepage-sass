@@ -1,0 +1,175 @@
+@import 'colours';
+
+#footer {
+    &-links {
+      padding-top: 32px;
+      padding-left: 16px;
+      color: white;
+      font-size: 14px;
+      background-color: #323544;
+  
+      @media (min-width: 768px) {
+        padding: 0 24px;
+      }
+  
+      @media (min-width: 1024px) {
+        padding: 0 40px;
+      }
+  
+      @media (min-width: 1280px) {
+        padding: 0 128px;
+        display: flex;
+      }
+  
+      @media (min-width: 1536px) {
+        padding: 0 700px;
+      }
+  
+      #social-media {
+        @media (min-width: 1280px) {
+          margin-right: 80px;
+        }
+  
+        &-logo {
+          width: 240px;
+          margin-bottom: 24px;
+  
+          @media (min-width: 768px) {
+            width: 320px;
+          }
+        }
+  
+        &-links {
+          &-header {
+            font-size: 1rem;
+            margin-bottom: 24px;
+          }
+  
+          &-group {
+            display: -ms-inline-grid;
+            display: -moz-inline-grid;
+            display: inline-grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 0.75rem;
+            margin-bottom: 32px;
+  
+            @media (min-width: 768px) {
+              margin-bottom: 40px;
+              grid-template-columns: repeat(4, minmax(0, 1fr));
+              grid-template-rows: repeat(1, minmax(0, 1fr));
+              gap: 0.75rem;
+            }
+  
+            a {
+              &#{".bg-\\[\\#212330\\]"} {
+                background-color: #212330;
+              }
+  
+              &.text-white {
+                color: white;
+              }
+  
+              &.flex {
+                display: flex;
+              }
+  
+              &.items-center {
+                align-items: center;
+              }
+  
+              &.justify-center {
+                justify-content: center;
+              }
+  
+              &#{".hover:bg-\\[\\#3B5998\\]"}:hover {
+                background-color: #3B5998;
+              }
+  
+              &#{".hover:bg-\\[\\#2877B5\\]"}:hover {
+                background-color: #2877B5;
+              }
+  
+              &#{".hover:bg-\\[\\#41ACED\\]"}:hover {
+                background-color: #41ACED;
+              }
+  
+              &#{".hover:bg-\\[\\#DA3A75\\]"}:hover {
+                background-color: #DA3A75;
+              }
+  
+              &.h-14 {
+                height: 3.5rem;
+              }
+  
+              &.w-24 {
+                width: 6rem;
+              }
+  
+              &.md:w-16 {
+                width: 4rem;
+              }
+  
+              &.md:h-14 {
+                height: 3.5rem;
+              }
+  
+              i {
+                &.fab {
+                  font-family: "Font Awesome 5 Brands";
+                }
+  
+                &.fa-2x {
+                  font-size: 2rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  
+    #pages {
+      display: grid;
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+      gap: 0;
+  
+      @media (min-width: 768px) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+  
+      @media (min-width: 1024px) {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 2.5rem;
+      }
+  
+      @media (min-width: 1280px) {
+        gap: 3rem;
+      }
+  
+      @media (min-width: 1536px) {
+        gap: 4rem;
+      }
+  
+      div {
+        h1 {
+          font-size: 1rem;
+          margin-bottom: 24px;
+        }
+  
+        ul {
+          margin-bottom: 32px;
+  
+          li {
+            font-size: 0.75rem;
+            margin-bottom: 0.375rem;
+  
+            a {
+              &.hover:underline:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+    }
+  }

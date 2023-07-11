@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" property="description"
+        content="Full service digital agency offering software & web development, software integration, digital marketing, IT, Telecoms & Cyber Security to drive results for your business.">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="https://kit.fontawesome.com/7d3adce3d2.js" crossorigin="anonymous"></script>
+    <style>
+        #hero {
+            position: relative;
+            background-image: url('./assets/smiling.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-blend-mode: darken;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        @media (min-width: 1024px) {
+            #hero {
+                background-blend-mode: normal;
+            }
+
+            #hero::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 70%;
+                height: 100%;
+                background-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+            }
+
+            #hero * {
+                z-index: 1;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container" class="w-screen tracking-widest text-[#333645]">
+        <header class="pt-5">
+            <div id="header-top" class="px-4 pb-4 md:pb-2 md:px-8 xl:px-32 2xl:px-content-4k">
+                <div id="main-nav" class="flex flex-wrap justify-between items-center md:flex-nowrap xl:justify-start">
+                    <a id="title" class="flex-1 mr-4 md:mr-12 xl:flex-none" href="#">
+                        <img src="./assets/netmatters-logo.png" class="cursor-pointer mb-4">
+                    </a>
+                    <div id="support" class="hidden lg:block">
+                        <a class="bg-[#4183d7] flex justify-center items-center h-14 mb-4 mr-4.5 p-4 rounded-sm-md hover:bg-[#2A6EC6] cursor-pointer"
+                            href="#">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" class="fill-current text-white mr-1">
+                                <title>mouse</title>
+                                <path
+                                    d="M11.016 1.078v7.922h-7.031q0-3.047 2.039-5.297t4.992-2.625zM3.984 15v-3.984h16.031v3.984q0 3.281-2.367 5.648t-5.648 2.367-5.648-2.367-2.367-5.648zM12.984 1.078q2.953 0.375 4.992 2.625t2.039 5.297h-7.031v-7.922z">
+                                </path>
+                            </svg>
+                            <h3 class="text-white">SUPPORT</h3>
+                        </a>
+                    </div>
+                    <div id="contact" class="hidden lg:block">
+                        <a class="bg-[#999aa2] flex justify-center items-center h-14 mb-4 mr-4.5 p-4 rounded-sm-md hover:bg-[#7E808A] cursor-pointer"
+                            href="#">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 32 32" class="fill-current text-white mr-1">
+                                <title>paperplane</title>
+                                <path
+                                    d="M31.543 0.16c-0.166-0.107-0.355-0.16-0.543-0.16-0.193 0-0.387 0.055-0.555 0.168l-30 20c-0.309 0.205-0.479 0.566-0.439 0.936 0.038 0.369 0.278 0.688 0.623 0.824l7.824 3.131 3.679 6.438c0.176 0.309 0.503 0.5 0.857 0.504 0.004 0 0.007 0 0.011 0 0.351 0 0.677-0.186 0.857-0.486l2.077-3.463 9.695 3.877c0.119 0.048 0.244 0.071 0.371 0.071 0.17 0 0.338-0.043 0.49-0.129 0.264-0.148 0.445-0.408 0.496-0.707l5-30c0.065-0.393-0.109-0.787-0.443-1.004zM3.136 20.777l23.175-15.451-16.85 18.037c-0.089-0.053-0.168-0.123-0.266-0.162l-6.059-2.424zM10.189 24.066c-0.002-0.004-0.005-0.006-0.007-0.010l18.943-20.275-16.149 25.162-2.787-4.877zM25.217 29.609l-8.541-3.416c-0.203-0.080-0.414-0.107-0.623-0.119l13.152-20.388-3.988 23.923z">
+                                </path>
+                            </svg>
+                            <h3 class="text-white">CONTACT</h3>
+                        </a>
+                    </div>
+                    <div id="call-and-burger" class="flex items-center justify-between mt-1 mb-4 md:order-2">
+
+                        <div id="call" class="md:hidden">
+                            <a class="cursor-pointer">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                    viewBox="0 0 24 24" class="fill-current text-[#333645]">
+                                    <title>phone_in_talk</title>
+                                    <path
+                                        d="M15 12q0-1.219-0.891-2.109t-2.109-0.891v-2.016q2.063 0 3.539 1.477t1.477 3.539h-2.016zM18.984 12q0-2.906-2.039-4.945t-4.945-2.039v-2.016q3.75 0 6.375 2.625t2.625 6.375h-2.016zM20.016 15.516q0.422 0 0.703 0.281t0.281 0.703v3.516q0 0.422-0.281 0.703t-0.703 0.281q-7.031 0-12.023-4.992t-4.992-12.023q0-0.422 0.281-0.703t0.703-0.281h3.516q0.422 0 0.703 0.281t0.281 0.703v0.047q0 1.922 0.563 3.516 0.094 0.188 0.094 0.328 0 0.469-0.328 0.703l-2.203 2.203q0.938 1.781 2.883 3.727t3.727 2.883l2.203-2.203q0.328-0.328 0.703-0.328 0.141 0 0.328 0.094 1.688 0.563 3.563 0.563z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
+
+                        <div id="hamburger"
+                            class="flex items-center justify-center rounded-sm-md bg-[#333645] py-2 px-3 ml-5 cursor-pointer hover:bg-[#22242E] md:mr-2">
+                            <a>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white"
+                                    stroke-width="3" stroke-linecap="square" stroke-linejoin="arcs" class="w-10 h-10">
+                                    <path d="M3 12h18M3 6h18M3 18h18"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div id="search"
+                        class="flex justify-between items-center w-full bg-[#E5E5E5] border-[#D6D6D6] border-2 mt-1 mb-1 rounded-sm md:order-1 md:h-14 md:w-60 md:mb-4 md:bg-[#999aa2] md:border-0 md:hover:bg-[#7E808A] md:rounded-sm-md lg:w-16 xl:w-full">
+                        <div class="md:flex-3 md:border md:border-[#CCCCCC] md:h-14 lg:hidden xl:block xl:w-full">
+                            <input type="text"
+                                class="flex-1 py-2.5 px-4 text-[#989898] bg-[#E5E5E5] text-sm md:bg-white md:h-full md:p-0 md:pl-4 md:border md:border-l-0 md:border-r-0 md:border-b-0 md:border-gray-[#EEEEEE] xl:w-full"
+                                placeholder="Search...">
+                        </div>
+                        <a class="md:flex-1 md:h-14 cursor-pointer" href="#">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="22"
+                                viewBox="0 0 26 28"
+                                class="fill-current text-[#333645] mr-2 md:m-4 md:ml-6 md:fill-current md:text-white">
+                                <title>search</title>
+                                <path
+                                    d="M18 13c0-3.859-3.141-7-7-7s-7 3.141-7 7 3.141 7 7 7 7-3.141 7-7zM26 26c0 1.094-0.906 2-2 2-0.531 0-1.047-0.219-1.406-0.594l-5.359-5.344c-1.828 1.266-4.016 1.937-6.234 1.937-6.078 0-11-4.922-11-11s4.922-11 11-11 11 4.922 11 11c0 2.219-0.672 4.406-1.937 6.234l5.359 5.359c0.359 0.359 0.578 0.875 0.578 1.406z">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div id="header-bottom" class="hidden lg:block lg:flex justify-center bg-[#333645] text-white">
+                <a id="bespoke-nav" class="flex flex-col items-center bg=[#333645] p-5 xl:px-8 cursor-pointer" href="#">
+                    <div class="pb-2.5">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 32 32"
+                            class="fill-current text-[#67809F]">
+                            <title>equalizer</title>
+                            <path
+                                d="M14 4v-0.5c0-0.825-0.675-1.5-1.5-1.5h-5c-0.825 0-1.5 0.675-1.5 1.5v0.5h-6v4h6v0.5c0 0.825 0.675 1.5 1.5 1.5h5c0.825 0 1.5-0.675 1.5-1.5v-0.5h18v-4h-18zM8 8v-4h4v4h-4zM26 13.5c0-0.825-0.675-1.5-1.5-1.5h-5c-0.825 0-1.5 0.675-1.5 1.5v0.5h-18v4h18v0.5c0 0.825 0.675 1.5 1.5 1.5h5c0.825 0 1.5-0.675 1.5-1.5v-0.5h6v-4h-6v-0.5zM20 18v-4h4v4h-4zM14 23.5c0-0.825-0.675-1.5-1.5-1.5h-5c-0.825 0-1.5 0.675-1.5 1.5v0.5h-6v4h6v0.5c0 0.825 0.675 1.5 1.5 1.5h5c0.825 0 1.5-0.675 1.5-1.5v-0.5h18v-4h-18v-0.5zM8 28v-4h4v4h-4z">
+                            </path>
+                        </svg>
+                    </div>
+                    <p class="text-xxs -mb-1.5">BESPOKE</p>
+                    <p class="text-lg">SOFTWARE</p>
+                </a>
+                <a id="it-support-nav" class="flex flex-col items-center bg=[#333645] p-5 xl:px-8 cursor-pointer"
+                    href="#">
+                    <div class="pb-2.5">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 32 32"
+                            class="fill-current text-[#4484D7]">
+                            <title>display</title>
+                            <path d="M0 2v20h32v-20h-32zM30 20h-28v-16h28v16zM21 24h-10l-1 4-2 2h16l-2-2z">
+                            </path>
+                        </svg>
+                    </div>
+                    <p class="text-xxs -mb-1.5">IT</p>
+                    <p class="text-lg">SUPPORT</p>
+                </a>
+                <a id="digital-marketing-nav" class="flex flex-col items-center bg=[#333645] p-5 xl:px-8 cursor-pointer"
+                    href="#">
+                    <div class="pb-2.5">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 32 32"
+                            class="fill-current text-[#5ECD73]">
+                            <title>stats-bars</title>
+                            <path d="M0 26h32v4h-32zM4 18h4v6h-4zM10 10h4v14h-4zM16 16h4v8h-4zM22 4h4v20h-4z">
+                            </path>
+                        </svg>
+                    </div>
+                    <p class="text-xxs -mb-1.5">DIGITAL</p>
+                    <p class="text-lg">MARKETING</p>
+                </a>
+                <a id="telecoms-services-nav" class="flex flex-col items-center bg=[#333645] p-5 xl:px-8 cursor-pointer"
+                    href="#">
+                    <div class="pb-2.5">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 24 24"
+                            class="fill-current text-[#D64541]">
+                            <title>phone_in_talk</title>
+                            <path
+                                d="M15 12q0-1.219-0.891-2.109t-2.109-0.891v-2.016q2.063 0 3.539 1.477t1.477 3.539h-2.016zM18.984 12q0-2.906-2.039-4.945t-4.945-2.039v-2.016q3.75 0 6.375 2.625t2.625 6.375h-2.016zM20.016 15.516q0.422 0 0.703 0.281t0.281 0.703v3.516q0 0.422-0.281 0.703t-0.703 0.281q-7.031 0-12.023-4.992t-4.992-12.023q0-0.422 0.281-0.703t0.703-0.281h3.516q0.422 0 0.703 0.281t0.281 0.703v0.047q0 1.922 0.563 3.516 0.094 0.188 0.094 0.328 0 0.469-0.328 0.703l-2.203 2.203q0.938 1.781 2.883 3.727t3.727 2.883l2.203-2.203q0.328-0.328 0.703-0.328 0.141 0 0.328 0.094 1.688 0.563 3.563 0.563z">
+                            </path>
+                        </svg>
+                    </div>
+                    <p class="text-xxs -mb-1.5">TELECOMS</p>
+                    <p class="text-lg">SERVICES</p>
+                </a>
+                <a id="web-design-nav" class="flex flex-col items-center bg=[#333645] p-5 xl:px-8 cursor-pointer"
+                    href="#">
+                    <div class="pb-2.5">
+
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="29" height="23" viewBox="0 0 40 32"
+                            class="fill-current text-[#926FB1]">
+                            <title>embed2</title>
+                            <path d="M26 23l3 3 10-10-10-10-3 3 7 7z"></path>
+                            <path d="M14 9l-3-3-10 10 10 10 3-3-7-7z"></path>
+                            <path d="M21.916 4.704l2.171 0.592-6 22.001-2.171-0.592 6-22.001z"></path>
+                        </svg>
+                    </div>
+                    <p class="text-xxs -mb-1.5">WEB</p>
+                    <p class="text-lg">DESIGN</p>
+                </a>
+                <a id="cyber-security-nav" class="flex flex-col items-center bg=[#333645] p-5 xl:px-8 cursor-pointer"
+                    href="#">
+                    <div class="pb-2.5">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 24 24"
+                            class="fill-current text-[#ED3B58]">
+                            <path
+                                d="M20.995 6.9a.998.998 0 0 0-.548-.795l-8-4a1 1 0 0 0-.895 0l-8 4a1.002 1.002 0 0 0-.547.795c-.011.107-.961 10.767 8.589 15.014a.987.987 0 0 0 .812 0c9.55-4.247 8.6-14.906 8.589-15.014zM12 19.897V12H5.51a15.473 15.473 0 0 1-.544-4.365L12 4.118V12h6.46c-.759 2.74-2.498 5.979-6.46 7.897z" />
+                        </svg>
+                    </div>
+                    <p class="text-xxs -mb-1.5">CYBER</p>
+                    <p class="text-lg">SECURITY</p>
+                </a>
+                <a id="developer-training-nav"
+                    class="flex flex-col items-center bg=[#333645] p-5 xl:px-8 cursor-pointer" href="#">
+                    <div class="pb-2.5">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 24 24"
+                            class="fill-current text-[#CE412C]">
+                            <path d="M12 3L1 9l11 6l9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82Z" />
+                        </svg>
+
+                    </div>
+                    <p class="text-xxs -mb-1.5">DEVELOPER</p>
+                    <p class="text-lg">TRAINING</p>
+                </a>
+            </div>
+        </header>
+        <main>
+            <div id="hero" class="flex flex-col justify-center items-center pt-20 px-2 md:pt-40 lg:pt-32">
+                <div class="w-full flex flex-col items-center lg:items-start xl:pl-32 2xl:px-content-4k">
+                    <h1 class="text-4.25xl text-white mb-4 font-bold text-center lg:text-6xl">Bespoke Software</h1>
+                    <h2 class="text-xl text-white text-center font-bold mb-10 lg:text-left xl:text-2xl">Delivering
+                        expert bespoke
+                        software <br>
+                        solutions across a range of industries. </h2>
+                    <a class="bg-[#67809f] text-white px-4 py-4 text-xl rounded-md hover:bg-[#566C88] cursor-pointer mb-12 md:mb-24"
+                        href="#">FIND
+                        OUT MORE <i class="fa-solid fa-arrow-right ml-2"></i></a>
+                </div>
+                <ul class="flex justify-center mb-12">
+                    <li class="mr-4 text-white">O</li>
+                    <li class="mr-4 text-white">O</li>
+                    <li class="mr-4 text-white">O</li>
+                    <li class="mr-4 text-white">O</li>
+                    <li class="mr-4 text-white">O</li>
+                    <li class="mr-4 text-white">O</li>
+                    <li class="mr-4 text-white">O</li>
+                </ul>
+            </div>
+            <div id="our-services" class="flex flex-col pt-12">
+                <div id="cards-and-view-your-work"
+                    class="flex flex-col px-4 md:px-6 md:flex-row md:flex-wrap md:justify-between md:items-center lg:px-10 xl:px-32 2xl:px-content-4k">
+                    <h1 class="text-4.5xl font-bold mb-9">Our Services</h1>
+                    <div id="cards" class="flex flex-wrap justify-around md:order-2">
+                        <div id="upper-cards" class="lg:grid lg:grid-cols-3 lg:gap-8">
+                            <a href="#">
+                                <div id="bespoke-software"
+                                    class="flex flex-col justify-center items-center w-full bg-white rounded-2xl border border-gray-300 shadow-large-light p-7 mb-8 group hover:text-white hover:bg-[#67809F] cursor-pointer transform hover:-translate-y-3 transition-all duration-500 ease-out">
+                                    <div
+                                        class="flex justify-center items-center bg-[#67809F] w-16 h-16 rounded-full mb-4 group-hover:bg-white">
+                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                            viewBox="0 0 32 32"
+                                            class="fill-current text-white group-hover:text-[#67809F]">
+                                            <title>equalizer</title>
+                                            <path
+                                                d="M14 4v-0.5c0-0.825-0.675-1.5-1.5-1.5h-5c-0.825 0-1.5 0.675-1.5 1.5v0.5h-6v4h6v0.5c0 0.825 0.675 1.5 1.5 1.5h5c0.825 0 1.5-0.675 1.5-1.5v-0.5h18v-4h-18zM8 8v-4h4v4h-4zM26 13.5c0-0.825-0.675-1.5-1.5-1.5h-5c-0.825 0-1.5 0.675-1.5 1.5v0.5h-18v4h18v0.5c0 0.825 0.675 1.5 1.5 1.5h5c0.825 0 1.5-0.675 1.5-1.5v-0.5h6v-4h-6v-0.5zM20 18v-4h4v4h-4zM14 23.5c0-0.825-0.675-1.5-1.5-1.5h-5c-0.825 0-1.5 0.675-1.5 1.5v0.5h-6v4h6v0.5c0 0.825 0.675 1.5 1.5 1.5h5c0.825 0 1.5-0.675 1.5-1.5v-0.5h18v-4h-18v-0.5zM8 28v-4h4v4h-4z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                    <h2 class="text-xl mb-5">Bespoke Software</h2>
+                                    <p class="text-sm leading-relaxed mb-3 text-center">Bespoke software solutions
+                                        for
+                                        all
+                                        your
+                                        business needs including integrations and reporting.</p>
+                                    <div
+                                        class="px-4 py-3 text-white bg-[#67809F] rounded-sm-md group-hover:bg-white group-hover:text-[#67809F]">
+                                        <p>READ MORE</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div id="it-support"
+                                    class="flex flex-col justify-center items-center w-full bg-white rounded-2xl border border-gray-300 shadow-large-light p-7 mb-8 group hover:text-white hover:bg-[#4484D7] cursor-pointer transform hover:-translate-y-3 transition-all duration-500  ease-out">
+                                    <div
+                                        class="flex justify-center items-center bg-[#4484D7] w-16 h-16 rounded-full mb-4 group-hover:bg-white">
+                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                            viewBox="0 0 32 32"
+                                            class="fill-current text-white group-hover:text-[#4484D7]">
+                                            <title>display</title>
+                                            <path
+                                                d="M0 2v20h32v-20h-32zM30 20h-28v-16h28v16zM21 24h-10l-1 4-2 2h16l-2-2z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                    <h2 class="text-xl mb-5">IT Support</h2>
+                                    <p class="text-sm leading-relaxed mb-3 text-center">Fully managed IT support and
+                                        consultancy
+                                        packages tailored to meet your exact business needs.</p>
+                                    <div
+                                        class="px-4 py-3 text-white bg-[#4484D7] rounded-sm-md group-hover:bg-white group-hover:text-[#4484D7]">
+                                        <p>READ MORE</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div id="digital-marketing"
+                                    class="flex flex-col justify-center items-center w-full bg-white rounded-2xl border border-gray-300 shadow-large-light p-7 mb-8 group hover:text-white hover:bg-[#5ECD73] cursor-pointer transform hover:-translate-y-3 transition-all duration-500  ease-out">
+                                    <div
+                                        class="flex justify-center items-center bg-[#5ECD73] w-16 h-16 rounded-full mb-4 group-hover:bg-white">
+                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                            viewBox="0 0 32 32"
+                                            class="fill-current text-white group-hover:text-[#5ECD73]">
+                                            <title>stats-bars</title>
+                                            <path
+                                                d="M0 26h32v4h-32zM4 18h4v6h-4zM10 10h4v14h-4zM16 16h4v8h-4zM22 4h4v20h-4z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                    <h2 class="text-xl mb-5">Digital Marketing</h2>
+                                    <p class="text-sm leading-relaxed mb-3 text-center"> Driven brand awareness &
+                                        ROI
+                                        through
+                                        creative digital marketing campaigns.
+                                    </p>
+                                    <div
+                                        class="px-4 py-3 text-white bg-[#5ECD73] rounded-sm-md group-hover:bg-white group-hover:text-[#5ECD73]">
+                                        <p>READ MORE</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div id="lower-cards"
+                            class="flex flex-wrap md:grid md:grid-cols-2 md:gap-8 md:mb-14 xl:grid-cols-4">
+                            <a href="#">
+                                <div id="telecoms-services"
+                                    class="flex flex-col justify-center items-center bg-white rounded-2xl border border-gray-300 shadow-large-light p-7 mb-8 group hover:text-white hover:bg-[#D64541] cursor-pointer transform hover:-translate-y-3 transition-all duration-500 ease-out md:mb-0">
+                                    <div
+                                        class="flex justify-center items-center bg-[#D64541] w-16 h-16 rounded-full mb-4 group-hover:bg-white">
+                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                            viewBox="0 0 24 24"
+                                            class="fill-current text-white group-hover:text-[#D64541]">
+                                            <title>phone_in_talk</title>
+                                            <path
+                                                d="M15 12q0-1.219-0.891-2.109t-2.109-0.891v-2.016q2.063 0 3.539 1.477t1.477 3.539h-2.016zM18.984 12q0-2.906-2.039-4.945t-4.945-2.039v-2.016q3.75 0 6.375 2.625t2.625 6.375h-2.016zM20.016 15.516q0.422 0 0.703 0.281t0.281 0.703v3.516q0 0.422-0.281 0.703t-0.703 0.281q-7.031 0-12.023-4.992t-4.992-12.023q0-0.422 0.281-0.703t0.703-0.281h3.516q0.422 0 0.703 0.281t0.281 0.703v0.047q0 1.922 0.563 3.516 0.094 0.188 0.094 0.328 0 0.469-0.328 0.703l-2.203 2.203q0.938 1.781 2.883 3.727t3.727 2.883l2.203-2.203q0.328-0.328 0.703-0.328 0.141 0 0.328 0.094 1.688 0.563 3.563 0.563z">
+                                            </path>
+                                        </svg>
+
+                                    </div>
+                                    <h2 class="text-xl mb-5">Telecoms Services</h2>
+                                    <p class="text-sm leading-relaxed mb-3 text-center">Business telephony solutions
+                                        including
+                                        mobile & connectivity solutions.
+                                    </p>
+                                    <div
+                                        class="px-4 py-3 text-white bg-[#D64541] rounded-sm-md group-hover:bg-white group-hover:text-[#D64541]">
+                                        <p>READ MORE</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div id="web-design"
+                                    class="flex flex-col justify-center items-center bg-white rounded-2xl border border-gray-300 shadow-large-light p-7 mb-8 group hover:text-white hover:bg-[#926FB1] cursor-pointer transform hover:-translate-y-3 transition-all duration-500 ease-out md:mb-0">
+                                    <div
+                                        class="flex justify-center items-center bg-[#926FB1] w-16 h-16 rounded-full mb-4 group-hover:bg-white">
+                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="40" height="32"
+                                            viewBox="0 0 40 32"
+                                            class="fill-current text-white group-hover:text-[#926FB1]">
+                                            <title>embed2</title>
+                                            <path d="M26 23l3 3 10-10-10-10-3 3 7 7z"></path>
+                                            <path d="M14 9l-3-3-10 10 10 10 3-3-7-7z"></path>
+                                            <path d="M21.916 4.704l2.171 0.592-6 22.001-2.171-0.592 6-22.001z">
+                                            </path>
+                                        </svg>
+
+                                    </div>
+                                    <h2 class="text-xl mb-5">Web Design</h2>
+                                    <p class="text-sm leading-relaxed mb-3 text-center">User-centric design for
+                                        businesses
+                                        looking
+                                        to make a lasting impression.
+                                    </p>
+                                    <div
+                                        class="px-4 py-3 text-white bg-[#926FB1] rounded-sm-md group-hover:bg-white group-hover:text-[#926FB1]">
+                                        <p>READ MORE</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div id="cyber-security"
+                                    class="flex flex-col justify-center items-center bg-white rounded-2xl border border-gray-300 shadow-large-light p-7 mb-8 group hover:text-white hover:bg-[#ED3B58] cursor-pointer transform hover:-translate-y-3 transition-all duration-500 ease-out md:mb-0">
+                                    <div
+                                        class="flex justify-center items-center bg-[#ED3B58] w-16 h-16 rounded-full mb-4 group-hover:bg-white">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36"
+                                            viewBox="0 0 24 24"
+                                            class="fill-current text-white group-hover:text-[#ED3B58]">
+                                            <path
+                                                d="M20.995 6.9a.998.998 0 0 0-.548-.795l-8-4a1 1 0 0 0-.895 0l-8 4a1.002 1.002 0 0 0-.547.795c-.011.107-.961 10.767 8.589 15.014a.987.987 0 0 0 .812 0c9.55-4.247 8.6-14.906 8.589-15.014zM12 19.897V12H5.51a15.473 15.473 0 0 1-.544-4.365L12 4.118V12h6.46c-.759 2.74-2.498 5.979-6.46 7.897z" />
+                                        </svg>
+                                    </div>
+                                    <h2 class="text-xl mb-5">Cyber Security</h2>
+                                    <p class="text-sm leading-relaxed mb-3 text-center">Prevention, testing,
+                                        consultancy
+                                        &
+                                        breach
+                                        management services.
+                                    </p>
+                                    <div class="px-4 py-3 text-white bg-[#ED3B58] rounded-sm-md">
+                                        <p>READ MORE</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div id="developer-training"
+                                    class="flex flex-col justify-center items-center bg-white rounded-2xl border border-gray-300 shadow-large-light p-7 mb-8 group hover:text-white hover:bg-[#CE412C] cursor-pointer transform hover:-translate-y-3 transition-all duration-500 ease-out md:mb-0">
+                                    <div
+                                        class="flex justify-center items-center bg-[#CE412C] w-16 h-16 rounded-full mb-4 group-hover:bg-white">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36"
+                                            viewBox="0 0 24 24"
+                                            class="fill-current text-white group-hover:text-[#CE412C]">
+                                            <path
+                                                d="M12 3L1 9l11 6l9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82Z" />
+                                        </svg>
+                                    </div>
+                                    <h2 class="text-xl mb-5">Developer Training</h2>
+                                    <p class="text-sm leading-relaxed mb-3 text-center">Web design & software
+                                        training
+                                        courses
+                                        designed to secure a job in tech.</p>
+                                    <div
+                                        class="px-4 py-3 text-white bg-[#CE412C] rounded-sm-md group-hover:bg-white group-hover:text-[#CE412C]">
+                                        <p>READ MORE</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <a id="view-our-work" class="md:order-1 md:mb-8 cursor-pointer group hover:underline" href="#">
+                        <h1 class="text-2.4xl font-bold text-center">View Our Work
+                            <i class="fa-solid fa-arrow-right group-hover:underline"></i>
+                        </h1>
+                    </a>
+                </div>
+                <div id="accreditations" class="flex items-center mt-12 mb-12 md:order-3">
+                    <div id="list-of-clients" class="flex overflow-x-scroll w-full">
+                        <div class="group h-16 mr-8 2xl:mr-24 flex-shrink-0">
+                            <img src="./assets/accreditations/future-50-bw.jpeg" class="group-hover:hidden">
+                            <img src="./assets/accreditations/future-50.jpeg" class="group-hover:block hidden">
+                        </div>
+                        <div class="group h-16 mr-8 2xl:mr-24 flex-shrink-0">
+                            <img src="./assets/accreditations/google-partner-bw.jpeg" class="group-hover:hidden">
+                            <img src="./assets/accreditations/google-partner.jpeg" class="group-hover:block hidden">
+                        </div>
+                        <div class="group h-16 mr-8 2xl:mr-24 flex-shrink-0">
+                            <img src="./assets/accreditations/investing-in-future-growth-bw.jpeg"
+                                class="group-hover:hidden">
+                            <img src="./assets/accreditations/investing-in-future-growth.jpeg"
+                                class="group-hover:block hidden">
+                        </div>
+                        <div class="group h-16 mr-8 2xl:mr-24 flex-shrink-0">
+                            <img src="./assets/accreditations/iso_27001-bw.jpeg" class="group-hover:hidden">
+                            <img src="./assets/accreditations/iso_27001.jpeg" class="group-hover:block hidden">
+                        </div>
+                        <div class="group h-16 mr-8 2xl:mr-24 flex-shrink-0">
+                            <img src="./assets/accreditations/living_wage_bw.png" class="group-hover:hidden">
+                            <img src="./assets/accreditations/living_wage.png" class="group-hover:block hidden">
+                        </div>
+                        <div class="group h-16 mr-8 2xl:mr-24 flex-shrink-0">
+                            <img src="./assets/accreditations/norfolk-carbon-charter-bw.jpeg"
+                                class="group-hover:hidden">
+                            <img src="./assets/accreditations/norfolk-carbon-charter.jpeg"
+                                class="group-hover:block hidden">
+                        </div>
+                        <div class="group h-16 mr-8 2xl:mr-24 flex-shrink-0">
+                            <img src="./assets/accreditations/norfolk_prohelp_bw.png" class="group-hover:hidden">
+                            <img src="./assets/accreditations/norfolk_prohelp.png" class="group-hover:block hidden">
+                        </div>
+                        <div class="group h-16 mr-8 2xl:mr-24 flex-shrink-0">
+                            <img src="./assets/accreditations/PPC_logo-bw.jpeg" class="group-hover:hidden">
+                            <img src="./assets/accreditations/PPC_logo.jpeg" class="group-hover:block hidden">
+                        </div>
+                        <div class="group h-16 mr-8 2xl:mr-24 flex-shrink-0">
+                            <img src="./assets/accreditations/princess-royal-training-bw.jpeg"
+                                class="group-hover:hidden">
+                            <img src="./assets/accreditations/princess-royal-training.jpeg"
+                                class="group-hover:block hidden">
+                        </div>
+                        <div class="group h-16 mr-8 2xl:mr-24 flex-shrink-0">
+                            <img src="./assets/accreditations/qms-bw.jpeg" class="group-hover:hidden">
+                            <img src="./assets/accreditations/qms.jpeg" class="group-hover:block hidden">
+                        </div>
+                        <div class="group h-16 mr-8 2xl:mr-24 flex-shrink-0">
+                            <img src="./assets/accreditations/skills-of-tomorrow-bw.jpeg" class="group-hover:hidden">
+                            <img src="./assets/accreditations/skills-of-tomorrow.jpeg" class="group-hover:block hidden">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="about"
+                class="bg-[#333645] pt-12 px-4 pb-10 md:px-6 lg:px-10 lg:grid lg:grid-cols-2 lg:gap-10 xl:px-32 2xl:px-content-4k">
+                <div id="welcome">
+                    <h1 class="text-white text-4xl font-bold mb-10">Welcome To NetMatters</h1>
+                    <p class="text-white font-bold mb-6 leading-loose tracking-wider">Netmatters is a leading
+                        <a href="#">Bespoke Software</a>, <a href="#">IT Support</a>, and <a href="#">Digital
+                            Marketing</a>
+                        company based in the East of England with offices in <a href="#">London</a>, <a
+                            href="#">Cambridge</a>, <a href="#">Wymondham</a>, and <a href="#">Great Yarmouth</a>.
+                    </p>
+                    <p class="text-white leading-loose tracking-wider mb-6">We aren't tied into contracts with
+                        third-party providers,
+                        so you know that our
+                        recommendations for your business are based purely with one benefit in mind: to help improve
+                        your business with the most appropriate solutions.</p>
+                    <p class="text-white leading-loose tracking-wider mb-6">We pride ourselves on being an ethical
+                        business and have a
+                        unique business
+                        offering and cost model that ensures you get the most from our relationship in an upfront
+                        manner.
+                    </p>
+                    <div id="why-culture" class="flex flex-wrap">
+                        <a id="why"
+                            class="flex items-center bg-[#272936] rounded-md text-xl text-white tracking-wide py-4 px-6 mb-12 mr-3 hover:bg-[#121318] cursor-pointer"
+                            href="#">
+                            <p>WHY CHOOSE US?</p>
+                            <i class="inline-block fa-solid fa-arrow-right pl-3"></i>
+                        </a>
+                        <a id="culture"
+                            class="flex items-center bg-[#272936] rounded-md text-xl text-white tracking-wide py-4 px-7 mb-12 hover:bg-[#121318] cursor-pointer"
+                            href="#">
+                            <p>OUR CULTURE</p>
+                            <i class="inline-block fa-solid fa-arrow-right pl-4"></i>
+                        </a>
+                    </div>
+                </div>
+                <div id="reviews">
+                    <h1 class="text-white text-3.5xl font-bold leading-less-than-loose mb-10">What Our Clients
+                        Think
+                    </h1>
+                    <div class="flex flex-wrap mb-6 text-1.5xl items-center h-12 !important">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 1024 1024">
+                            <path fill="orange"
+                                d="m908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5c-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2l-253.9 36.9c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 0 0 .6 45.3l183.7 179.1l-43.4 252.9a31.95 31.95 0 0 0 46.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2c17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9l183.7-179.1c5-4.9 8.3-11.3 9.3-18.3c2.7-17.5-9.5-33.7-27-36.3z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 1024 1024">
+                            <path fill="orange"
+                                d="m908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5c-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2l-253.9 36.9c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 0 0 .6 45.3l183.7 179.1l-43.4 252.9a31.95 31.95 0 0 0 46.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2c17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9l183.7-179.1c5-4.9 8.3-11.3 9.3-18.3c2.7-17.5-9.5-33.7-27-36.3z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 1024 1024">
+                            <path fill="orange"
+                                d="m908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5c-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2l-253.9 36.9c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 0 0 .6 45.3l183.7 179.1l-43.4 252.9a31.95 31.95 0 0 0 46.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2c17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9l183.7-179.1c5-4.9 8.3-11.3 9.3-18.3c2.7-17.5-9.5-33.7-27-36.3z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 1024 1024">
+                            <path fill="orange"
+                                d="m908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5c-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2l-253.9 36.9c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 0 0 .6 45.3l183.7 179.1l-43.4 252.9a31.95 31.95 0 0 0 46.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2c17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9l183.7-179.1c5-4.9 8.3-11.3 9.3-18.3c2.7-17.5-9.5-33.7-27-36.3z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 1024 1024">
+                            <path fill="orange"
+                                d="m908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5c-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2l-253.9 36.9c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 0 0 .6 45.3l183.7 179.1l-43.4 252.9a31.95 31.95 0 0 0 46.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2c17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9l183.7-179.1c5-4.9 8.3-11.3 9.3-18.3c2.7-17.5-9.5-33.7-27-36.3z" />
+                        </svg>
+                    </div>
+                    <div id="quote" class="mb-12 xl:mb-24">
+                        <p
+                            class="font-bold italic text-white text-1.25xl tracking-wider leading-relaxed mb-6 md:leading-relaxed">
+                            Netmatters
+                            stood
+                            out from the start. Great guys and very easy
+                            to work with. Both the build and digital marketing teams are clearly skilled -they
+                            know
+                            their
+                            stuff! They delivered a website to our (high!) expectations and went over and above
+                            to
+                            ensure we
+                            were satisfied clients - and we are!</p>
+                        <p>
+                            <span class="text-[#A3A8AC] text-lg font-bold tracking-wide leading-relaxed">Eleanor
+                                Bishop,
+                                Head
+                                of Marketing -</span> <span
+                                class="text-white text-lg font-bold tracking-wide leading-relaxed"><a href="#"
+                                    class="hover:underline">Ashcroft
+                                    Partnership
+                                    LLP</a></span>
+                        </p>
+                    </div>
+                    <div id="links-to-reviews" class="flex items-center flex-wrap">
+                        <a class="bg-[#4387f6] text-white tracking-wide px-6 py-3 text-lg rounded-md mr-4 mb-4 hover:bg-[#166AF4] md:mb-0 lg:mb-5 xl:mb-0"
+                            href="#">
+                            GOOGLE REVIEWS
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a class="bg-[#00b67b] text-white tracking-wide px-6 py-3 text-lg rounded-md hover:bg-[#449B6A]"
+                            href="#">
+                            TRUSTPILOT REVIEWS
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+            <div id="latest-news" class="flex flex-col pt-10">
+                <div id="cards-and-view-all-button"
+                    class="flex flex-col px-4 md:px-6 md:flex-row md:flex-wrap md:justify-between lg:px-10 xl:px-32 2xl:px-content-4k">
+                    <h1 class="text-3.5xl font-bold mb-10">Latest News</h1>
+                    <div id="news-cards" class="md:order-2 md:grid md:grid-cols-2 md:gap-8 md:mb-16 xl:grid-cols-3">
+                        <a href="#">
+                            <div id="business"
+                                class="shadow-custom border mb-8 transform hover:-translate-y-2 transition-all duration-500 ease-out">
+                                <div class="relative">
+                                    <p
+                                        class="absolute top-2.5 right-0 bg-[#67809F] text-white tracking-wide font-bold py-1 px-2 text-xs">
+                                        CAREERS</p>
+                                    <img class="w-full"
+                                        src="./assets/thumbnails/business-development-account-zUub.webp">
+                                </div>
+                                <div class="p-7 flex flex-col">
+                                    <h3 class="font-bold mb-4 tracking-wider text-[#67809F]">Business Development
+                                        Account
+                                        Manager
+                                    </h3>
+                                    <p class="text-sm tracking-wider leading-relaxed mb-6">Salary Range £35k+ per annum
+                                        +
+                                        Bonus
+                                        +
+                                        Benefits Hours 40 hours per week, Mon – Fri Location Wymondha...</p>
+                                    <div
+                                        class="inline px-5 py-3 mr-auto bg-[#67809F] text-white rounded-sm-md tracking-wide">
+                                        READ
+                                        MORE</div>
+                                    <div class="flex items-center mt-7 pt-7 border-t">
+                                        <div class="text-2xl">
+                                            <img src="./assets/thumbnails/elliott-peacock-w8vu.webp"
+                                                class="rounded-full">
+                                        </div>
+                                        <div class="ml-4.5">
+                                            <p class="font-bold text-sm tracking-wide leading-relaxed">Posted by
+                                                Elliott Peacock</p>
+                                            <p class="text-sm tracking-wide leading-relaxed">23rd June 2023</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div id="web"
+                                class="shadow-custom border mb-8 transform hover:-translate-y-2 transition-all duration-500 ease-out">
+                                <div class="relative">
+                                    <p
+                                        class="absolute top-2.5 right-0 bg-[#926FB1] text-white tracking-wide font-bold py-1 px-2 text-xs">
+                                        CAREERS</p>
+                                    <img class="w-full" src="./assets/thumbnails/web-project-manager-FeSd.webp">
+                                </div>
+                                <div class="p-7 flex flex-col">
+                                    <h3 class="font-bold mb-4 tracking-wider text-[#926FB1]">Web Project Manager</h3>
+                                    <p class="text-sm tracking-wider leading-relaxed mb-6">Salary Range £24,000 -
+                                        £34,000
+                                        (DOE)
+                                        +
+                                        Bonus Hours 40 hours per week, Mon – Fri Location Wymondham,...</p>
+                                    <div
+                                        class="inline px-5 py-3 mr-auto bg-[#926FB1] text-white rounded-sm-md tracking-wide">
+                                        READ
+                                        MORE</div>
+                                    <div class="flex items-center mt-7 pt-7 border-t">
+                                        <div class="text-2xl">
+                                            <img src="./assets/thumbnails/tom-lancaster-61K1.webp" class="rounded-full">
+                                        </div>
+                                        <div class="ml-4.5">
+                                            <p class="font-bold text-sm tracking-wide leading-relaxed">Posted by
+                                                Tom Lancaster</p>
+                                            <p class="text-sm tracking-wide leading-relaxed">23rd June 2023</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div id="marketing"
+                                class="shadow-custom border mb-8 transform hover:-translate-y-2 transition-all duration-500 ease-out md:hidden xl:block">
+                                <div class="relative">
+                                    <p
+                                        class="absolute top-2.5 right-0 bg-[#5ECD72] text-white tracking-wide font-bold py-1 px-2 text-xs">
+                                        CAREERS</p>
+                                    <img class="w-full" src="./assets/thumbnails/digital-marketing-executive-UmWA.webp">
+                                </div>
+                                <div class="p-7 flex flex-col">
+                                    <h3 class="font-bold mb-4 tracking-wider text-[#5ECD72]">Digital Marketing Executive
+                                    </h3>
+                                    <p class="text-sm tracking-wider leading-relaxed mb-6">Salary Range £28,000 -
+                                        £34,000
+                                        per
+                                        annum
+                                        + Bonus Hours 40 hours per week, Mon – Fri Location Wymondh...</p>
+                                    <div
+                                        class="inline px-5 py-3 mr-auto bg-[#5ECD72] text-white rounded-sm-md tracking-wide">
+                                        READ
+                                        MORE</div>
+                                    <div class="flex items-center mt-7 pt-7 border-t">
+                                        <div class="text-2xl">
+                                            <img src="./assets/thumbnails/james-palmer-1KKg.webp" class="rounded-full">
+                                        </div>
+                                        <div class="ml-4.5">
+                                            <p class="font-bold text-sm tracking-wide leading-relaxed">Posted by
+                                                Jim Palmer</p>
+                                            <p class="text-sm tracking-wide leading-relaxed">23rd June 2023</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div id="view-all"
+                        class="flex justify-center md:order-1 mb-20 md:mb-10 cursor-pointer group hover:underline">
+                        <a href="#" class="text-2.5xl font-bold">View All
+                            <i class="fa-solid fa-arrow-right group-hover:underline"></i>
+                        </a>
+                    </div>
+                </div>
+                <div id="clients" class="flex flex-col items-center mt-2 mb-16 max-w-full md:order-3">
+                    <div id="list-of-clients" class="flex overflow-x-scroll max-w-full">
+                        <img src="./assets/clients/ashcroftlogo_landscape_goldblack_DP60P-small.png"
+                            class="h-14 mr-8 md:mr-14">
+                        <img src="./assets/clients/beat_logo.png" class="h-14 mr-8 md:mr-14">
+                        <img src="./assets/clients/black_swan_logo.png" class="h-14 mr-8 md:mr-14">
+                        <img src="./assets/clients/crane_logo.png" class="h-14 mr-8 md:mr-14">
+                        <img src="./assets/clients/girl_guides_anglia_logo.png" class="h-14 mr-8 md:mr-14">
+                        <img src="./assets/clients/girls_day_school_trust_logob.png" class="h-14 mr-8 md:mr-14">
+                        <img src="./assets/clients/howespercivallogo.png" class="h-14 mr-8 md:mr-14">
+                        <img src="./assets/clients/onetravellerlogo_white_figuire.png" class="h-14 mr-8 md:mr-14">
+                        <img src="./assets/clients/searles_logo.jpeg" class="h-14 mr-8 md:mr-14">
+                        <img src="./assets/clients/survey_solutions_logo.png" class="h-14 mr-8 md:mr-14">
+                        <img src="./assets/clients/sweetzy_logo.png" class="h-14 mr-8 md:mr-14">
+                        <img src="./assets/clients/xupes_logo.png" class="h-14 mr-8 md:mr-14">
+                    </div>
+                </div>
+            </div>
+            <div id="newsletter-signup"
+                class="flex flex-col pt-12 pb-12 bg-[#DDDDDD] px-4 tracking-wide md:px-6 lg:px-10 xl:px-32 2xl:px-content-4k">
+                <h2 class="text-4xl mb-4">Email Newsletter Sign-Up</h2>
+                <form id="signup-form" class="flex flex-col">
+                    <div class="flex flex-col lg:grid lg:grid-cols-2 lg:gap-6">
+                        <div>
+                            <label for="name" class=" text-base mb-1 font-bold">Your Name <span
+                                    class="text-red-500">*</span></label>
+                            <input id="name" type="text" required class="w-full mb-4 h-12 py-1 px-4">
+                        </div>
+                        <div>
+                            <label for="email" class=" text-base mb-1 font-bold">Your Email <span
+                                    class="text-red-500">*</span></label>
+                            <input id="email" type="text" required class="w-full mb-4 h-12 py-1 px-4">
+                        </div>
+                    </div>
+                    <div class="flex mb-8">
+                        <div class="w-8 h-8 border-3 border-gray-700 rounded-sm mr-5 flex-shrink-0">
+                            <input id="marketing_preference" class=" w-full h-full cursor-pointer" type="checkbox">
+                        </div>
+                        <label for="marketing_preference"
+                            class="font-bold leading-loose tracking-wider text-gray-700 cursor-pointer">
+                            Please tick this box if you wish to receive marketing information from us. Please see our
+                            <a href="#" target="_blank" class="underline">Privacy Policy</a> for more information on how
+                            we keep your data safe.
+                        </label>
+                    </div>
+                    <input type="submit" value="SUBSCRIBE"
+                        class="w-30 py-3  text-base bg-[#333645] text-white rounded-sm hover:bg-[#22242E] cursor-pointer">
+                </form>
+            </div>
+        </main>
+        <footer>
+            <div id="links"
+                class="pt-8 pl-4 text-white text-sm bg-[#323544] md:px-6 lg:px-10 xl:px-32 xl:flex 2xl:px-content-4k">
+                <div class="xl:mr-20">
+                    <img src="./assets/nm-logo-white-med.png" class="w-60 mb-6 md:w-80">
+                    <div id="social-media">
+                        <p class="text-base mb-6">FOLLOW US ON:</p>
+                        <div class="inline-grid grid-cols-2 gap-3 mb-8 md:mb-10 md:grid-cols-4 md:grid-rows-1 md:gap-3">
+                            <a class="bg-[#212330] text-white flex items-center justify-center hover:bg-[#3B5998] h-14 w-24 md:w-16 md:h-14"
+                                href="#">
+                                <i class="fab fa-facebook-f fa-2x"></i>
+                            </a>
+                            <a class="bg-[#212330] text-white flex items-center justify-center hover:bg-[#2877B5] h-14 w-24 md:w-16 md:h-14"
+                                href="#">
+                                <i class="fab fa-linkedin-in fa-2x"></i>
+                            </a>
+                            <a class="bg-[#212330] text-white flex items-center justify-center hover:bg-[#41ACED] h-14 w-24 md:w-16 md:h-14"
+                                href="#">
+                                <i class="fab fa-twitter fa-2x"></i>
+                            </a>
+                            <a class="bg-[#212330] text-white flex items-center justify-center hover:bg-[#DA3A75] h-14 w-24 md:w-16 md:h-14"
+                                href="#">
+                                <i class="fab fa-instagram fa-2x"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div id="pages"
+                    class="grid grid-cols-1 tracking-wide pb-6 md:pb-0 md:grid-cols-2 lg:grid-cols-4 lg:gap-10">
+                    <div>
+                        <h1 class=" text-base mb-6">ABOUT NETMATTERS</h1>
+                        <ul class="mb-8">
+                            <li class="text-xs mb-1.5 hover:underline"><a href="#">News</a></li>
+                            <li class="text-xs mb-1.5 hover:underline"><a href="#">Our Careers</a></li>
+                            <li class="text-xs mb-1.5 hover:underline"><a href="#">Our Team</a></li>
+                            <li class="text-xs mb-1.5 hover:underline"><a href="#">Contact Us</a></li>
+                            <li class="text-xs mb-1.5 hover:underline"><a href="#">Privacy Policy</a></li>
+                            <li class="text-xs mb-1.5 hover:underline"><a href="#">Cookie Policy</a></li>
+                            <li class="text-xs mb-1.5 hover:underline"><a href="#">Data Retention and Disposal
+                                    Policy</a></li>
+                            <li class="text-xs mb-1.5 hover:underline"><a href="#">CCTV Policy</a></li>
+                            <li class="text-xs mb-1.5 hover:underline"><a href="#">Environmental Policy</a></li>
+                            <li class="text-xs mb-1.5 hover:underline"><a href="#">Terms & Conditions</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h1 class="mb-6 text-base">OUR SERVICES</h1>
+                        <ul class="mb-8">
+                            <li class="text-xs mb-1.5 hover:underline"><a href="#">Bespoke Software</a></li>
+                            <li class="text-xs mb-1.5 hover:underline"><a href="#">IT Support</a></li>
+                            <li class="text-xs mb-1.5 hover:underline"><a href="#">Digital Marketing</a></li>
+                            <li class="text-xs mb-1.5 hover:underline"><a href="#">Telecoms Services</a></li>
+                            <li class="text-xs mb-1.5 hover:underline"><a href="#">Web Design</a></li>
+                            <li class="text-xs mb-1.5 hover:underline"><a href="#">Cyber Security</a></li>
+                            <li class="text-xs mb-1.5 hover:underline"><a href="#">Developer Training</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h1 class="mb-6 text-base">OUR INDUSTRIES</h1>
+                        <ul class="mb-8">
+                            <li class="text-xs mb-1.5 hover:underline"><a href="#">Financial Services</a></li>
+                            <li class="text-xs mb-1.5 hover:underline"><a href="#">Construction</a></li>
+                            <li class="text-xs mb-1.5 hover:underline"><a href="#">Retail & E-Commerce</a></li>
+                            <li class="text-xs mb-1.5 hover:underline"><a href="#">Non-Profits</a></li>
+                            <li class="text-xs mb-1.5 hover:underline"><a href="#">SME's</a></li>
+                            <li class="text-xs mb-1.5 hover:underline"><a href="#">Healthcare</a></li>
+                            <li class="text-xs mb-1.5 hover:underline"><a href="#">Education & Training</a></li>
+                            <li class="text-xs mb-1.5 hover:underline"><a href="#">Travel & Leisure</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h1 class="mb-6 text-base">LOCATIONS</h1>
+                        <ul>
+                            <li class="text-xs mb-1.5 hover:underline"><a href="#">London Office</a></li>
+                            <li class="text-xs mb-1.5 hover:underline"><a href="#">Cambridge Office</a></li>
+                            <li class="text-xs mb-1.5 hover:underline"><a href="#">Wymondham Office</a></li>
+                            <li class="text-xs mb-1.5 hover:underline"><a href="#">Great Yarmouth</a> Office</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="copyright" class="p-3 bg-[#212330] text-white text-sm tracking-wide md:flex xl:px-32">
+                <p class="mr-2">&copy; Copyright Netmatters 2023.</p>
+                <p class="mr-2">All rights reserved.</p>
+                <p class="hidden md:inline-block mr-2">-</p>
+                <a href="#" class="hover:underline">Sitemap</a>
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+</html>

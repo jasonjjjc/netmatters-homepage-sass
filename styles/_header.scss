@@ -1,0 +1,219 @@
+@import 'colours';
+
+#header {
+    padding-top: 20px;
+  
+    &-top {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0px 16px 16px 16px;
+  
+      @media (min-width: 768px) {
+        flex-wrap: nowrap;
+        padding: 0px 32px 8px 32px;
+      }
+  
+      @media (min-width: 1024px) {
+        justify-content: flex-start;
+      }
+  
+      @media (min-width: 1280px) {
+        padding: 0px 128px 0px 128px;
+      }
+  
+      @media (min-width: 1536px) {
+        padding: 0 700px 0 700px;
+      }
+  
+      &-logo {
+        flex: 1 1 0%;
+        margin-right: 16px;
+  
+        @media (min-width: 768px) {
+          margin-right: 48px;
+        }
+  
+        @media (min-width: 1280px) {
+          flex: none;
+        }
+  
+        :first-child {
+          margin-bottom: 16px;
+        }
+      }
+  
+      &-support,
+      &-contact {
+        display: none;
+  
+        @media (min-width: 1024px) {
+          display: block;
+        }
+  
+        >a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 56px;
+          margin-bottom: 16px;
+          margin-right: 18px;
+          padding: 16px;
+          border-radius: 4px;
+          background-color: $secondary;
+  
+          :hover {
+            background-color: #2A6EC6;
+  
+            >svg {
+              fill: white;
+              margin-right: 4px;
+            }
+  
+            >h3 {
+              color: white;
+            }
+          }
+        }
+      }
+  
+      &-navgroup {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 4px;
+        margin-bottom: 16px;
+  
+        #call {
+          @media (min-width: 768px) {
+            display: none;
+          }
+  
+          >a {
+            cursor: pointer;
+          }
+  
+          >svg {
+            fill: $primary;
+            color: $primary;
+          }
+        }
+  
+        #hamburger {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 4px;
+          background-color: $primary;
+          padding: 8px 12px;
+          margin-left: 20px;
+          cursor: pointer;
+  
+          :hover {
+            background-color: #22242E;
+          }
+  
+          @media (min-width: 768px) {
+            margin-right: 8px;
+          }
+        }
+  
+        @media (min-width: 768px) {
+          order: 2;
+        }
+      }
+      
+      &-search {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        background-color: #E5E5E5;
+        border: 2px solid #D6D6D6;
+        margin-top: 1px;
+        margin-bottom: 1px;
+        border-radius: 2px;
+  
+        @media (min-width: 768px) {
+          order: 1;
+          height: 56px;
+          width: 240px;
+          margin-bottom: 16px;
+          background-color: #999AA2;
+          border: 0;
+          border-radius: 4px;
+          :hover {
+            background-color: #7E808A;
+          }
+        }
+  
+        @media (min-width: 1024px) {
+          width: 64px;
+        }
+  
+        @media (min-width: 1280px) {
+          width: 100%;
+        }
+        
+        #{&}-input-wrapper {
+          @media (min-width: 768px) {
+            border:1;
+            border-color: #CCCCCC;
+            height: 56px;
+          }
+          @media (min-width: 1024px) {
+            display: none;
+          }
+          @media (min-width: 1280px) {
+            display: block;
+          }
+          @media (min-width: 1280px) {
+            width: 100%;
+          }
+  
+          > input {
+            flex: 1 1 0%;
+            padding: 10px 16px;
+            color: #989898;
+            background-color: #E5E5E5;
+            font-size: 14px;
+  
+            @media (min-width: 768px) {
+              background-color: white;
+              height: 100%;
+              padding: 0px 0px 0px 16px;
+              border-top: 1px solid #EEEEEE;
+            }
+            @media (min-width: 1280px) {
+              width: 100%;
+            }
+          }
+        }
+  
+        #{&}-button-wrapper {
+          @media (min-width: 768px) {
+            flex: 1 1 0%;
+            height: 56px;
+            cursor: pointer;
+          }
+          
+          // class="fill-current text-[#333645]
+          // mr-2 md:m-4 md:ml-6 md:fill-current 
+          // md:text-white">
+          > svg {
+            fill: #333645;
+            margin-right: 8px;
+            @media (min-width: 768px) {
+              margin: 16px 16px 16px 24px;
+              fill: white;
+              color:white;
+            }
+          }
+        }
+  
+      }
+    }
+  
+  }
