@@ -32,11 +32,11 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.7rem;
 
   @media (min-width: 992px) {
     justify-content: center;
-
+    gap: 0.5rem;
   }
 
   @media (min-width: 1260px) {
@@ -214,6 +214,10 @@
     transition: background-color 0.3s ease;
 
     @media (min-width: 768px) {
+      margin-left: 0.5rem;
+    }
+
+    @media (min-width: 992px) {
       margin-left: 0.75rem;
     }
 
@@ -366,11 +370,10 @@
     flex-direction: column;
     align-items: center;
     height: 99px;
-    width: 167px;
+    width: 134px;
     background-color: #333645;
-    padding: 1.25rem 1.25rem;
     cursor: pointer;
-    
+    padding: 1.2rem 0 0.8rem 0;
 
     &:hover {
       background-color: #22242e;
@@ -388,6 +391,10 @@
       &.text-lg {
         font-size: 1.125rem;
       }
+    }
+
+    @media (min-width: 1260px) {
+      width: 167px;
     }
   }
 
