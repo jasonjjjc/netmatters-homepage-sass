@@ -378,14 +378,15 @@
 
     svg {
       fill: currentColor;
+      margin-bottom: 0.4rem;
     }
 
     p {
-      margin-bottom: -0.5rem;
+      margin-bottom: -0.4rem;
       font-size: 0.625rem;
 
       &.text-lg {
-        font-size: 1.25rem;
+        font-size: 1.125rem;
       }
     }
   }
@@ -488,7 +489,7 @@
     }
   }
 
-  #developer-training-nav {
+  #developer-course-nav {
     background-color: #333645;
 
     svg {
