@@ -6,19 +6,23 @@
 
 // Header top section
 #header-top {
-  padding: 1.5rem 1rem 1.25rem 1rem;
+  padding: 1.25rem 1rem 1.25rem 1rem;
 
 
   @media (min-width: 768px) {
-    padding: 0.75rem 0.75rem 0 0.75rem;
+    padding: 1.25rem 1.5rem 1.25rem 1.5rem;
   }
 
-  @media (min-width: 1280px) {
-    padding: 0.5rem 7.5rem 0.25rem;
+  @media (min-width: 992px) {
+    padding: 1.25rem 0 1.25rem 0;
+  }
+
+  @media (min-width: 1260px) {
+    padding: 1.25rem 0;
   }
 
   @media (min-width: 1536px) {
-    padding: 0.5rem 15.5rem 0.25rem;
+    padding: 1.25rem 0;
   }
 }
 
@@ -28,9 +32,20 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  gap: 0.5rem;
 
-  @media (min-width: 1280px) {
-    justify-content: flex-start;
+  @media (min-width: 992px) {
+    justify-content: center;
+
+  }
+
+  @media (min-width: 1260px) {
+    flex-wrap: nowrap;
+    
+    > a {
+      margin-right: 1.5rem;
+    }
+    
   }
 }
 
@@ -41,6 +56,17 @@
 
   @media (min-width: 768px) {
     margin-bottom: 0;
+    align-self: start;
+  }
+
+  @media (min-width: 992px) {
+    flex:none;
+    padding: 0 0;
+    margin-right: 4rem;
+  }
+
+  @media (min-width: 1260px) {
+    flex: none;
   }
 
   @media (min-width: 1536px) {
@@ -49,7 +75,17 @@
 
   img {
     cursor: pointer;
-    margin-bottom: 1rem;
+    width: 345px;
+
+    @media (min-width: 992px) {
+      width: 374px;
+    }
+
+    @media (min-width: 1260px) {
+      width: 370px;
+      margin-right: 3rem;
+    }
+
   }
 }
 
@@ -68,7 +104,6 @@
     justify-content: center;
     align-items: center;
     height: 3.5rem;
-    margin-bottom: 1rem;
     margin-right: 0.75rem;
     padding: 1rem;
     border-radius: 0.25rem;
@@ -85,6 +120,9 @@
     }
 
     h3 {
+      font-size: 1.125rem;
+      font-weight: 400;
+      letter-spacing: 0.05rem;
       color: #fff;
     }
   }
@@ -105,7 +143,6 @@
     justify-content: center;
     align-items: center;
     height: 3.5rem;
-    margin-bottom: 1rem;
     margin-right: 0.75rem;
     padding: 1rem;
     border-radius: 0.25rem;
@@ -122,6 +159,9 @@
     }
 
     h3 {
+      font-size: 1.125rem;
+      font-weight: 400;
+      letter-spacing: 0.05rem;
       color: #fff;
     }
   }
@@ -132,13 +172,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 0.25rem;
-  margin-bottom: 1.1rem;
+  margin: 0.45rem 0;
 
   @media (min-width: 768px) {
     order: 2;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
   }
 
   @media (min-width: 1536px) {
@@ -172,7 +209,7 @@
     background-color: #333645;
     margin-left: 1rem;
     padding: 8px 12px 8px 12px;
-    border-radius: 0.25rem;
+    border-radius: 0.2rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
 
@@ -211,24 +248,23 @@
   @media (min-width: 768px) {
     order: 1;
     height: 3.5rem;
-    width: 15rem;
-    margin-bottom: 1rem;
+    width: 14.75rem;
     background-color: #999aa2;
     border: 0;
     transition: background-color 0.3s ease;
-    border-radius: 0.25rem;
+    border-radius: 0.2rem;
 
     &:hover {
       background-color: #7e808a;
     }
   }
 
-  @media (min-width: 1024px) {
-    width: 16rem;
+  @media (min-width: 992px) {
+    width: 4rem;
   }
 
-  @media (min-width: 1280px) {
-    width: 100%;
+  @media (min-width: 1260px) {
+    width: 19rem;
   }
 
   #input-wrapper {
@@ -240,15 +276,15 @@
 
     }
 
-    @media (min-width: 1024px) {
+    @media (min-width: 992px) {
       display: none;
     }
 
-    @media (min-width: 1280px) {
+    @media (min-width: 1260px) {
       display: block;
     }
 
-    @media (min-width: 1280px) {
+    @media (min-width: 1260px) {
       width: 100%;
     }
 
@@ -260,14 +296,14 @@
       color: #989898;
 
       @media (min-width: 768px) {
-        
+        width: 100%;
         background-color: #fff;
         height: 100%;
-        padding: 0 0 0 1rem;
+        padding: 0 1rem 0 1rem;
         border-top: 1px solid #EEEEEE;
       }
 
-      @media (min-width: 1024px) {
+      @media (min-width: 992px) {
         width: 100%;
       }
     }
@@ -282,10 +318,10 @@
     border-top: 1px solid #DDDDDD;
 
     @media (min-width: 768px) {
-      flex: 1;
-      height: 3.5rem;
+      width: 4rem;
       border: none;
     }
+
 
     svg {
       width: 20px;
@@ -295,6 +331,8 @@
       margin-bottom: 0.25rem;
 
       @media (min-width: 768px) {
+        width: 23px;
+        height: 27px;
         margin: 0;
         fill: #fff;
       }
@@ -316,21 +354,23 @@
   display: none;
 
   @media (min-width: 992px) {
-    display: block;
+    display: flex;
+    justify-content: center;
+    background-color: #333645;
+    color: #fff;
   }
 
-  justify-content: center;
-  background-color: #333645;
-  color: #fff;
 
   a {
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 99px;
+    width: 167px;
     background-color: #333645;
-    padding: 1.25rem 1rem;
+    padding: 1.25rem 1.25rem;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    
 
     &:hover {
       background-color: #22242e;
@@ -352,9 +392,17 @@
 
   #bespoke-nav {
     background-color: #333645;
-
+    
     svg {
       fill: #67809f;
+    }
+
+    &:hover {
+      background-color: #67809f;
+    }
+  
+    &:hover svg {
+      fill: white;
     }
   }
 
@@ -364,6 +412,15 @@
     svg {
       fill: #4484d7;
     }
+
+    &:hover {
+      background-color: #4484d7;
+    }
+    
+    &:hover svg {
+      fill: white;
+    }
+
   }
 
   #digital-marketing-nav {
@@ -372,6 +429,15 @@
     svg {
       fill: #5ecd73;
     }
+
+    &:hover {
+      background-color: #5ecd73;
+    }
+
+    &:hover svg {
+      fill: white;
+    }
+
   }
 
   #telecoms-services-nav {
@@ -379,6 +445,14 @@
 
     svg {
       fill: #d64541;
+    }
+
+    &:hover {
+      background-color: #d64541;
+    }
+
+    &:hover svg {
+      fill: white;
     }
   }
 
@@ -388,6 +462,14 @@
     svg {
       fill: #926fb1;
     }
+
+    &:hover {
+      background-color: #926fb1;
+    }
+
+    &:hover svg {
+      fill: white;
+    }
   }
 
   #cyber-security-nav {
@@ -396,6 +478,14 @@
     svg {
       fill: #ed3b58;
     }
+
+    &:hover {
+      background-color: #ed3b58;
+    }
+
+    &:hover svg {
+      fill: white;
+    }
   }
 
   #developer-training-nav {
@@ -403,6 +493,14 @@
 
     svg {
       fill: #ce412c;
+    }
+
+    &:hover {
+      background-color: #ce412c;
+    }
+
+    &:hover svg {
+      fill: white;
     }
   }
 }
