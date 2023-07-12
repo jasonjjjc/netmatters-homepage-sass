@@ -41,11 +41,11 @@
 
   @media (min-width: 1260px) {
     flex-wrap: nowrap;
-    
-    > a {
+
+    >a {
       margin-right: 1.5rem;
     }
-    
+
   }
 }
 
@@ -60,7 +60,7 @@
   }
 
   @media (min-width: 992px) {
-    flex:none;
+    flex: none;
     padding: 0 0;
     margin-right: 4rem;
   }
@@ -361,7 +361,6 @@
     display: flex;
     justify-content: center;
     background-color: #333645;
-    color: #fff;
   }
 
 
@@ -387,6 +386,8 @@
     p {
       margin-bottom: -0.4rem;
       font-size: 0.625rem;
+      color: #fff;
+
 
       &.text-lg {
         font-size: 1.125rem;
@@ -400,7 +401,7 @@
 
   #bespoke-nav {
     background-color: #333645;
-    
+
     svg {
       fill: #67809f;
     }
@@ -408,7 +409,7 @@
     &:hover {
       background-color: #67809f;
     }
-  
+
     &:hover svg {
       fill: white;
     }
@@ -424,7 +425,7 @@
     &:hover {
       background-color: #4484d7;
     }
-    
+
     &:hover svg {
       fill: white;
     }

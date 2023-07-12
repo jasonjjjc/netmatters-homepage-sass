@@ -15,12 +15,12 @@
     flex-direction: column;
     align-items: center;
     flex: 1;
-    
-    h1 {
+
+    >h1 {
       font-size: 2.5rem;
       color: rgb(232, 230, 227);
       margin-bottom: 1.25rem;
-      font-weight: 600;
+      font-weight: 700;
       text-align: center;
       line-height: 3rem;
       letter-spacing: 0.2rem;
@@ -31,11 +31,11 @@
       }
     }
 
-    h2 {
+    >h2 {
       font-size: 1.25rem;
       color: rgb(232, 230, 227);
       text-align: center;
-      font-weight: 600;
+      font-weight: 700;
       margin-bottom: 0.375rem;
       line-height: 1.75rem;
       letter-spacing: 0.1rem;
@@ -48,11 +48,11 @@
       }
     }
 
-    a {
+    >a {
       background-color: #67809f;
       color: #e8e6e3;
       padding: 1rem;
-      font-size: 1.25rem; 
+      font-size: 1.25rem;
       border-radius: 3px;
       margin: 1.95rem 0;
       display: flex;
@@ -62,7 +62,7 @@
       font-weight: 400;
       border: 1px solid transparent;
 
-      > svg {
+      >svg {
         fill: white;
         margin-left: 0.5rem;
       }
@@ -81,11 +81,13 @@
         margin: 1.938rem 0 1.125rem 0;
         padding: 5px 20px;
         line-height: 50px;
-        height:auto;
+        height: auto;
 
       }
 
-    };
+    }
+
+    ;
 
 
 
@@ -114,7 +116,7 @@
   }
 
   &-carousel {
-    position:absolute;
+    position: absolute;
     bottom: 0;
     width: 100%;
     display: flex;
@@ -122,7 +124,7 @@
     padding: 2rem 0;
     margin: 0 auto;
 
-    > li {
+    >li {
       margin-right: 1rem;
       color: white;
     }
@@ -131,10 +133,10 @@
 
 
   @media (min-width: 992px) {
-    
-      background-blend-mode: normal;
-    
-  
+
+    background-blend-mode: normal;
+
+
     hero::before {
       content: "";
       position: absolute;
@@ -144,17 +146,11 @@
       height: 100%;
       background-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
     }
-  
+
     * {
       z-index: 1;
     }
-  
+
   }
 
 }
-
-
-
-
-
-

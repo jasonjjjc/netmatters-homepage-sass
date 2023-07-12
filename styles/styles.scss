@@ -1,6 +1,8 @@
+@import 'colours';
 @import 'footer';
 @import 'header';
 @import 'hero';
+@import 'services';
 
 *,
 ::before,
@@ -517,8 +519,9 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-#container {
-  width: 100%;
+:root {
+  color: #333645;
+  letter-spacing: 0.1rem;
 }
 
 // @media (min-width: 481px) {

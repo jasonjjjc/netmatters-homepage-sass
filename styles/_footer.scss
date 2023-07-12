@@ -3,12 +3,13 @@
 // _footer.scss
 #footer {
   letter-spacing: .4px;
+  color: white;
+  
 
   // Nav links container
   &-nav {
     padding-top: 1.7rem;
     padding-left: 1rem;
-    color: white;
     background-color: #323544;
 
     @media (min-width: 768px) {
@@ -69,7 +70,6 @@
 
           >a {
             background-color: #212330;
-            color: white;
             display: flex;
             align-items: center;
             justify-content: center;
