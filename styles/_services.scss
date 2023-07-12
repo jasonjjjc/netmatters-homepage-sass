@@ -469,11 +469,12 @@
       width: 100%;
 
       >div {
-        height: 12rem;
-        width: 12rem; 
         margin-right: 3rem;
         flex-shrink: 0;
         
+        >img {
+          height: 4rem;
+        }
 
         :last-child {
           display: none;

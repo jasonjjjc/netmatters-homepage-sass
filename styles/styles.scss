@@ -1,8 +1,9 @@
-@import 'colours';
 @import 'footer';
 @import 'header';
 @import 'hero';
 @import 'services';
+@import 'company';
+
 
 *,
 ::before,
@@ -521,7 +522,7 @@ video {
 
 :root {
   color: #333645;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.4px;
 }
 
 // @media (min-width: 481px) {
