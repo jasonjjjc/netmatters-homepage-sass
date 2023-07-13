@@ -25,7 +25,14 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-around;
+
+      // gap between upper and lower sections
       gap: 2rem;
+
+      // add a gap between every card in upper and lower sections
+      >div {
+        gap: 2rem;
+      }
 
       @media (min-width: 768px) {
         order: 2;
@@ -33,6 +40,8 @@
 
       &-upper,
       &-lower {
+        display: flex;
+        flex-wrap: wrap;
 
         >a>div {
           display: flex;
@@ -40,7 +49,6 @@
           justify-content: center;
           align-items: center;
           width: 100%;
-          height: 100%;
           background-color: white;
           border-radius: 1rem;
           border: 1px solid #D1D5DB;
@@ -131,18 +139,6 @@
 
 
       &-upper {
-
-        @media (min-width: 768px) {
-          display: flex;
-          flex-direction: column;
-          gap: 2rem;
-        }
-
-        @media (min-width: 992px) {
-          display: grid;
-          grid-template-columns: repeat(3, minmax(0, 1fr));
-          gap: 2rem;
-        }
 
         a #bespoke-software {
 
@@ -250,14 +246,23 @@
 
         }
 
+        @media (min-width: 768px) {
+          display: flex;
+          flex-direction: column;
+          gap: 2rem;
+        }
+
+        @media (min-width: 992px) {
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 2rem;
+        }
+
+
       }
 
 
       &-lower {
-
-        display: flex;
-        flex-wrap: wrap;
-
 
         a #telecoms-services {
 
@@ -420,7 +425,13 @@
       justify-content: center;
       align-items: center;
       gap: 0.5rem;
+      margin-top: 2rem;
       padding-bottom: 2px;
+
+      // bring the border up to the bottom of the text
+      >* {
+        margin-bottom: -4px;
+      }
 
       >h1 {
         font-size: 1.625rem;
@@ -431,10 +442,10 @@
       }
 
       >svg {
-        width: 2rem;
-        height: 2rem;
-
-      }
+        stroke: #333645;
+        width: 28px;
+        height: 28px;
+    }
 
       &:hover {
         padding-bottom: 0;
@@ -443,6 +454,7 @@
 
       @media (min-width: 768px) {
         order: 1;
+        margin-top: 0;
       }
     }
 

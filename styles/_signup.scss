@@ -1,0 +1,126 @@
+#signup-wrapper {
+    background-color: #DDDDDD;
+
+    #signup {
+
+        display: flex;
+        flex-direction: column;
+        padding: 3rem 1rem;
+
+        &-title {
+            font-size: 2rem;
+            font-weight: 400;
+            line-height: 1.1;
+            margin-bottom: 0.95rem;
+        }
+
+        &-form {
+            display: flex;
+            flex-direction: column;
+
+            &-inputs {
+                display: flex;
+                flex-direction: column;
+
+
+                >* {
+                    margin-bottom: 1rem;
+
+                    label {
+
+                        font-size: 1rem;
+                        line-height: 2rem;
+                        font-weight: 600;
+
+                        input {
+                            margin-top: 5px;
+                            width: 100%;
+                            height: 47px;
+                            padding: 5px 15px 5px 15px;
+                            border: 1px solid #ccc;
+                        }
+                    }
+
+                }
+
+
+                @media (min-width: 992px) {
+                    display: grid;
+                    grid-template-columns: repeat(2, minmax(0, 1fr));
+                    grid-gap: 2rem;
+                }
+
+            }
+
+            &-marketing {
+                display: flex;
+                margin-bottom: 2rem;
+
+                &-input {
+                    width: 2rem;
+                    height: 2rem;
+                    border: 3px solid #374151;
+                    border-radius: 0.125rem;
+                    margin-right: 1.25rem;
+                    flex-shrink: 0;
+
+                    &-checkbox {
+                        width: 100%;
+                        height: 100%;
+                        cursor: pointer;
+
+                    }
+
+                }
+
+                &-label {
+                    font-weight: 600;
+                    line-height: 2;
+                    color: #374151;
+                    cursor: pointer;
+                }
+
+            }
+
+            &-button {
+
+                width: 7.5rem;
+                padding: 0.75rem 0;
+                font-size: 1rem;
+                line-height: 1.5rem;
+                background-color: #333645;
+                color: #FFFFFF;
+                border-radius: 0.125rem;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #22242E;
+                }
+
+            }
+
+        }
+
+
+
+        @media (min-width: 768px) {
+            padding: 3.125rem 1.5rem 3.125rem 1.5rem;
+        }
+
+        @media (min-width: 992px) {
+            padding: 3.125rem 2.5rem 3.125rem 2.5rem;
+        }
+
+        @media (min-width: 1260px) {
+            width: 1200px;
+            margin: 0 auto;
+            padding: 50px 15px 50px 15px;
+        }
+
+
+
+
+
+    }
+
+}
