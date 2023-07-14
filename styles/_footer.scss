@@ -60,10 +60,6 @@
                 height: 26px;
               }
 
-              :hover {
-                background-color: #3B5998;
-              }
-
               @media (min-width: 768px) {
                 display: block;
                 width: fit-content;
@@ -71,7 +67,29 @@
               }
             }
 
+            #facebook {
+              &:hover {
+                background-color: #3B5998;
+              }
+            }
 
+            #linkedin {
+              &:hover {
+                background-color: #2877B5;
+              }
+            }
+
+            #twitter {
+              &:hover {
+                background-color: #41ACED;
+              }
+            }
+
+            #instagram {
+              &:hover {
+                background-color: #DA3A75;
+              }
+            }
 
 
           }
