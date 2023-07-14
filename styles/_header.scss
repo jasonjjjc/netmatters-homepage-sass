@@ -353,167 +353,371 @@
 
 
 
-// Header bottom section
+
+// Nav bar
+
 #header-bottom {
   display: none;
+  background-color: #333645;
 
   @media (min-width: 992px) {
+
     display: flex;
     justify-content: center;
-    background-color: #333645;
-  }
+    position: relative;
 
 
-  a {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 99px;
-    width: 134px;
-    background-color: #333645;
-    cursor: pointer;
-    padding: 1.2rem 0 0.8rem 0;
-    positon: relative;
+    // each nav button
+    >a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 99px;
+      width: 134px;
+      background-color: #333645;
+      cursor: pointer;
+      padding: 1.2rem 0 0.8rem 0;
+      position: relative;
 
-    &:hover {
-      background-color: #22242e;
+      // each nav button has a triangle
+      &::before {
+        content: "";
+        display: none;
+        position: absolute;
+        bottom: -35px; // Adjust this value to position the triangle
+        left: 50%;
+        transform: translateX(-50%);
+        border-left: 68px solid transparent; // Adjust this value to change the size of the triangle
+        border-right: 68px solid transparent; // Adjust this value to change the size of the triangle
+        border-top: 35px solid black;
+        z-index: 99;
 
-      
+      }
 
-    }
+      @media (min-width: 1260px) {
+        &::before {
 
-    svg {
-      fill: currentColor;
-      margin-bottom: 0.4rem;
-    }
+          content: "";
+          display: none;
+          position: absolute;
+          bottom: -35px; // Adjust this value to position the triangle
+          left: 50%;
+          transform: translateX(-50%);
+          border-left: 83px solid transparent; // Adjust this value to change the size of the triangle
+          border-right: 83px solid transparent; // Adjust this value to change the size of the triangle
+          border-top: 35px solid black;
+          z-index: 99;
 
-    p {
-      margin-bottom: -0.4rem;
-      font-size: 0.625rem;
-      color: #fff;
+        }
+      }
 
+      &:hover::before {
+        display: block;
+      }
 
-      &.text-lg {
+      &:hover+.dropdown {
+        display: flex;
+      }
+
+      // has an icon
+      >svg {
+        margin-bottom: 0.4rem;
+      }
+
+      // top line of title
+      >p:nth-of-type(1) {
+        font-size: 0.625rem;
+        margin-bottom: -0.4rem;
+        color: #fff;
+      }
+
+      // bottom line of title
+      >p:nth-of-type(2) {
         font-size: 1.125rem;
+        color: #fff;
+      }
+
+
+      @media (min-width: 1260px) {
+        width: 167px;
       }
     }
 
-    @media (min-width: 1260px) {
-      width: 167px;
+
+    // and a dropdown container that puts the menu in the centre
+    .dropdown {
+      display: none;
+      justify-content: center;
+      position: absolute;
+      width: 100%;
+      top: 100%;
+      left: 0;
+      right: 0;
+      z-index: 20;
+      color: white;
+      padding-top: 50px;
+      padding-bottom: 50px;
+
+
+      // the menu stacks a title above a table
+      &-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 27px;
+        width: 970px;
+
+        @media (min-width: 1260px) {
+          width: 1200px;
+        }
+
+        // the title is just a title
+        &-title {
+          font-size: 2rem;
+          margin-top: -8px;
+        }
+
+        // each table creates vertical space between rows 
+        &-table {
+          display: flex;
+          flex-direction: column;
+          gap: 30px;
+          margin-left: -10px;
+          color: #fff;
+          font-size: 1.2rem;
+          line-height: 1.313;
+
+          // each row puts boxes to the side of each other
+          &-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 10px;
+
+            // each box puts the icon and text side by side
+            &-box {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+
+              // each row has an icon
+              svg {
+                height: 19px;
+                fill: #fff;
+              }
+
+
+
+            }
+
+          }
+
+
+        }
+
+      }
+
+
     }
+
+
+
+    // custom colours for all the buttons
+
+    #bespoke-nav-button {
+
+      svg {
+        fill: #67809f;
+      }
+
+      &:hover {
+        background-color: #67809f;
+
+        svg {
+          fill: white;
+        }
+      // triangle
+
+        &::before {
+          border-top: 35px solid #67809f;
+        }
+      }
+
+    }
+
+    #it-support-nav-button {
+
+      svg {
+        fill: #4484d7;
+      }
+
+      &:hover {
+        background-color: #4484d7;
+
+        svg {
+          fill: white;
+        }
+      }
+      // triangle
+
+      &::before {
+        border-top: 35px solid #4484d7;
+      }
+
+
+    }
+
+    #digital-marketing-nav-button {
+
+      svg {
+        fill: #5ecd73;
+      }
+
+      &:hover {
+        background-color: #5ecd73;
+
+        svg {
+          fill: white;
+        }
+      }
+      // triangle
+
+      &::before {
+        border-top: 35px solid #5ecd73;
+      }
+
+    }
+
+    #telecoms-services-nav-button {
+
+      svg {
+        fill: #d64541;
+      }
+
+      &:hover {
+        background-color: #d64541;
+
+        svg {
+          fill: white;
+        }
+      }
+      // triangle
+
+      &::before {
+        border-top: 35px solid #d64541;
+      }
+
+
+    }
+
+    #web-design-nav-button {
+
+      svg {
+        fill: #926fb1;
+      }
+
+      &:hover {
+        background-color: #926fb1;
+
+        svg {
+          fill: white;
+        }
+      }
+      // triangle
+
+      &::before {
+        border-top: 35px solid #926fb1;
+      }
+
+    }
+
+    #cyber-security-nav-button {
+
+      svg {
+        fill: #ed3b58;
+      }
+
+      &:hover {
+        background-color: #ed3b58;
+
+        svg {
+          fill: white;
+        }
+      }
+      // triangle
+
+      &::before {
+        border-top: 35px solid #ed3b58;
+      }
+
+    }
+
+    #developer-course-nav-button {
+
+      svg {
+        fill: #ce412c;
+      }
+
+      &:hover {
+        background-color: #ce412c;
+
+        svg {
+          fill: white;
+        }
+      }
+
+      // triangle
+
+      &::before {
+        border-top: 35px solid #ce412c;
+      }
+
+    }
+
+
+    // custom colours for all the dropdowns
+
+    #bespoke-dropdown {
+
+      background-color: #526781;
+
+    }
+
+    #it-support-dropdown {
+
+      background-color: #286ABD;
+
+    }
+
+    #digital-marketing-dropdown {
+
+      background-color: #25A25A;
+
+    }
+
+    #telecoms-services-dropdown {
+
+      background-color: #BC2C28;
+
+    }
+
+    #web-design-dropdown {
+
+      background-color: #79539A;
+
+    }
+
+    #cyber-security-dropdown {
+
+      background-color: #DE093F;
+
+    }
+
+    #developer-course-dropdown {
+
+      background-color: #A3331D;
+
+    }
+
+
   }
 
-  #bespoke-nav {
-    background-color: #333645;
-
-    svg {
-      fill: #67809f;
-    }
-
-    &:hover {
-      background-color: #67809f;
-    }
-
-    &:hover svg {
-      fill: white;
-    }
-  }
-
-  #it-support-nav {
-    background-color: #333645;
-
-    svg {
-      fill: #4484d7;
-    }
-
-    &:hover {
-      background-color: #4484d7;
-    }
-
-    &:hover svg {
-      fill: white;
-    }
-
-  }
-
-  #digital-marketing-nav {
-    background-color: #333645;
-
-    svg {
-      fill: #5ecd73;
-    }
-
-    &:hover {
-      background-color: #5ecd73;
-    }
-
-    &:hover svg {
-      fill: white;
-    }
-
-  }
-
-  #telecoms-services-nav {
-    background-color: #333645;
-
-    svg {
-      fill: #d64541;
-    }
-
-    &:hover {
-      background-color: #d64541;
-    }
-
-    &:hover svg {
-      fill: white;
-    }
-  }
-
-  #web-design-nav {
-    background-color: #333645;
-
-    svg {
-      fill: #926fb1;
-    }
-
-    &:hover {
-      background-color: #926fb1;
-    }
-
-    &:hover svg {
-      fill: white;
-    }
-  }
-
-  #cyber-security-nav {
-    background-color: #333645;
-
-    svg {
-      fill: #ed3b58;
-    }
-
-    &:hover {
-      background-color: #ed3b58;
-    }
-
-    &:hover svg {
-      fill: white;
-    }
-  }
-
-  #developer-course-nav {
-    background-color: #333645;
-
-    svg {
-      fill: #ce412c;
-    }
-
-    &:hover {
-      background-color: #ce412c;
-    }
-
-    &:hover svg {
-      fill: white;
-    }
-  }
 }
