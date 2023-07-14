@@ -9,14 +9,14 @@
     background-color: $primary;
 
     #nav {
-      padding-top: 1.7rem;
-      padding-left: 1rem;
+      padding-top: 27px;
+      padding-left: 15px;
 
       &-social {
 
         &-icon {
           // Logo image
-          width: 15rem;
+          width: 250px;
           margin-bottom: 1.5rem;
 
           @media (min-width: 768px) {
@@ -30,7 +30,8 @@
           // Social media links
           p {
             font-size: 1rem;
-            margin-bottom: 1.5rem;
+            line-height: 1.1;
+            margin-bottom: 26px;
           }
 
           div {
@@ -42,9 +43,8 @@
 
             @media (min-width: 768px) {
               margin-bottom: 2.5rem;
-              grid-template-columns: repeat(4, minmax(0, 1fr));
-              grid-template-rows: repeat(1, minmax(0, 1fr));
-              gap: 0.625rem;
+              display: flex;
+              gap: 10px;
             }
 
             >a {
@@ -52,14 +52,12 @@
               display: flex;
               align-items: center;
               justify-content: center;
-              height: 3.5rem;
-              width: 6.25rem;
-              font-size: 1.25rem;
+              height: 56px;
+              width: 101.5px;
 
               >svg {
-                width: 1.5rem;
-                height: 1.5rem;
                 fill: white;
+                height: 26px;
               }
 
               :hover {
@@ -67,8 +65,9 @@
               }
 
               @media (min-width: 768px) {
-                height: 56px;
-                width: 68px;
+                display: block;
+                width: fit-content;
+                padding: 16px 22px 16px 22px;
               }
             }
 
@@ -92,21 +91,20 @@
 
         div {
 
+          margin-bottom: -2px;
+
           h1 {
             font-size: 1rem;
             margin-bottom: 26px;
+            line-height: 1.1;
           }
 
           ul {
             margin-bottom: 2rem;
 
             li {
-              margin-bottom: -0.2rem;
-
-              a {
-                font-size: 0.8rem;
-                color: white;
-              }
+              font-size: 0.8125rem;
+              line-height: 1.375rem;
 
               :hover {
                 text-decoration: underline;
@@ -118,7 +116,7 @@
 
         @media (min-width: 768px) {
           grid-template-columns: repeat(2, minmax(0, 1fr));
-          padding-bottom: 0;
+          gap: 0 30px;
         }
 
         @media (min-width: 992px) {
@@ -189,7 +187,9 @@
       @media (min-width: 768px) {
         display: flex;
         flex-direction: row;
-        padding: 15px 24px 10px 24px;
+        gap: 0 1px;
+        padding: 15px 24px 13px 24px;
+        line-height: 1.42857143;
 
         :first-child {
           margin-right: 3px;
