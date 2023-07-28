@@ -231,49 +231,12 @@
         &-list {
             display: flex;
             gap: 100px;
-            // force the flex box to only show the first few and let the others be hidden
-            overflow: hidden;
 
             .latest-clients-list-item {
                 flex-shrink: 0;
-                display: flex;
-                align-items: center;
                 position: relative;
 
-
-                &-description {
-                    display: none;
-                    position: absolute;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    padding: 1rem;
-
-                    background-color: black;
-                    color: #fff;
-
-
-                    &-title {
-                        font-size: 1.25rem;
-                        font-weight: 600;
-                        margin-bottom: 0.5rem;
-                    }
-
-                    &-summary {
-                        font-size: 0.875rem;
-                        line-height: 1.625;
-                    }
-
-                    &-link {
-                        padding: 0.75rem 1.25rem;
-                        border-radius: 0.2rem;
-                        margin-top: 1.5rem;
-                        background-color: #67809F;
-                    }
-
-                }
-
-                >img {
+                &-image {
                     max-width: 200px;
                     max-height: 70px;
                     -webkit-filter: grayscale(1);
@@ -285,11 +248,87 @@
 
                 }
 
-                &:hover {
-                    .latest-clients-list-item-description {
-                        display: flex;
+                &-description {
+                    display: none;
+                    position: absolute;
+                    bottom: 125px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    background-color: #333645;
+                    color: #fff;
+                    padding: 20px;
+                    font-size: .875rem;
+                    max-width: 280px;
+                    line-height: 1.42857143;
+                    flex-direction: column;
+                    width: 280px;
+
+                    >h3 {
+                        font-size: 1.125rem;
+                        color: #fff;
+                        padding-bottom: 17px;
+                        text-align: center;
                     }
+
+                    >p {
+                        font-size: .8125rem;
+                        line-height: 1.375rem;
+                        margin: 0 0 10px;
+                        text-align: center;
+                    }
+
+                    >a {
+                        border-radius: 3px;
+                        border: 1px solid transparent;
+                        margin-top: 11px;
+                        padding: 5px 15px;
+                        font-size: 16px;
+                        line-height: 35px;
+                        text-transform: uppercase;
+                        white-space: normal;
+                        font-weight: 400;
+                        text-align: center;
+                    }
+
+                    ::after {
+                        content: "";
+                        position: absolute;
+                        bottom: -40px;
+                        left: 50%;
+                        width: 0;
+                        height: 0;
+                        transform: translateX(-50%);
+                        border-left: 40px solid transparent;
+                        border-right: 40px solid transparent;
+                        border-top: 40px solid #333645;
+                        display: block;
+                    }
+
+                    .purple {
+                        background-color: #926fb1;
+                    }
+
+                    .grey {
+                        background-color: #67809f;
+                    }
+
+                    .blue {
+                        background-color: #4183d7;
+                    }
+
+                    .green {
+                        background-color: #2ecc71;
+                    }
+
+
+
                 }
+
+
+                &:hover .latest-clients-list-item-description {
+                    display: flex;
+                }
+
 
 
             }
