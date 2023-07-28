@@ -45,7 +45,7 @@
       gap: 0.5rem;
     }
 
-    
+
   }
 
   // Logo
@@ -263,10 +263,6 @@
       border-radius: 0.2rem;
       margin-top: 7px;
       margin-bottom: 7px;
-
-      &:hover {
-        background-color: #7e808a;
-      }
     }
 
     @media (min-width: 992px) {
@@ -283,7 +279,7 @@
 
       @media (min-width: 768px) {
         flex: 1;
-        border: 1px solid #cccccc;
+        // border: 1px solid #cccccc;
         height: 3.5rem;
 
       }
@@ -305,14 +301,26 @@
         padding: 0.625rem 1rem;
         font-size: 0.875rem;
         background-color: #e5e5e5;
-        color: #989898;
+        color: #555;
+        
+
+        &:focus {
+          background-color: #fff;
+          background-image: none;
+          border-radius: 0;
+          border: 1px solid #5bc0de;
+          outline: 0;
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(91, 192, 222, .6);
+          transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+        }
 
         @media (min-width: 768px) {
           width: 100%;
           background-color: #fff;
           height: 100%;
           padding: 0 1rem 0 1rem;
-          border-top: 1px solid #EEEEEE;
+          border: 1px solid #ccc;
+          box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
         }
 
         @media (min-width: 992px) {
@@ -329,7 +337,7 @@
       padding: 0 8px 4px 8px;
       cursor: pointer;
       border-top: 1px solid #DDDDDD;
-
+      border-radius: 0 0.25rem 0.25rem 0;
 
 
       svg {
@@ -343,6 +351,10 @@
           margin: 0;
           fill: #fff;
         }
+      }
+
+      &:hover {
+        background-color: #7e808a;
       }
 
       @media (min-width: 768px) {
