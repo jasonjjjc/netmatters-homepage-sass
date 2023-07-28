@@ -61,31 +61,45 @@
                 display: flex;
                 margin-bottom: 2rem;
 
-                &-input {
-                    width: 2rem;
-                    height: 2rem;
-                    border: 3px solid #374151;
-                    border-radius: 0.125rem;
-                    margin-right: 1.25rem;
+                input[type="checkbox"] {
+                    /* Hide the default checkbox appearance */
+                    appearance: none;
+
+                    /* Create a white box with a border when unchecked */
+                    border: 3px solid #333645;
+                    border-radius: 3px;
+                    width: 32px;
+                    height: 32px;
+                    background-color: white;
                     flex-shrink: 0;
+                    margin-right: 20px;
 
-                    &-checkbox {
-                        width: 100%;
-                        height: 100%;
-                        cursor: pointer;
+                    /* Add a custom checkmark when checked */
+                    &:checked {
+                        background-color: #333645;
+                        position: relative;
 
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-40%, -60%) rotate(45deg);
+                            width: 7px;
+                            height: 15px;
+                            border: 2px solid white;
+                            border-width: 0 2px 2px 0;
+                        }
                     }
-
                 }
 
                 &-label {
                     font-weight: 600;
-                    line-height: 2;
-                    color: #374151;
-                    cursor: pointer;
+                    line-height: 32px;
                 }
-
             }
+
+
 
             &-button {
 
