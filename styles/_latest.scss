@@ -3,6 +3,10 @@
     display: flex;
     flex-direction: column;
     padding-top: 2.5rem;
+    //make space for the clients section
+    padding-bottom: 9rem;
+    position: relative;
+
 
     &-news {
 
@@ -246,10 +250,16 @@
 
 
     &-clients {
-
-        margin: 0.5rem 0 4rem 0;
+        position: absolute;
+        bottom: 40px;
         width: 100vw;
-
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        overflow: hidden;
+        // push to the back so that I can still inspect elements in the rest of the latest section
+        z-index: -1;
 
         &-list {
             display: flex;
