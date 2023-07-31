@@ -258,8 +258,8 @@
         flex-direction: column;
         justify-content: end;
         overflow: hidden;
-        // push to the back so that I can still inspect elements in the rest of the latest section
-        z-index: -1;
+        // move to the back when need to debug the rest of the latest section
+        // z-index: -1;
 
         &-list {
             display: flex;
