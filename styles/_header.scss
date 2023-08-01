@@ -2,6 +2,24 @@
   width: 100%;
   position: absolute;
   top: 0;
+  z-index: 9999;
+  background-color: #fff;
+
+  &.can-animate {
+    transition: transform 0.3s ease, visibility 0s 0.3s linear;
+  }
+
+  &.is-fixed {
+
+    position: fixed;
+    transform: translate3d(0, -100%, 0);
+
+  }
+
+  &.scroll-up {
+    transform: translate3d(0, 0, 0);
+  }
+
 }
 
 // Header top section
