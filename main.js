@@ -23,7 +23,7 @@ window.onload = function () {
     const validateHeader = () => {
         const windowY = window.scrollY;
         const windowH = window.innerHeight;
-        if (windowY > windowH /4) {
+        if (windowY > windowH /3.5) {
             // We passed the first section, set a toggable class
             header.classList.add("is-fixed");
             // Determine is we ready to animate
