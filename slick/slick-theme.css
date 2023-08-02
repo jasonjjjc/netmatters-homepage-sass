@@ -192,13 +192,22 @@
     text-align: center;
 
     opacity: .25;
-    color: rgba(255, 255, 255, 0.8);
+    color:white;
+    opacity: 0.5;
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 .slick-dots li.slick-active button:before
 {
-    opacity: .8;
+    content: '•';
     color: white;
+    top: -3px;
+    width: 24px;
+    height: 24px;
+    padding-top: 0.5px;
+    border-radius: 50%;
+    border: 2px solid white;
+    background-color: transparent;
+    opacity: 1;
 }
