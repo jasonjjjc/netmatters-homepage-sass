@@ -23,7 +23,7 @@ window.onload = function () {
     const validateHeader = () => {
         const windowY = window.scrollY;
         const windowH = window.innerHeight;
-        if (windowY > windowH /3.5) {
+        if (windowY > windowH / 3.5) {
             // We passed the first section, set a toggable class
             header.classList.add("is-fixed");
             // Determine is we ready to animate
@@ -52,17 +52,16 @@ window.onload = function () {
 
     // Banner Slider 
 
-    $(document).ready(function () {
-        $('.slick-container').slick({
-            autoplay: true,
-            dots: true,
-            arrows: false,
-            infinite: true,
-            speed: 200,
-            cssEase: 'ease-in-out',
-            interval: 3000,
 
-        });
+    $('.slick-container').slick({
+        autoplay: true,
+        dots: true,
+        arrows: false,
+        infinite: true,
+        speed: 200,
+        cssEase: 'ease-in-out',
+        interval: 3000,
+        
     });
 
 

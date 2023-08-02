@@ -18,11 +18,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,600&display=swap"
         rel="stylesheet">
 
-    <!-- Slick carousel styles -->
+    <!-- Slick carousel -->
 
     <link rel="stylesheet" type="text/css" href="slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
-
+    <script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
 
     <!--My own styles and javascript below here-->
     <link rel="stylesheet" href="./css/styles.css">
@@ -1614,9 +1615,41 @@
     </div>
 
     <!--Slick jQuery dependencies -->
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script type="text/javascript" src="slick/slick.min.js"></script>
-    <script type="text/javascript" src="js/jquery.ihavecookies.min.js"></script>
+    
+    <script type="text/javascript" src="js/jquery.ihavecookies.js"></script>
+    <script type="text/javascript">
+        var options = {
+            title: '&#x1F36A; Accept Cookies & Privacy Policy?',
+            message: 'There are no cookies used on this site, but if there were this message could be customised to provide more details. Click the <strong>accept</strong> button below to see the optional callback in action...',
+            delay: 600,
+            expires: 1,
+            link: '#privacy',
+            onAccept: function(){
+                var myPreferences = $.fn.ihavecookies.cookie();
+                console.log('Yay! The following preferences were saved...');
+                console.log(myPreferences);
+            },
+            uncheckBoxes: true,
+            acceptBtnLabel: 'Accept Cookies',
+            moreInfoLabel: 'More information',
+            cookieTypesTitle: 'Select which cookies you want to accept',
+            fixedCookieTypeLabel: 'Essential',
+            fixedCookieTypeDesc: 'These are essential for the website to work correctly.'
+        }
+    
+        $(document).ready(function() {
+            $('body').ihavecookies(options);
+    
+            if ($.fn.ihavecookies.preference('marketing') === true) {
+                console.log('This should run because marketing is accepted.');
+            }
+    
+            $('#ihavecookiesBtn').on('click', function(){
+                $('body').ihavecookies(options, 'reinit');
+            });
+        });
+    
+        </script>
 
 </body>
 
