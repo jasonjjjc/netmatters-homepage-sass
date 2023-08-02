@@ -1623,12 +1623,14 @@
     <script>
         $(document).ready(function () {
             $('.slick-container').slick({
+                autoplay: true,
                 dots: true,
                 arrows: false,
                 infinite: true,
-                speed: 3000,
-                fade: true,
-                cssEase: 'linear'
+                speed: 200,
+                cssEase: 'ease-in-out',
+                interval: 3000,
+
             });
         });
     </script>
