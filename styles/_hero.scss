@@ -1,4 +1,4 @@
-#hero {
+.hero-bespoke {
   width: 100%;
   height: 550px;
   position: relative;
@@ -112,52 +112,69 @@
 
   }
 
-  &-carousel {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 0 2rem 0;
-    margin: 0 auto;
+  // &-carousel {
+  //   position: absolute;
+  //   bottom: 0;
+  //   width: 100%;
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  //   padding: 0 0 2rem 0;
+  //   margin: 0 auto;
 
 
 
-    >li {
-      margin: 0 9px 18px 9px;
+  //   >li {
+  //     margin: 0 9px 18px 9px;
 
-      // show normal icon (not active)
+  //     // show normal icon (not active)
 
-      >svg:first-of-type {
-        height: 13px;
-        width: 13px;
-        fill: hsla(0, 0%, 100%, .5);
-      }
+  //     >svg:first-of-type {
+  //       height: 13px;
+  //       width: 13px;
+  //       fill: hsla(0, 0%, 100%, .5);
+  //     }
 
-      // hide active icon
+  //     // hide active icon
 
-      >svg:nth-of-type(2) {
-        display: none;
-      }
+  //     >svg:nth-of-type(2) {
+  //       display: none;
+  //     }
+  //   }
+
+  //   // whichever slide is displayed, replace the normal icon with the 'active' icon
+
+  //   >li:nth-child(#{$current-slide}) {
+  //     >svg:first-of-type {
+  //       display: none;
+  //     }
+
+  //     >svg:nth-of-type(2) {
+  //       display: block;
+  //       height: 23px;
+  //       width: 23px;
+  //       fill: white;
+  //     }
+  //   }
+
+  // }
+
+  @media (min-width: 992px) {
+    background-blend-mode: normal;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 70%;
+      height: 100%;
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
     }
 
-    // whichever slide is displayed, replace the normal icon with the 'active' icon
-
-    >li:nth-child(#{$current-slide}) {
-      >svg:first-of-type {
-        display: none;
-      }
-
-      >svg:nth-of-type(2) {
-        display: block;
-        height: 23px;
-        width: 23px;
-        fill: white;
-      }
+    * {
+      z-index: 2;
     }
-
   }
-
 
 }
