@@ -58,10 +58,10 @@ window.onload = function () {
         dots: true,
         arrows: false,
         infinite: true,
-        speed: 200,
+        autoplaySpeed: 4000,
         cssEase: 'ease-in-out',
-        interval: 3000,
-        
+        speed: 300,
+
     });
 
 
@@ -71,7 +71,7 @@ window.onload = function () {
 
     // Cookie Pop-up
 
-    $('body').ihavecookies();
+ 
 
 
 
