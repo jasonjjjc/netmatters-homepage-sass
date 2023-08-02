@@ -50,7 +50,20 @@ window.onload = function () {
 
     ////////////////////////////////////////////////////////////////////////////
 
+    // Banner Slider 
 
+    $(document).ready(function () {
+        $('.slick-container').slick({
+            autoplay: true,
+            dots: true,
+            arrows: false,
+            infinite: true,
+            speed: 200,
+            cssEase: 'ease-in-out',
+            interval: 3000,
+
+        });
+    });
 
 
     ////////////////////////////////////////////////////////////////////////////
