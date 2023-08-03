@@ -72,21 +72,21 @@ $(document).ready(function() {
 
     // Cookie Pop-up
 
-    // const overlay = document.getElementById("cookie-overlay");
-    // const acceptButton = document.getElementById("accept-cookies");
+    const overlay = document.getElementById("cookie-overlay");
+    const acceptButton = document.getElementById("accept-cookies");
 
-    // // Check if user has already accepted cookies
-    // if (!localStorage.getItem("cookiesAccepted")) {
-    //     document.body.classList.add("cookie-consent-active");
-    // } else {
-    //     overlay.style.display = "none";
-    // }
+    // Check if user has already accepted cookies
+    if (!localStorage.getItem("cookiesAccepted")) {
+        document.body.classList.add("cookie-consent-active");
+    } else {
+        overlay.style.display = "none";
+    }
 
-    // acceptButton.addEventListener("click", function() {
-    //     localStorage.setItem("cookiesAccepted", "true");  // Store user's preference
-    //     document.body.classList.remove("cookie-consent-active");
-    //     overlay.style.display = "none";
-    // });
+    acceptButton.addEventListener("click", function() {
+        localStorage.setItem("cookiesAccepted", "true");  // Store user's preference
+        document.body.classList.remove("cookie-consent-active");
+        overlay.style.display = "none";
+    });
 
 
 
