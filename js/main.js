@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
 
 
     ////////////////////////////////////////////////////////////////////////////
@@ -72,21 +72,47 @@ $(document).ready(function() {
 
     // Cookie Pop-up
 
-    const overlay = document.getElementById("cookie-overlay");
-    const acceptButton = document.getElementById("accept-cookies");
+    const cookieOverlay = document.getElementById("cookieOverlay");
+    const acceptCookies = document.getElementById("acceptCookies");
 
     // Check if user has already accepted cookies
-    if (!localStorage.getItem("cookiesAccepted")) {
-        document.body.classList.add("cookie-consent-active");
-    } else {
-        overlay.style.display = "none";
+    if (!getCookie("cookieConsent")) {
+        cookieOverlay.style.display = "flex";
     }
 
-    acceptButton.addEventListener("click", function() {
-        localStorage.setItem("cookiesAccepted", "true");  // Store user's preference
-        document.body.classList.remove("cookie-consent-active");
-        overlay.style.display = "none";
+    acceptCookies.addEventListener("click", function () {
+        setCookie("cookieConsent", "accepted", 30);
+        cookieOverlay.style.display = "none";
     });
+
+    // Other event listeners for other buttons can be added similarly
+
+    function setCookie(name, value, days) {
+        let date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        const expires = "expires=" + date.toUTCString();
+        document.cookie = name + "=" + value + ";" + expires + ";path=/";
+    }
+
+    function getCookie(name) {
+        let nameEQ = name + "=";
+        let ca = document.cookie.split(';');
+        for (let i = 0; i < ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+            if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+    }
+
+
+
+    const cookiePreferenceBtn = document.getElementById("cookiePreferenceBtn");
+
+    cookiePreferenceBtn.addEventListener("click", function () {
+        cookieOverlay.style.display = "flex";
+    });
+
 
 
 

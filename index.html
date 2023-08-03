@@ -36,16 +36,6 @@
 
 <body>
     <div id="container">
-        <div class="overlay" id="cookie-overlay">
-            <div class="cookie-consent">
-                <h2>Cookies Policy</h2>
-                <p>Our website uses cookies. This helps us provide you with a good experience on our website. To see what cookies we use and what they do, and to opt in on non-essential cookies, click "change settings." For a detailed explanation, click on "Privacy Policy" otherwise click on "Accept Cookies" to enter.</p>
-                <div class="buttons">
-                    <button id="change-settings">Change Settings</button>
-                    <button id="accept-cookies">Accept Cookies</button>
-                </div>
-            </div>
-        </div>
         <header id="header">
             <div id="header-top">
                 <div id="main-nav">
@@ -1586,6 +1576,19 @@
                 </div>
             </footer>
         </main>
+        <div class="crumb-overlay" id="crumbOverlay">
+            <div class="crumb-box">
+                <div class="crumb-box-header">
+                    <h3>Cookies Policy</h3>
+                </div>
+                <p class="crumb-box-description">Our website uses cookies. This helps us provide you with a good experience on our website. To see what cookies we use and what they do, and to opt in on non-essential cookies, click "change settings." For a detailed explanation, click on <span href="#" >"Privacy Policy"</span> otherwise click on "Accept Cookies" to enter.</p>
+                <div class="crumb-box-footer">
+                    <a id="changeSettings">Change Settings</a>
+                    <a id="acceptCrumbs">Accept Cookies</a>
+                </div>
+            </div>
+        </div>
+        <button id="crumbPreferenceBtn" class="preference-btn">Cookie Preferences</button>
     </div>
 </body>
 
