@@ -55,6 +55,8 @@ window.onload = function () {
 
     $('.slick-container').slick({
         autoplay: true,
+        pauseOnHover: false,
+        pauseOnFocus: false,
         dots: true,
         arrows: false,
         infinite: true,
