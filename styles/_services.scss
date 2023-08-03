@@ -448,7 +448,7 @@
         stroke: #333645;
         width: 28px;
         height: 28px;
-    }
+      }
 
       &:hover {
         padding-bottom: 0;
@@ -485,58 +485,28 @@
 
   }
 
-  &-accreditations {
-    display: flex;
-    align-items: center;
-    margin: 3rem 0;
-    width: 100%;
 
-    @media (min-width: 768px) {
-      order: 3;
-    }
+  // styles for 'Slick' jquery plugin version of accreditations
 
-    &-content {
-      display: flex;
-      overflow: hidden;
+  .accreditations-slider {
+    padding: 50px 0;
 
-      >div {
-        margin-right: 3rem;
-        flex-shrink: 0;
+    .slick-slide {
+      max-height: 70px;
+      max-width: 200px;
+      margin-right: 60px;
+      padding: 0 20px;
+      filter: grayscale(100%);
 
-        >img {
-          height: 4rem;
-        }
-
-        :last-child {
-          display: none;
-        }
-
-
-        &:hover {
-
-          :first-child {
-            display: none;
-          }
-
-          :last-child {
-            display: block;
-          }
-
-        }
-
-
-        @media (min-width: 1260px) {
-          margin-right: 6rem;
-        }
-
+      &:hover {
+        filter: grayscale(0%);
       }
-
-
     }
-
 
   }
 
 
+
+  
 
 }

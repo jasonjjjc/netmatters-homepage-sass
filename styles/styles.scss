@@ -7,11 +7,18 @@
 @import 'latest';
 @import 'signup';
 @import 'footer';
+@import 'cookie-consent';
 
 :root {
   color: #333645;
   letter-spacing: 0.4px;
   font-family: 'Poppins', sans-serif;
+}
+
+body {
+  &.cookie-consent-active {
+    filter: brightness(0.3);
+  }
 }
 
 .asterisk {
@@ -23,3 +30,4 @@
     text-decoration: underline;
   }
 }
+
