@@ -249,23 +249,24 @@
     }
 
 
-    &-clients {
+    .latest-clients {
         position: absolute;
         bottom: 40px;
         width: 100vw;
         display: flex;
         flex-direction: column;
         justify-content: end;
-        // move to the back when need to debug the rest of the latest section
-        // z-index: -1;
 
-        &-list {
+        // this is the slick container
+
+        .slick-track {
             display: flex;
-            gap: 100px;
+            align-items: center;
 
-            .latest-clients-list-item {
-                flex-shrink: 0;
+            .slick-slide {
                 position: relative;
+                margin-right: 60px;
+                padding: 0 20px;
 
                 &-image {
                     max-width: 200px;
@@ -355,14 +356,15 @@
 
                 }
 
-                &:hover .latest-clients-list-item-description {
-                    display: flex;
+                &:hover {
+                    .slick-slide-description {
+                        display: flex;
+                    }
                 }
 
             }
 
         }
-
 
         @media (min-width: 768px) {
             order: 3;
