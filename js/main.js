@@ -1,4 +1,4 @@
-window.onload = function () {
+$(document).ready(function() {
 
 
     ////////////////////////////////////////////////////////////////////////////
@@ -52,7 +52,6 @@ window.onload = function () {
 
     // Banner Slider 
 
-
     $('.slick-container').slick({
         autoplay: true,
         pauseOnHover: false,
@@ -73,7 +72,22 @@ window.onload = function () {
 
     // Cookie Pop-up
 
- 
+    // const overlay = document.getElementById("cookie-overlay");
+    // const acceptButton = document.getElementById("accept-cookies");
+
+    // // Check if user has already accepted cookies
+    // if (!localStorage.getItem("cookiesAccepted")) {
+    //     document.body.classList.add("cookie-consent-active");
+    // } else {
+    //     overlay.style.display = "none";
+    // }
+
+    // acceptButton.addEventListener("click", function() {
+    //     localStorage.setItem("cookiesAccepted", "true");  // Store user's preference
+    //     document.body.classList.remove("cookie-consent-active");
+    //     overlay.style.display = "none";
+    // });
+
 
 
 
@@ -82,5 +96,132 @@ window.onload = function () {
 
     ////////////////////////////////////////////////////////////////////////////
 
-};
+    ////////////////////////////////////////////////////////////////////////////
+
+
+    // Accreditations Slider
+
+
+
+    $('.accreditations-slider').slick({
+        // control the width of the images in the slider
+        variableWidth: true,
+        autoplay: true,
+        pauseOnHover: false,
+        dots: false,
+        arrows: false,
+        infinite: true,
+        autoplaySpeed: 4000,
+        cssEase: 'ease-in-out',
+        speed: 300,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 5,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: false,
+                    arrows: false,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: false,
+                    arrows: false,
+                }
+            },
+            {
+                breakpoint: 576,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: false,
+                    arrows: false,
+                }
+            },
+            {
+                breakpoint: 400,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: false,
+                    arrows: false,
+                }
+            },
+        ]
+    });
+
+
+    // Latest Clients Slider
+
+    $('.latest-clients-list').slick({
+        // control the width of the images in the slider
+        variableWidth: true,
+        autoplay: true,
+        pauseOnHover: false,
+        dots: false,
+        arrows: false,
+        infinite: true,
+        autoplaySpeed: 4000,
+        cssEase: 'ease-in-out',
+        speed: 300,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 5,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: false,
+                    arrows: false,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: false,
+                    arrows: false,
+                }
+            },
+            {
+                breakpoint: 576,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: false,
+                    arrows: false,
+                }
+            },
+            {
+                breakpoint: 400,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: false,
+                    arrows: false,
+                }
+            },
+        ]
+    });
+
+
+
+
+});
 

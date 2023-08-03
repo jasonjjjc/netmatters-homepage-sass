@@ -13,6 +13,7 @@
         display: flex;
         flex-direction: column;
         padding: 0 1rem;
+        
 
         &-title {
             font-size: 2.25rem;
@@ -33,6 +34,7 @@
                 border: 1px solid rgba(0, 0, 0, 0.1);
                 margin-bottom: 2rem;
                 transition: transform 0.5s ease;
+                z-index: 1000;
 
                 &:hover {
                     transform: translateY(-0.5rem);
@@ -249,120 +251,131 @@
     }
 
 
-    &-clients {
+    .latest-clients {
         position: absolute;
         bottom: 40px;
         width: 100vw;
         display: flex;
         flex-direction: column;
         justify-content: end;
-        // move to the back when need to debug the rest of the latest section
-        // z-index: -1;
 
-        &-list {
+        // this is the slick container
+        .slick-list {
+            height: 50vh;
             display: flex;
-            gap: 100px;
+            align-items: end;
+            
 
-            .latest-clients-list-item {
-                flex-shrink: 0;
-                position: relative;
+            .slick-track {
+                display: flex;
+                align-items: center;
+                overflow: visible;
 
-                &-image {
-                    max-width: 200px;
-                    max-height: 70px;
-                    -webkit-filter: grayscale(1);
-                    filter: grayscale(1);
+                .slick-slide {
+                    position: relative;
+                    margin-right: 60px;
+                    padding: 0 20px;
+
+                    &-image {
+                        max-width: 200px;
+                        max-height: 70px;
+                        -webkit-filter: grayscale(1);
+                        filter: grayscale(1);
+
+                        &:hover {
+                            filter: none;
+                        }
+
+                    }
+
+                    &-description {
+                        display: none;
+                        position: absolute;
+                        bottom: 125px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        background-color: #333645;
+                        color: #fff;
+                        padding: 20px;
+                        font-size: .875rem;
+                        max-width: 280px;
+                        line-height: 1.42857143;
+                        flex-direction: column;
+                        width: 280px;
+                        z-index: 1001;
+
+                        >h3 {
+                            font-size: 1.125rem;
+                            color: #fff;
+                            padding-bottom: 17px;
+                            text-align: center;
+                        }
+
+                        >p {
+                            font-size: .8125rem;
+                            line-height: 1.375rem;
+                            margin: 0 0 10px;
+                            text-align: center;
+                        }
+
+                        >a {
+                            border-radius: 3px;
+                            border: 1px solid transparent;
+                            margin-top: 11px;
+                            padding: 5px 15px;
+                            font-size: 16px;
+                            line-height: 35px;
+                            text-transform: uppercase;
+                            white-space: normal;
+                            font-weight: 400;
+                            text-align: center;
+                        }
+
+                        ::after {
+                            content: "";
+                            position: absolute;
+                            bottom: -40px;
+                            left: 50%;
+                            width: 0;
+                            height: 0;
+                            transform: translateX(-50%);
+                            border-left: 40px solid transparent;
+                            border-right: 40px solid transparent;
+                            border-top: 40px solid #333645;
+                            display: block;
+                        }
+
+                        .purple {
+                            background-color: #926fb1;
+                        }
+
+                        .grey {
+                            background-color: #67809f;
+                        }
+
+                        .blue {
+                            background-color: #4183d7;
+                        }
+
+                        .green {
+                            background-color: #2ecc71;
+                        }
+
+
+
+                    }
 
                     &:hover {
-                        filter: none;
+                        .slick-slide-description {
+                            display: flex;
+                        }
                     }
 
-                }
-
-                &-description {
-                    display: none;
-                    position: absolute;
-                    bottom: 125px;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    background-color: #333645;
-                    color: #fff;
-                    padding: 20px;
-                    font-size: .875rem;
-                    max-width: 280px;
-                    line-height: 1.42857143;
-                    flex-direction: column;
-                    width: 280px;
-
-                    >h3 {
-                        font-size: 1.125rem;
-                        color: #fff;
-                        padding-bottom: 17px;
-                        text-align: center;
-                    }
-
-                    >p {
-                        font-size: .8125rem;
-                        line-height: 1.375rem;
-                        margin: 0 0 10px;
-                        text-align: center;
-                    }
-
-                    >a {
-                        border-radius: 3px;
-                        border: 1px solid transparent;
-                        margin-top: 11px;
-                        padding: 5px 15px;
-                        font-size: 16px;
-                        line-height: 35px;
-                        text-transform: uppercase;
-                        white-space: normal;
-                        font-weight: 400;
-                        text-align: center;
-                    }
-
-                    ::after {
-                        content: "";
-                        position: absolute;
-                        bottom: -40px;
-                        left: 50%;
-                        width: 0;
-                        height: 0;
-                        transform: translateX(-50%);
-                        border-left: 40px solid transparent;
-                        border-right: 40px solid transparent;
-                        border-top: 40px solid #333645;
-                        display: block;
-                    }
-
-                    .purple {
-                        background-color: #926fb1;
-                    }
-
-                    .grey {
-                        background-color: #67809f;
-                    }
-
-                    .blue {
-                        background-color: #4183d7;
-                    }
-
-                    .green {
-                        background-color: #2ecc71;
-                    }
-
-
-
-                }
-
-                &:hover .latest-clients-list-item-description {
-                    display: flex;
                 }
 
             }
 
         }
-
 
         @media (min-width: 768px) {
             order: 3;
