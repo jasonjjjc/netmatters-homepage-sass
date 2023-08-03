@@ -52,7 +52,7 @@ $(document).ready(function() {
 
     // Banner Slider 
 
-    $('.slick-container').slick({
+    $('.hero-wrapper').slick({
         autoplay: true,
         pauseOnHover: false,
         pauseOnFocus: false,
@@ -87,7 +87,6 @@ $(document).ready(function() {
         document.body.classList.remove("cookie-consent-active");
         overlay.style.display = "none";
     });
-
 
 
 
