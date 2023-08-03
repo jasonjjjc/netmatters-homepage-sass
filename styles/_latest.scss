@@ -25,7 +25,6 @@
             display: flex;
             flex-direction: column;
             gap: 2rem;
-            padding-bottom: 50px;
 
             &-1,
             &-2,
@@ -248,7 +247,7 @@
 
 
     .latest-clients {
-        padding: 50px 0;
+        padding-bottom: 50px;
         width: 100vw;
         display: flex;
         flex-direction: column;
@@ -270,8 +269,10 @@
                 .slick-slide {
                     position: relative;
                     margin-right: 60px;
-                    padding: 75px 20px 0 20px;
+                    padding: 100px 20px 0 20px;
                     overflow: inherit;
+                    display: flex;
+                    align-items: center;
 
                     &-image {
                         max-width: 200px;
