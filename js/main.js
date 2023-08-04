@@ -1,10 +1,7 @@
 $(document).ready(function () {
 
 
-    ////////////////////////////////////////////////////////////////////////////
-
-
-    // Sticky header
+    // Sticky header ////////////////////////////////////////////////////////////////////////////
 
     const header = document.querySelector("#header");
     let lastScroll = 0;
@@ -46,11 +43,9 @@ $(document).ready(function () {
 
     window.addEventListener("scroll", throttle(validateHeader, 100));
 
-    ////////////////////////////////////////////////////////////////////////////
 
-    ////////////////////////////////////////////////////////////////////////////
 
-    // Banner Slider 
+    // Banner Slider ////////////////////////////////////////////////////////////////////////////
 
     $('.hero-wrapper').slick({
         autoplay: true,
@@ -66,17 +61,14 @@ $(document).ready(function () {
     });
 
 
-    ////////////////////////////////////////////////////////////////////////////
 
-    ////////////////////////////////////////////////////////////////////////////
+    // Cookie Pop-up ////////////////////////////////////////////////////////////////////////////
 
-    // Cookie Pop-up
 
     const crumbOverlay = document.getElementById("crumbOverlay");
     const acceptCrumbs = document.getElementById("acceptCrumbs");
     const crumbPreferenceBtn = document.getElementById("crumbPreferenceBtn");
 
-    // Check if user has already accepted cookies
 
     if (document.cookie.indexOf("cookiesAccepted=true") > -1) {
         crumbOverlay.style.display = "none";
@@ -87,13 +79,13 @@ $(document).ready(function () {
     }
 
     acceptCrumbs.addEventListener("click", () => {
-        document.cookie="cookiesAccepted=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
+        document.cookie = "cookiesAccepted=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
         if (document.cookie.indexOf("cookiesAccepted=true") > -1) {
             crumbOverlay.style.display = "none";
         } else {
             crumbOverlay.style.display = "flex";
         }
-        
+
     });
 
     crumbPreferenceBtn.addEventListener("click", () => {
@@ -101,14 +93,8 @@ $(document).ready(function () {
     });
 
 
-    ////////////////////////////////////////////////////////////////////////////
 
-    ////////////////////////////////////////////////////////////////////////////
-
-
-    // Accreditations Slider
-
-
+    // Accreditations Slider ////////////////////////////////////////////////////////////////////
 
     $('.accreditations-slider').slick({
         // control the width of the images in the slider
@@ -168,7 +154,8 @@ $(document).ready(function () {
     });
 
 
-    // Latest Clients Slider
+
+    // Latest Clients Slider ////////////////////////////////////////////////////////////////////
 
     $('.latest-clients-list').slick({
         // control the width of the images in the slider
@@ -229,6 +216,29 @@ $(document).ready(function () {
 
 
 
+    // Side Menu ////////////////////////////////////////////////////////////////////////////////
 
+    const hamburger = document.querySelector("#hamburger");
+    const cover = document.querySelector("#cover");
+    const sideNav = document.querySelector("#sideNav");
+
+    function showNav() {
+        console.log("show");
+        container.style.right = "275px";
+        container.style.left = "-275px";
+        cover.style.display = "block";
+        cover.style.opacity = "0.5";
+    }
+
+    function hideNav() {
+        console.log("hide");
+        container.style.right = "0";
+        container.style.left = "0";
+        cover.style.display = "none";
+        cover.style.opacity = "0";
+    }
+
+    hamburger.addEventListener("click", showNav);
+    cover.addEventListener("click", hideNav);
 });
 

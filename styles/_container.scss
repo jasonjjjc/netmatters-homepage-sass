@@ -1,5 +1,10 @@
-@import 'colours';
-
 #container {
-  width: 100vw;
+
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: right .5s, left .5s;
+
 }
