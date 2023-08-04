@@ -224,7 +224,6 @@ $(document).ready(function () {
 
     function showNav() {
         console.log("show");
-        sideNav.style.width = "275px";
         container.style.right = "275px";
         container.style.left = "-275px";
         cover.style.display = "block";
@@ -233,7 +232,6 @@ $(document).ready(function () {
 
     function hideNav() {
         console.log("hide");
-        sideNav.style.width = "0";
         container.style.right = "0";
         container.style.left = "0";
         cover.style.display = "none";
