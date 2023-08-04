@@ -1,5 +1,7 @@
 @import 'reset';
 @import 'sidenav';
+@import 'container';
+@import 'cover';
 @import 'cookie-consent';
 @import 'header';
 @import 'main';
@@ -14,30 +16,6 @@
   color: #333645;
   letter-spacing: 0.4px;
   font-family: 'Poppins', sans-serif;
-}
-
-#container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-}
-
-#cover {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 100vh;
-  background-color: #333645;
-  opacity: 0;
-  transition: opacity .5s;
-  z-index: 99999;
-  display: none;
-}
-
-#main {
-  background-color: white;
 }
 
 .asterisk {
