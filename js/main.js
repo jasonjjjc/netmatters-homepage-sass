@@ -72,51 +72,33 @@ $(document).ready(function () {
 
     // Cookie Pop-up
 
-    const cookieOverlay = document.getElementById("cookieOverlay");
-    const acceptCookies = document.getElementById("acceptCookies");
+    const crumbOverlay = document.getElementById("crumbOverlay");
+    const acceptCrumbs = document.getElementById("acceptCrumbs");
+    const crumbPreferenceBtn = document.getElementById("crumbPreferenceBtn");
 
     // Check if user has already accepted cookies
-    if (!getCookie("cookieConsent")) {
-        cookieOverlay.style.display = "flex";
+
+    if (document.cookie.indexOf("cookiesAccepted=true") > -1) {
+        crumbOverlay.style.display = "none";
+        console.log(document.cookie);
+    } else {
+        crumbOverlay.style.display = "flex";
+        console.log(document.cookie);
     }
 
-    acceptCookies.addEventListener("click", function () {
-        setCookie("cookieConsent", "accepted", 30);
-        cookieOverlay.style.display = "none";
-    });
-
-    // Other event listeners for other buttons can be added similarly
-
-    function setCookie(name, value, days) {
-        let date = new Date();
-        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-        const expires = "expires=" + date.toUTCString();
-        document.cookie = name + "=" + value + ";" + expires + ";path=/";
-    }
-
-    function getCookie(name) {
-        let nameEQ = name + "=";
-        let ca = document.cookie.split(';');
-        for (let i = 0; i < ca.length; i++) {
-            let c = ca[i];
-            while (c.charAt(0) === ' ') c = c.substring(1, c.length);
-            if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+    acceptCrumbs.addEventListener("click", () => {
+        document.cookie="cookiesAccepted=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
+        if (document.cookie.indexOf("cookiesAccepted=true") > -1) {
+            crumbOverlay.style.display = "none";
+        } else {
+            crumbOverlay.style.display = "flex";
         }
-        return null;
-    }
-
-
-
-    const cookiePreferenceBtn = document.getElementById("cookiePreferenceBtn");
-
-    cookiePreferenceBtn.addEventListener("click", function () {
-        cookieOverlay.style.display = "flex";
+        
     });
 
-
-
-
-
+    crumbPreferenceBtn.addEventListener("click", () => {
+        crumbOverlay.style.display = "flex";
+    });
 
 
     ////////////////////////////////////////////////////////////////////////////
