@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
 
 
     ////////////////////////////////////////////////////////////////////////////
@@ -52,7 +52,7 @@ $(document).ready(function() {
 
     // Banner Slider 
 
-    $('.slick-container').slick({
+    $('.hero-wrapper').slick({
         autoplay: true,
         pauseOnHover: false,
         pauseOnFocus: false,
@@ -72,26 +72,33 @@ $(document).ready(function() {
 
     // Cookie Pop-up
 
-    // const overlay = document.getElementById("cookie-overlay");
-    // const acceptButton = document.getElementById("accept-cookies");
+    const crumbOverlay = document.getElementById("crumbOverlay");
+    const acceptCrumbs = document.getElementById("acceptCrumbs");
+    const crumbPreferenceBtn = document.getElementById("crumbPreferenceBtn");
 
-    // // Check if user has already accepted cookies
-    // if (!localStorage.getItem("cookiesAccepted")) {
-    //     document.body.classList.add("cookie-consent-active");
-    // } else {
-    //     overlay.style.display = "none";
-    // }
+    // Check if user has already accepted cookies
 
-    // acceptButton.addEventListener("click", function() {
-    //     localStorage.setItem("cookiesAccepted", "true");  // Store user's preference
-    //     document.body.classList.remove("cookie-consent-active");
-    //     overlay.style.display = "none";
-    // });
+    if (document.cookie.indexOf("cookiesAccepted=true") > -1) {
+        crumbOverlay.style.display = "none";
+        console.log(document.cookie);
+    } else {
+        crumbOverlay.style.display = "flex";
+        console.log(document.cookie);
+    }
 
+    acceptCrumbs.addEventListener("click", () => {
+        document.cookie="cookiesAccepted=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
+        if (document.cookie.indexOf("cookiesAccepted=true") > -1) {
+            crumbOverlay.style.display = "none";
+        } else {
+            crumbOverlay.style.display = "flex";
+        }
+        
+    });
 
-
-
-
+    crumbPreferenceBtn.addEventListener("click", () => {
+        crumbOverlay.style.display = "flex";
+    });
 
 
     ////////////////////////////////////////////////////////////////////////////
