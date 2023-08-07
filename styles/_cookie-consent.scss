@@ -9,10 +9,12 @@
     display: none;
     align-items: center;
     justify-content: center;
+    padding: 30px;
 }
 
 .crumb-box {
-    width: 600px;
+    width: 100%;
+    max-width: 598px;
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
@@ -20,6 +22,8 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
     border: 1px solid rgba(0, 0, 0, .2);
     outline: none;
+    display: flex;
+    flex-direction: column;
 
     &-header {
         padding: 15px 20px;
@@ -29,7 +33,6 @@
 
         h3 {
             font-size: 26px;
-            margin-top: 0;
         }
 
     }
@@ -38,6 +41,7 @@
         padding: 20px;
         color: #666;
         line-height: 1.875rem;
+        font-size: 1rem;
         margin-bottom: 25px;
 
         >span {
@@ -50,11 +54,12 @@
         padding: 19px 20px 20px;
         border-top: 1px solid #e5e5e5;
         line-height: 1.42857143;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        display: flex;
+        flex-direction: column;
         gap: 30px;
 
         a {
+            flex: 1;
             height: auto;
             line-height: 35px;
             padding: 5px 15px;
@@ -73,7 +78,7 @@
         #changeSettings {
             background-color: #999aa2;
             border-color: #999aa2;
-            
+
             &:hover {
                 background-color: #84858f;
                 border-color: #797a85;
@@ -90,7 +95,10 @@
             }
         }
 
-        
+        @media (min-width: 768px) {
+            flex-direction: row;
+        }
+
 
     }
 }
@@ -109,7 +117,7 @@
     text-transform: capitalize;
     border: solid #75788a;
     border-width: 1px 1px 0 0;
-    box-shadow: 0 3px 35px rgba(0,0,0,.1);
+    box-shadow: 0 3px 35px rgba(0, 0, 0, .1);
     border-top-right-radius: 10px;
     cursor: pointer;
     z-index: 999; // To ensure it's above most other elements but below the overlay
