@@ -227,6 +227,8 @@ $(document).ready(function () {
         container.style.left = "-275px";
         cover.style.visibility = "visible";
         cover.style.opacity = "0.6";
+        cover.style.right= "275px";
+        cover.style.left = "-275px";
     }
 
     function hideNav() {
