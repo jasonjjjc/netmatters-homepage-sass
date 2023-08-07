@@ -177,6 +177,7 @@
 
 
         &-view {
+            padding-top: 40px;
             align-self: center;
             cursor: pointer;
 
@@ -214,6 +215,7 @@
             @media (min-width: 768px) {
                 order: 1;
                 margin-bottom: 2.5rem;
+                padding-top: 0;
             }
 
 
