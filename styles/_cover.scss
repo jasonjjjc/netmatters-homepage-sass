@@ -6,7 +6,7 @@
     height: 100vh;
     background-color: #333645;
     opacity: 0;
-    transition: opacity .5s;
+    transition: opacity 1s;
     z-index: 99999;
-    display: none;
+    visibility: hidden;
   }

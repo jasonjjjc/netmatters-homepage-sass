@@ -220,22 +220,26 @@ $(document).ready(function () {
 
     const hamburger = document.querySelector("#hamburger");
     const cover = document.querySelector("#cover");
-    const sideNav = document.querySelector("#sideNav");
 
     function showNav() {
         console.log("show");
         container.style.right = "275px";
         container.style.left = "-275px";
-        cover.style.display = "block";
-        cover.style.opacity = "0.5";
+        cover.style.visibility = "visible";
+        cover.style.opacity = "0.6";
     }
 
     function hideNav() {
         console.log("hide");
         container.style.right = "0";
         container.style.left = "0";
-        cover.style.display = "none";
+        cover.style.right = "0";
+        cover.style.left = "0";
         cover.style.opacity = "0";
+
+        setTimeout(function() {
+            cover.style.visibility = "hidden";
+        }, 500);
     }
 
     hamburger.addEventListener("click", showNav);
