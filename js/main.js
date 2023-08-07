@@ -57,7 +57,7 @@ $(document).ready(function () {
         autoplaySpeed: 4000,
         cssEase: 'ease-in-out',
         speed: 300,
-
+        adaptiveHeight: true,
     });
 
 
