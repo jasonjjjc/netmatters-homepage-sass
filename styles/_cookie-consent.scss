@@ -109,12 +109,13 @@
     text-transform: capitalize;
     border: solid #75788a;
     border-width: 1px 1px 0 0;
+    box-shadow: 0 3px 35px rgba(0,0,0,.1);
     border-top-right-radius: 10px;
     cursor: pointer;
     z-index: 999; // To ensure it's above most other elements but below the overlay
     transition: background-color 0.3s;
 
     &:hover {
-        background-color: #555;
+        background-color: #999aa2;
     }
 }
