@@ -252,14 +252,11 @@
         background-color: #22242e;
       }
 
-      a {
-        svg {
-          stroke: #fff;
-          stroke-width: 3;
-          stroke-linecap: square;
-          stroke-linejoin: arcs;
-        }
+      .svg-icon rect {
+        transition: all .3s ease;
       }
+
+
     }
   }
 
@@ -326,7 +323,7 @@
         font-size: 0.875rem;
         background-color: #e5e5e5;
         color: #555;
-        
+
 
         &:focus {
           background-color: #fff;
@@ -344,7 +341,7 @@
           height: 100%;
           padding: 0 1rem 0 1rem;
           border: 1px solid #ccc;
-          box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
         }
 
         @media (min-width: 992px) {
