@@ -220,6 +220,7 @@ $(document).ready(function () {
 
     const hamburger = document.querySelector("#hamburger");
     const cover = document.querySelector("#cover");
+    const sidenav = document.querySelector(".sidenav");
 
     function showNav() {
         console.log("show");
@@ -229,6 +230,7 @@ $(document).ready(function () {
         cover.style.opacity = "0.6";
         cover.style.right = "275px";
         cover.style.left = "-275px";
+        sidenav.style.visibility = "visible";
 
         // Burger Icon Switch ///////////////////////////////////////////////////////////////////////
         $('.bar1').attr('y', '12').attr('transform', 'rotate(-45 12 12)');
@@ -244,6 +246,7 @@ $(document).ready(function () {
         cover.style.right = "0";
         cover.style.left = "0";
         cover.style.opacity = "0";
+        sidenav.style.visibility = "hidden";
 
         setTimeout(function () {
             cover.style.visibility = "hidden";
