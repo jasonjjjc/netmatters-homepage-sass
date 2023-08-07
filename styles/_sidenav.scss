@@ -137,10 +137,6 @@
       }
     }
 
-    @media (min-width: 992px) {
-      display: none;
-    }
-
   }
 
   >ul {
@@ -235,6 +231,14 @@
     }
 
 
+  }
+
+  .sm-md-only {
+    display: block;
+
+    @media (min-width: 992px) {
+      display: none;
+    }
   }
 
 }
