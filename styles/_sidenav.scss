@@ -7,7 +7,6 @@
   background-color: #333645;
   color: white;
   overflow-x: hidden;
-  padding-top: 60px;
   transition: 0.5s;
   line-height: 1.42857143;
 
@@ -38,9 +37,37 @@
           border: 1px solid hsla(0, 0%, 100%, .1);
           cursor: pointer;
 
-          >span {
+          >svg {
             padding-bottom: 10px;
-            font-size: 1.438rem;
+
+            &.bespoke {
+              fill: rgb(103, 128, 159);
+            }
+
+            &.support {
+              fill: rgb(65, 131, 215);
+            }
+
+            &.marketing {
+              fill: rgb(46, 204, 113);
+            }
+
+            &.telecoms {
+              fill: rgb(214, 69, 65);
+            }
+
+            &.design {
+              fill: rgb(146, 111, 177);
+            }
+
+            &.security {
+              fill: rgb(246, 36, 89);
+            }
+
+            &.training {
+              fill: rgb(206, 65, 37);
+            }
+
           }
         }
 
@@ -121,6 +148,10 @@
 
     .active {
       display: none;
+
+      @media (min-width: 992px) {
+        display: block;
+      }
     }
 
     >li {
@@ -199,13 +230,14 @@
 
     }
 
+
   }
 
+  .sm-md-only {
+    display: block;
 
-
-  @media (min-width: 992px) {
-    .active {
-      display: block;
+    @media (min-width: 992px) {
+      display: none;
     }
   }
 
