@@ -44,6 +44,17 @@
                         border-radius: 2px;
                         box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
                         transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+
+                        &:focus {
+                            background-color: #fff;
+                            background-image: none;
+                            border-radius: 0;
+                            border: 1px solid #5bc0de;
+                            outline: 0;
+                            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(91, 192, 222, .6);
+                            transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+                        }
                     }
 
 
@@ -59,7 +70,7 @@
             }
 
 
-            
+
 
             &-marketing {
                 display: flex;
@@ -71,7 +82,7 @@
                 &-checkbox {
                     /* Hide the default checkbox appearance */
                     appearance: none;
-    
+
                     /* Create a white box with a border when unchecked */
                     border: 3px solid #333645;
                     border-radius: 3px;
@@ -80,12 +91,12 @@
                     background-color: transparent;
                     flex-shrink: 0;
                     margin-right: 20px;
-    
+
                     /* Add a custom checkmark when checked */
                     &:checked {
                         background-color: #333645;
                         position: relative;
-    
+
                         &::before {
                             content: "";
                             position: absolute;
