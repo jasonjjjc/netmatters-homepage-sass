@@ -5,7 +5,7 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 10000;
+    z-index: 100;
     display: none;
     align-items: center;
     justify-content: center;
@@ -120,7 +120,7 @@
     box-shadow: 0 3px 35px rgba(0, 0, 0, .1);
     border-top-right-radius: 10px;
     cursor: pointer;
-    z-index: 999; // To ensure it's above most other elements but below the overlay
+    z-index: 90; // To ensure it's above most other elements but below the overlay
     transition: background-color 0.3s;
 
     &:hover {

@@ -223,16 +223,17 @@ $(document).ready(function () {
     const sidenav = document.querySelector(".sidenav");
 
     function showNav() {
-        console.log("show");
-        container.style.right = "275px";
-        container.style.left = "-275px";
+        let value = window.innerWidth >= 992 ? "350px" : "255px";
+
+        container.style.right = value;
+        container.style.left = "-" + value;
         cover.style.visibility = "visible";
         cover.style.opacity = "0.6";
-        cover.style.right = "275px";
-        cover.style.left = "-275px";
+        cover.style.right = value;
+        cover.style.left = "-" + value;
         sidenav.style.visibility = "visible";
 
-        // Burger Icon Switch ///////////////////////////////////////////////////////////////////////
+        // Burger Icon Switch
         $('.bar1').attr('y', '12').attr('transform', 'rotate(-45 12 12)');
         $('.bar2').attr('width', '0');
         $('.bar3').attr('y', '12').attr('transform', 'rotate(45 12 12)');
@@ -240,7 +241,7 @@ $(document).ready(function () {
     }
 
     function hideNav() {
-        console.log("hide");
+
         container.style.right = "0";
         container.style.left = "0";
         cover.style.right = "0";
@@ -252,7 +253,7 @@ $(document).ready(function () {
             cover.style.visibility = "hidden";
         }, 500);
 
-        // Burger Icon Switch ///////////////////////////////////////////////////////////////////////
+        // Burger Icon Switch
         $('.bar1').attr('y', '12').attr('transform', 'rotate(0 12 12)');
         $('.bar2').attr('width', '18');
         $('.bar3').attr('y', '6').attr('transform', 'rotate(0 12 12)');
