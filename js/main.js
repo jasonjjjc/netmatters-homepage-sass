@@ -223,14 +223,14 @@ $(document).ready(function () {
     const sidenav = document.querySelector(".sidenav");
 
     function showNav() {
-        let value = window.innerWidth >= 992 ? "350px" : "255px"; // 255 because of 20px padding appearing on some screens
-
-        container.style.right = value;
-        container.style.left = "-" + value;
+        let containerValue = window.innerWidth >= 992 ? "350px" : "275px";
+        let coverValue= window.innerWidth >= 992 ? "335px" : "260px";
+        container.style.right = containerValue;
+        container.style.left = "-" + containerValue;
         cover.style.visibility = "visible";
         cover.style.opacity = "0.6";
-        cover.style.right = value;
-        cover.style.left = "-" + value;
+        cover.style.right = coverValue;
+        cover.style.left = "-" + coverValue;
         sidenav.style.visibility = "visible";
 
         // Burger Icon Switch
