@@ -223,7 +223,7 @@ $(document).ready(function () {
     const sidenav = document.querySelector(".sidenav");
 
     function showNav() {
-        let value = window.innerWidth >= 992 ? "350px" : "255px";
+        let value = window.innerWidth >= 992 ? "350px" : "255px"; // 255 because of 20px padding appearing on some screens
 
         container.style.right = value;
         container.style.left = "-" + value;
