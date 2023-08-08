@@ -224,7 +224,7 @@ $(document).ready(function () {
 
     function showNav() {
         let containerValue = window.innerWidth >= 992 ? "350px" : "275px";
-        let coverValue= window.innerWidth >= 992 ? "335px" : "260px";
+        let coverValue= window.innerWidth >= 992 ? "333px" : "258px";
         container.style.right = containerValue;
         container.style.left = "-" + containerValue;
         cover.style.visibility = "visible";
