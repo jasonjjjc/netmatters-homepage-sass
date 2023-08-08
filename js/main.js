@@ -224,13 +224,13 @@ $(document).ready(function () {
 
     function showNav() {
         let containerValue = window.innerWidth >= 992 ? "350px" : "275px";
-        let coverValue= window.innerWidth >= 992 ? "333px" : "258px";
+        // let coverValue= window.innerWidth >= 992 ? "333px" : "258px";
         container.style.right = containerValue;
         container.style.left = "-" + containerValue;
         cover.style.visibility = "visible";
         cover.style.opacity = "0.6";
-        cover.style.right = coverValue;
-        cover.style.left = "-" + coverValue;
+        cover.style.right = containerValue;
+        cover.style.left = "-" + containerValue;
         sidenav.style.visibility = "visible";
 
         // Burger Icon Switch
@@ -263,6 +263,20 @@ $(document).ready(function () {
     hamburger.addEventListener("click", showNav);
     cover.addEventListener("click", hideNav);
 
+    // add event listener to listen to the width of the screen when it is resized and adjust the right and left values accordingly
+    window.addEventListener("resize", function () {
+        if (window.innerWidth >= 992) {
+            container.style.right = "350px";
+            container.style.left = "-350px";
+            cover.style.right = "350px";
+            cover.style.left = "-350px";
+        } else {
+            container.style.right = "275px";
+            container.style.left = "-275px";
+            cover.style.right = "275px";
+            cover.style.left = "-275px";
+        }
+    });
 
 
 
