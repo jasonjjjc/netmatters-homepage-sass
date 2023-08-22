@@ -46,6 +46,10 @@
 
         >span {
             color: #333645;
+            cursor: pointer;
+            &:hover {
+                text-decoration: underline;
+            }
         }
 
     }
