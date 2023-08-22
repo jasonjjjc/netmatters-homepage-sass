@@ -73,7 +73,6 @@ $(document).ready(function () {
   acceptCrumbs.addEventListener("click", () => {
     document.cookie =
       "cookiesAccepted=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
-    console.log(document.cookie);
     crumbOverlay.style.display = "none";
     document.body.classList.remove("no-scroll");
   });
@@ -209,7 +208,6 @@ $(document).ready(function () {
 
   function showNav() {
     let containerValue = window.innerWidth >= 992 ? "350px" : "275px";
-    console.log(containerValue);
     container.style.right = containerValue;
     container.style.left = "-" + containerValue;
     cover.style.visibility = "visible";
