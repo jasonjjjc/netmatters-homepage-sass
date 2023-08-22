@@ -72,9 +72,11 @@ $(document).ready(function () {
 
     if (document.cookie.indexOf("cookiesAccepted=true") > -1) {
         crumbOverlay.style.display = "none";
+        document.body.classList.remove('no-scroll');
         console.log(document.cookie);
     } else {
         crumbOverlay.style.display = "flex";
+        document.body.classList.add('no-scroll');
         console.log(document.cookie);
     }
 
@@ -82,14 +84,17 @@ $(document).ready(function () {
         document.cookie = "cookiesAccepted=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
         if (document.cookie.indexOf("cookiesAccepted=true") > -1) {
             crumbOverlay.style.display = "none";
+            document.body.classList.remove('no-scroll');
         } else {
             crumbOverlay.style.display = "flex";
+            document.body.classList.add('no-scroll');
         }
 
     });
 
     crumbPreferenceBtn.addEventListener("click", () => {
         crumbOverlay.style.display = "flex";
+        document.body.classList.add('no-scroll');
     });
 
 
