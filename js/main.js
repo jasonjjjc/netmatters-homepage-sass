@@ -65,23 +65,17 @@ $(document).ready(function () {
   if (document.cookie.indexOf("cookiesAccepted=true") > -1) {
     crumbOverlay.style.display = "none";
     document.body.classList.remove("no-scroll");
-    console.log(document.cookie);
   } else {
     crumbOverlay.style.display = "flex";
     document.body.classList.add("no-scroll");
-    console.log(document.cookie);
   }
 
   acceptCrumbs.addEventListener("click", () => {
     document.cookie =
       "cookiesAccepted=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
-    if (document.cookie.indexOf("cookiesAccepted=true") > -1) {
-      crumbOverlay.style.display = "none";
-      document.body.classList.remove("no-scroll");
-    } else {
-      crumbOverlay.style.display = "flex";
-      document.body.classList.add("no-scroll");
-    }
+    console.log(document.cookie);
+    crumbOverlay.style.display = "none";
+    document.body.classList.remove("no-scroll");
   });
 
   crumbPreferenceBtn.addEventListener("click", () => {
@@ -242,11 +236,10 @@ $(document).ready(function () {
       cover.style.visibility = "hidden";
     }, 500);
 
-// Burger Icon Switch (Close)
-$(".bar1").attr("y", "5.5").attr("transform", "rotate(0 13 11)");
-$(".bar2").attr("width", "20");
-$(".bar3").attr("y", "16.5").attr("transform", "rotate(0 13 11)");
-
+    // Burger Icon Switch (Close)
+    $(".bar1").attr("y", "5.5").attr("transform", "rotate(0 13 11)");
+    $(".bar2").attr("width", "20");
+    $(".bar3").attr("y", "16.5").attr("transform", "rotate(0 13 11)");
   }
 
   hamburger.addEventListener("click", showNav);
