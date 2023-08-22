@@ -210,6 +210,9 @@ $(document).ready(function () {
     let containerValue = window.innerWidth >= 992 ? "350px" : "275px";
     container.style.right = containerValue;
     container.style.left = "-" + containerValue;
+    container.style.width = "100%";
+    container.style.height = "100%";
+    container.style.overflow = "hidden";
     cover.style.visibility = "visible";
     cover.style.opacity = "0.6";
     cover.style.right = containerValue;
@@ -227,6 +230,9 @@ $(document).ready(function () {
     container.style.left = "0";
     cover.style.right = "0";
     cover.style.left = "0";
+    container.style.width = "100%";
+    container.style.height = "100%";
+    container.style.overflow = "visible";
     cover.style.opacity = "0";
     sidenav.style.visibility = "hidden";
 
