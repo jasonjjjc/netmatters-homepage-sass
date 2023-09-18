@@ -1,4 +1,4 @@
-#latest {
+.latest {
 
     display: flex;
     flex-direction: column;
@@ -50,6 +50,7 @@
                         padding: 0.25rem 0.5rem;
                         font-size: 0.75rem;
                         line-height: 1rem;
+                        text-transform: uppercase;
                     }
 
                     &-thumb {
