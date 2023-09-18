@@ -296,6 +296,14 @@
                 color: #333645;
               }
             }
+
+            p:nth-child(1) {
+              color: #666;
+            }
+
+            p:nth-child(3) {
+              color: #666;
+            }
           }
         }
       }
