@@ -1191,7 +1191,7 @@ if ($conn->connect_error) {
                           <p class="question-text">Out of Hours IT Support <em style="font-style: normal" class="fa fa-chevron-down rotate"></em></p>
                         </a>
                       </h4>
-                      <div class="answer initiallyHidden">
+                      <div id="answer" class="answer initiallyHidden">
                         <p>Netmatters IT are offering an Out of Hours service for Emergency and Critical tasks.</p>
                         <p><strong>Monday - Friday 18:00 - 22:00
                           </strong><strong>Saturday 08:00 - 16:00

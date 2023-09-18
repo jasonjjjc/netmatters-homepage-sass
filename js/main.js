@@ -255,4 +255,23 @@ $(document).ready(function () {
       showNav();
     }
   });
+
+  // Out of hours info ////////////////////////////////////////////////////////////////////////////////
+
+  document
+    .getElementById("toggleChevron")
+    .addEventListener("click", function (event) {
+      event.preventDefault(); // Prevent the default anchor action.
+      console.log("clicked")
+      const answerDiv = document.querySelector("#answer");
+      if (answerDiv.classList.contains("initiallyHidden")) {
+        answerDiv.classList.remove("initiallyHidden");
+      } else {
+        answerDiv.classList.add("initiallyHidden");
+      }
+    });
+
+
+
+    /////////////////////////////////////////////////////////////////////////////////////////////
 });

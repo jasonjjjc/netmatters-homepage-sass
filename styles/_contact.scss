@@ -273,11 +273,15 @@
             }
           }
 
-          .initiallyHidden {
-            display: none;
+          .answer.initiallyHidden {
+            max-height: 0;
+            overflow: hidden; /* prevents content from showing when container is at max-height: 0; */
+            transition: max-height 0.5s;
           }
 
           .answer {
+            max-height: 500px;
+            transition: max-height 0.5s;
             p {
               line-height: 1.875rem;
               margin: 0 0 10px;
@@ -288,6 +292,8 @@
               }
             }
           }
+
+          
         }
       }
     }
