@@ -35,11 +35,7 @@ if ($conn->connect_error) {
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,600&display=swap" rel="stylesheet" />
   <link href="assets/favicon.ico" rel="shortcut icon" />
   <!-- jQuery -->
-
   <script src="js/jquery-2.2.4.min.js"></script>
-
-  <!-- Bootstrap -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
   <!-- Slick carousel -->
   <link href="slick/slick.css" rel="stylesheet" type="text/css" />

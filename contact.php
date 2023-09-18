@@ -41,6 +41,10 @@ if ($conn->connect_error) {
   <link href="slick/slick.css" rel="stylesheet" type="text/css" />
   <link href="slick/slick-theme.css" rel="stylesheet" type="text/css" />
   <script src="slick/slick.min.js"></script>
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/7d3adce3d2.js" crossorigin="anonymous"></script>
+
   <!--My own styles and javascript below here-->
   <link href="./css/styles.css" rel="stylesheet" />
   <script src="js/main.js"></script>
@@ -1183,7 +1187,7 @@ if ($conn->connect_error) {
                   <div class="accordion out-of-hours">
                     <div class="question out-of-hours">
                       <h4>
-                        <a href="#">
+                        <a href="#" id="toggleChevron">
                           <p class="question-text">Out of Hours IT Support <em style="font-style: normal" class="fa fa-chevron-down rotate"></em></p>
                         </a>
                       </h4>
