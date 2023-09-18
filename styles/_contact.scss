@@ -270,6 +270,11 @@
                   content: "\F078";
                 }
               }
+
+              &:hover,
+              &.active {
+                text-decoration: underline;
+              }
             }
           }
 
@@ -292,8 +297,6 @@
               }
             }
           }
-
-          
         }
       }
     }

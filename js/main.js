@@ -262,7 +262,7 @@ $(document).ready(function () {
     .getElementById("toggleChevron")
     .addEventListener("click", function (event) {
       event.preventDefault(); // Prevent the default anchor action.
-      console.log("clicked")
+      console.log("clicked");
       const answerDiv = document.querySelector("#answer");
       if (answerDiv.classList.contains("initiallyHidden")) {
         answerDiv.classList.remove("initiallyHidden");
@@ -271,7 +271,18 @@ $(document).ready(function () {
       }
     });
 
+     // Toggle the 'active' class on the h4 when clicked
+     $('#toggleChevron').on('click', function(event) {
+      event.preventDefault(); // Prevent the default link action
+      $(this).toggleClass('active');
+  });
 
+  // Remove the 'active' class from the h4 when clicking anywhere outside of it
+  $(document).on('click', function(event) {
+      if (!$(event.target).closest('.question').length) {
+          $('#toggleChevron').removeClass('active');
+      }
+  });
 
-    /////////////////////////////////////////////////////////////////////////////////////////////
+  /////////////////////////////////////////////////////////////////////////////////////////////
 });
