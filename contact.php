@@ -1247,12 +1247,13 @@ if ($conn->connect_error) {
                   </div>
                 </div>
 
+                <div class="form-group">
+                  <label for="message" class="required">Message</label>
+                  <textarea class="form-control" name="message" cols="50" rows="10" id="message">Hi, I am interested in discussing a Our Offices solution, could you please give me a call or send an email?</textarea>
+                </div>
               </div>
 
-              <div class="form-group">
-                <label for="message" class="required">Message</label>
-                <textarea class="form-control" name="message" cols="50" rows="10" id="message">Hi, I am interested in discussing a Our Offices solution, could you please give me a call or send an email?</textarea>
-              </div>
+
 
 
               <div class="form-group">
