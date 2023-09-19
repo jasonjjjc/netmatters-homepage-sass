@@ -14,6 +14,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     unset($formData['success']);
   }
 }
+$success = false;
+if (isset($_GET['success']) && $_GET['success'] == 'true') {
+  $success = true;
+}
 
 
 ?>
@@ -1228,6 +1232,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
             <form method="POST" action="process_form.php" accept-charset="UTF-8" id="contact-form" class="" novalidate="novalidate">
 
+              <!-- if the form is successfully submitted, display a success message -->
+              <?php if ($success) : ?>
+                <div class="alert alert-success">
+                  Your enquiry has been successfully submitted!
+                </div>
+              <?php endif; ?>
+
+
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group">
@@ -1283,12 +1295,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
                     information on how we keep your data safe.</label>
                 </div>
               </div>
-              <!-- if the form is successfully submitted, display a success message -->
-              <?php if (isset($_GET['success']) && $_GET['success'] == 'true') : ?>
-                <div class="alert alert-success">
-                  Your message has been sent successfully! We'll get back to you soon.
-                </div>
-              <?php endif; ?>
 
               <div class="action-block">
                 <button name="submit" class="btn btn-primary">
