@@ -27,7 +27,7 @@ if (!empty($errors)) {
 // Insert into database
 $marketing = isset($_POST['marketing-preference']) ? 1 : 0;
 
-$stmt = $pdo->prepare("INSERT INTO contact (name, company, email, telephone, message, marketing) VALUES (?, ?, ?, ?, ?, ?)");
+$stmt = $pdo->prepare("INSERT INTO contacts (name, company, email, telephone, message, marketing) VALUES (?, ?, ?, ?, ?, ?)");
 $stmt->execute([$_POST['name'], $_POST['company'], $_POST['email'], $_POST['telephone'], $_POST['message'], $marketing]);
 
 header('Location: contact.php#contact-form?success=true');
