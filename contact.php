@@ -1236,6 +1236,7 @@ if (isset($_GET['success']) && $_GET['success'] == 'true') {
               <?php if ($success) : ?>
                 <div class="alert alert-success">
                   Your message has been sent!
+                  <button type="button" class="close" data-dismiss="alert">×</button>
                 </div>
               <?php endif; ?>
 

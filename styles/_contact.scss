@@ -708,9 +708,33 @@
           margin: -20px 0 20px 0;
           width: 100%;
           padding: 10px 20px;
-          color: #155724;
-          background-color: #d4edda;
-          border-color: #c3e6cb;
+          color: white;
+          background-color: #2ecc71;
+          border-color: #2ecc71;
+        }
+
+        .close {
+          margin: 2px -6px 0 0;
+          float: right;
+          font-size: 21px;
+          font-weight: 700;
+          line-height: 1;
+          color: #000;
+          text-shadow: 0 1px 0 #fff;
+          opacity: 0.2;
+          padding: 0;
+          cursor: pointer;
+          background: transparent;
+          border: 0;
+          -webkit-appearance: none;
+          font-family: inherit;
+
+          &:focus,
+          &:hover {
+            color: #000;
+            text-decoration: none;
+            opacity: 0.5;
+          }
         }
       }
 
