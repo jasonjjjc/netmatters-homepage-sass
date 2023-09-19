@@ -1005,8 +1005,10 @@ if ($conn->connect_error) {
         </div>
       </div>
 
-
+      
       <!-- Page Body -->
+
+      <!-- Office Addresses -->
       <div class="office-addresses">
         <div class="service-list container">
           <div class="row office-address-row">
@@ -1173,6 +1175,7 @@ if ($conn->connect_error) {
         </div>
       </div>
 
+      <!-- Contact Information and Form -->
       <div class="section bottom container">
 
         <div class="row">
@@ -1287,7 +1290,7 @@ if ($conn->connect_error) {
 
       </div>
 
-
+      <!-- Newsletter Sign Up Form -->
       <div id="signup-wrapper">
         <div class="signup">
           <h2 class="signup-title">Email Newsletter Sign-Up</h2>
@@ -1312,6 +1315,8 @@ if ($conn->connect_error) {
           </form>
         </div>
       </div>
+
+      <!-- Footer -->
       <footer id="footer">
         <div id="nav-wrapper">
           <div id="nav">
