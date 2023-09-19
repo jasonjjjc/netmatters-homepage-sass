@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
-$username = "root"; // default username for MAMP's MySQL
-$password = "root"; // default password for MAMP's MySQL
+$username = "root";
+$password = "root"; 
 $dbname = "latest_news";
 
 // Create connection
