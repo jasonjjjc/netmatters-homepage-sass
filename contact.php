@@ -1235,7 +1235,7 @@ if (isset($_GET['success']) && $_GET['success'] == 'true') {
               <!-- if the form is successfully submitted, display a success message -->
               <?php if ($success) : ?>
                 <div class="alert alert-success">
-                  Your enquiry has been successfully submitted!
+                  Your message has been sent!
                 </div>
               <?php endif; ?>
 
