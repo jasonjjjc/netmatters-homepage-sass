@@ -1025,13 +1025,13 @@ if (isset($_GET['success']) && $_GET['success'] == 'true') {
             <div class="col-md-6 spacer-sm">
               <div class="block address address-london">
                 <div class="image">
-                  <a href="/london-office">
+                  <a href="#">
                     <img src="assets/thumbnails/london.jpeg" alt="London Office" class="img-full london-office-img">
                   </a>
                 </div>
                 <div class="content">
                   <p class="h2">
-                    <a href="/london-office">
+                    <a href="#">
                       London Office
                     </a>
                   </p>
@@ -1048,12 +1048,12 @@ if (isset($_GET['success']) && $_GET['success'] == 'true') {
                     EN9 1JH
                   </p>
                   <div class="tel">
-                    <a href="tel:02045397354" class="h3 text-web">
+                    <a href="#" class="h3 text-web">
                       02045 397354
                     </a>
                   </div>
                   <div class="view-more">
-                    <a href="/london-office" class="btn btn-web">View More</a>
+                    <a href="#" class="btn btn-web">View More</a>
                   </div>
                 </div>
               </div>
@@ -1065,13 +1065,13 @@ if (isset($_GET['success']) && $_GET['success'] == 'true') {
             <div class="col-md-6 spacer-sm">
               <div class="block address address-cambridge">
                 <div class="image">
-                  <a href="/cambridge-office">
+                  <a href="#">
                     <img src="/assets/thumbnails/cambridge.jpeg" alt="Cambridge Office" class="img-full">
                   </a>
                 </div>
                 <div class="content">
                   <p class="h2">
-                    <a href="/cambridge-office">
+                    <a href="#">
                       Cambridge Office
                     </a>
                   </p>
@@ -1088,12 +1088,12 @@ if (isset($_GET['success']) && $_GET['success'] == 'true') {
                     CB4 0WS
                   </p>
                   <div class="tel">
-                    <a href="tel:01223375772" class="h3 text-web">
+                    <a href="#" class="h3 text-web">
                       01223 37 57 72
                     </a>
                   </div>
                   <div class="view-more">
-                    <a href="/cambridge-office" class="btn btn-web">View More</a>
+                    <a href="#" class="btn btn-web">View More</a>
                   </div>
                 </div>
               </div>
@@ -1106,13 +1106,13 @@ if (isset($_GET['success']) && $_GET['success'] == 'true') {
             <div class="col-md-6 spacer-sm">
               <div class="block address address-wymondham">
                 <div class="image">
-                  <a href="/wymondham-office">
+                  <a href="#">
                     <img src="/assets/thumbnails/wymondham.jpeg" alt="Wymondham Office" class="img-full">
                   </a>
                 </div>
                 <div class="content">
                   <p class="h2">
-                    <a href="/wymondham-office">
+                    <a href="#">
                       Wymondham Office
                     </a>
                   </p>
@@ -1128,12 +1128,12 @@ if (isset($_GET['success']) && $_GET['success'] == 'true') {
                     NR18 0WZ
                   </p>
                   <div class="tel">
-                    <a href="tel:01603704020" class="h3 text-web">
+                    <a href="#" class="h3 text-web">
                       01603 70 40 20
                     </a>
                   </div>
                   <div class="view-more">
-                    <a href="/wymondham-office" class="btn btn-web">View More</a>
+                    <a href="#" class="btn btn-web">View More</a>
                   </div>
                 </div>
               </div>
@@ -1145,13 +1145,13 @@ if (isset($_GET['success']) && $_GET['success'] == 'true') {
             <div class="col-md-6">
               <div class="block address address-yarmouth">
                 <div class="image">
-                  <a href="/yarmouth-office">
+                  <a href="#">
                     <img src="/assets/thumbnails/yarmouth-2.jpeg" alt="Great Yarmouth Office" class="img-full">
                   </a>
                 </div>
                 <div class="content">
                   <p class="h2">
-                    <a href="/yarmouth-office">
+                    <a href="#">
                       Great Yarmouth Office
                     </a>
                   </p>
@@ -1167,12 +1167,12 @@ if (isset($_GET['success']) && $_GET['success'] == 'true') {
                     NR31 7RA
                   </p>
                   <div class="tel">
-                    <a href="tel:01493603204" class="h3 text-web">
+                    <a href="#" class="h3 text-web">
                       01493 60 32 04
                     </a>
                   </div>
                   <div class="view-more">
-                    <a href="/yarmouth-office" class="btn btn-web">View More</a>
+                    <a href="#" class="btn btn-web">View More</a>
                   </div>
                 </div>
               </div>

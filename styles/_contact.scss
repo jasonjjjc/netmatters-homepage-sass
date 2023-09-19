@@ -180,6 +180,10 @@
 
             a {
               font-weight: 400;
+
+              &:hover {
+                text-decoration: underline;
+              }
             }
           }
 
@@ -199,6 +203,10 @@
 
             .text-web {
               color: #926fb1 !important;
+
+              &:hover {
+                text-decoration: underline;
+              }
             }
 
             .h3 {
@@ -239,6 +247,11 @@
               color: #fff;
               background-color: #926fb1;
               border-color: #926fb1;
+
+              &:hover {
+                background-color: #7e57a0;
+                border-color: #735093;
+              }
             }
           }
         }
