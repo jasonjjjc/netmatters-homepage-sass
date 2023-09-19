@@ -499,6 +499,10 @@
               transition: border-color 0.15s ease-in-out,
                 box-shadow 0.15s ease-in-out;
             }
+
+            &.is-invalid {
+              border-color: #d64541;
+            }
           }
         }
       }
@@ -549,6 +553,10 @@
               0 0 8px rgba(91, 192, 222, 0.6);
             transition: border-color 0.15s ease-in-out,
               box-shadow 0.15s ease-in-out;
+          }
+
+          &.is-invalid {
+            border-color: #d64541;
           }
         }
       }

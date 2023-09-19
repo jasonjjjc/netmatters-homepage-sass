@@ -1,18 +1,10 @@
 <?php
-$servername = "localhost";
-$username = "root"; // default username for MAMP's MySQL
-$password = "root"; // default password for MAMP's MySQL
-$dbname = "latest_news";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
+$errors = [];
+if (isset($_GET['errors'])) {
+    $errors = json_decode(urldecode($_GET['errors']), true);
 }
-?>
 
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -48,6 +40,8 @@ if ($conn->connect_error) {
   <!--My own styles and javascript below here-->
   <link href="./css/styles.css" rel="stylesheet" />
   <script src="js/main.js"></script>
+
+
 </head>
 
 <body>
@@ -1219,48 +1213,41 @@ if ($conn->connect_error) {
           <!-- Contact Form -->
           <div class="col-lg-8 col-lg-pull-4">
 
-            <form method="POST" action="https://www.netmatters.co.uk/enquiry#contact-form" accept-charset="UTF-8" id="contact-form" class="" novalidate="novalidate"><input name="_token" type="hidden" value="8a0G6fCO2CjCwz9IHSMG2TCeiM60VDttPlzH0DNO">
-
-
-              <input name="link" type="hidden" value="https://www.netmatters.co.uk/contact-us">
-              <input name="referrer" type="hidden" value="https://www.netmatters.co.uk/">
-
-
-              <input name="return_url" type="hidden" value="https://www.netmatters.co.uk/contact-us/success#contact-form">
+            <form method="POST" action="process_form.php" accept-charset="UTF-8" id="contact-form" class="" novalidate="novalidate">
 
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="name" class="required">Your Name</label>
-                    <input class="form-control" name="name" type="text" value="" id="name">
+                    <input class="form-control<?php echo isset($errors['name']) ? ' is-invalid' : '' ?>" name="name" type="text" value="" id="name">
                   </div>
                 </div>
 
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="company" class="">Company Name</label>
-                    <input class="form-control" name="company" type="text" value="" id="company">
+                    <input class="form-control<?php echo isset($errors['company']) ? ' is-invalid' : '' ?>" name="company" type="text" value="" id="company">
                   </div>
                 </div>
 
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="email" class="required">Your Email</label>
-                    <input class="form-control" name="email" type="email" value="" id="email">
+                    <input class="form-control<?php echo isset($errors['email']) ? ' is-invalid' : '' ?>" name="email" type="email" value="" id="email">
                   </div>
                 </div>
 
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="telephone" class="required">Your Telephone Number</label>
-                    <input class="form-control" name="telephone" type="text" value="" id="telephone">
+                    <input class="form-control<?php echo isset($errors['telephone']) ? ' is-invalid' : '' ?>" name="telephone" type="text" value="" id="telephone">
                   </div>
                 </div>
               </div>
 
               <div class="form-group">
                 <label for="message" class="required">Message</label>
-                <textarea class="form-control" name="message" cols="50" rows="10" id="message">Hi, I am interested in discussing a Our Offices solution, could you please give me a call or send an email?</textarea>
+                <textarea class="form-control<?php echo isset($errors['message']) ? ' is-invalid' : '' ?>" name="message" cols="50" rows="10" id="message">Hi, I am interested in discussing a Our Offices solution, could you please give me a call or send an email?</textarea>
               </div>
 
               <div class="form-group">
