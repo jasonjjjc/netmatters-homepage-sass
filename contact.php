@@ -1005,7 +1005,7 @@ if ($conn->connect_error) {
         </div>
       </div>
 
-      
+
       <!-- Page Body -->
 
       <!-- Office Addresses -->
@@ -1179,7 +1179,7 @@ if ($conn->connect_error) {
       <div class="section bottom container">
 
         <div class="row">
-
+          <!-- Contact Info -->
           <div class="col-lg-4 col-lg-push-8">
 
             <div>
@@ -1216,7 +1216,7 @@ if ($conn->connect_error) {
             </div>
 
           </div>
-
+          <!-- Contact Form -->
           <div class="col-lg-8 col-lg-pull-4">
 
             <form method="POST" action="https://www.netmatters.co.uk/enquiry#contact-form" accept-charset="UTF-8" id="contact-form" class="" novalidate="novalidate"><input name="_token" type="hidden" value="8a0G6fCO2CjCwz9IHSMG2TCeiM60VDttPlzH0DNO">
