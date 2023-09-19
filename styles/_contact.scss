@@ -362,15 +362,11 @@
             }
           }
 
-          .answer.initiallyHidden {
-            max-height: 0;
-            overflow: hidden; /* prevents content from showing when container is at max-height: 0; */
-            transition: max-height 0.5s;
-          }
-
           .answer {
-            max-height: 500px;
-            transition: max-height 0.5s;
+            max-height: 600px;
+            transition: max-height 0.5s ease;
+            overflow: hidden; /* prevents content from showing when container is at max-height: 0; */
+
             p {
               line-height: 1.875rem;
               margin: 0 0 10px;
@@ -388,6 +384,18 @@
             p:nth-child(3) {
               color: #666;
             }
+
+            &.initiallyHidden {
+              max-height: 0;
+            }
+
+            @media (min-width: 768px) {
+              max-height: 300px;
+            }
+            @media (min-width: 1260px) {
+              max-height: 250px;
+            }
+
           }
         }
       }
