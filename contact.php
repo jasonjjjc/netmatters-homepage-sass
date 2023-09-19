@@ -1256,25 +1256,17 @@ if ($conn->connect_error) {
               </div>
 
               <div class="form-group">
-                  <label for="message" class="required">Message</label>
-                  <textarea class="form-control" name="message" cols="50" rows="10" id="message">Hi, I am interested in discussing a Our Offices solution, could you please give me a call or send an email?</textarea>
-                </div>
+                <label for="message" class="required">Message</label>
+                <textarea class="form-control" name="message" cols="50" rows="10" id="message">Hi, I am interested in discussing a Our Offices solution, could you please give me a call or send an email?</textarea>
+              </div>
 
               <div class="form-group">
-                <label class=" pretty-checkbox">
-                  <span class="media">
-                    <span class="media-left checkbox-left">
-                      <span class="button">
-                        <span class="mdi-action-done"></span>
-                        <input name="marketing_preference" type="checkbox" value="1">
-                      </span>
-                    </span>
-                    <span class="media-body">
-                      Please tick this box if you wish to receive marketing information from us.
-                      Please see our <a href="https://www.netmatters.co.uk/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a> for more information on how we keep your data safe.
-                    </span>
-                  </span>
-                </label>
+                <div class="signup-form-marketing">
+                  <input class="signup-form-marketing-checkbox" type="checkbox" value="marketing-preference" />
+                  <label for="signup-form-marketing-checkbox" class="signup-form-marketing-label">Please tick this box if you wish to receive marketing
+                    information from us. Please see our Privacy Policy for more
+                    information on how we keep your data safe.</label>
+                </div>
               </div>
 
               <div class="my_name_wrap" style="display:none;"><input name="my_name" type="text" value="" id="my_name"><input name="my_time" type="text" value="eyJpdiI6ImpnazFSOFE4c0dnYldpS00xK2phSFE9PSIsInZhbHVlIjoiU0lna1pUVkNKUjlpcWphV05RMTdOZz09IiwibWFjIjoiZGQ0NTg5NTAyNTU5YWMwYmM4MmZkYzlkNjM2Njk1NDc5OTBhMDVkMzFlZDk5YWRjNmZjZGViNmUxNzUxYmIxYyJ9"></div>
@@ -1297,26 +1289,26 @@ if ($conn->connect_error) {
 
 
       <div id="signup-wrapper">
-        <div id="signup">
-          <h2 id="signup-title">Email Newsletter Sign-Up</h2>
-          <form id="signup-form" name="signup-form">
-            <div id="signup-form-inputs">
-              <div id="signup-form-inputs-name">
-                <label for="signup-form-inputs-name-input" id="signup-form-inputs-name-label">Your Name<span class="asterisk">*</span></label>
-                <input id="signup-form-inputs-name-input" required="" type="text" />
+        <div class="signup">
+          <h2 class="signup-title">Email Newsletter Sign-Up</h2>
+          <form class="signup-form" name="signup-form">
+            <div class="signup-form-inputs">
+              <div class="signup-form-inputs-name">
+                <label for="signup-form-inputs-name-input" class="signup-form-inputs-name-label">Your Name<span class="asterisk">*</span></label>
+                <input class="signup-form-inputs-name-input" required="" type="text" />
               </div>
-              <div id="signup-form-inputs-email">
-                <label for="signup-form-inputs-email-input" id="signup-form-inputs-email-label">Your Email<span class="asterisk">*</span></label>
-                <input id="signup-form-inputs-email-input" required="" type="text" />
+              <div class="signup-form-inputs-email">
+                <label for="signup-form-inputs-email-input" class="signup-form-inputs-email-label">Your Email<span class="asterisk">*</span></label>
+                <input class="signup-form-inputs-email-input" required="" type="text" />
               </div>
             </div>
-            <div id="signup-form-marketing">
-              <input id="signup-form-marketing-checkbox" type="checkbox" value="marketing-preference" />
-              <label for="signup-form-marketing-checkbox" id="signup-form-marketing-label">Please tick this box if you wish to receive marketing
+            <div class="signup-form-marketing">
+              <input class="signup-form-marketing-checkbox" type="checkbox" value="marketing-preference" />
+              <label for="signup-form-marketing-checkbox" class="signup-form-marketing-label">Please tick this box if you wish to receive marketing
                 information from us. Please see our Privacy Policy for more
                 information on how we keep your data safe.</label>
             </div>
-            <input id="signup-form-button" type="submit" value="SUBSCRIBE" />
+            <input class="signup-form-button" type="submit" value="SUBSCRIBE" />
           </form>
         </div>
       </div>
