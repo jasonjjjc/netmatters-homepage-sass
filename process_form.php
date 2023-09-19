@@ -18,11 +18,13 @@ if ($_POST['message'] == 'Hi, I am interested in discussing a Our Offices soluti
     $errors['message'] = true;
 }
 
-// If there are validation errors, redirect back to the form
+// If there are validation errors, redirect back to the form with error messages and previously entered data
 if (!empty($errors)) {
-    header('Location: contact.php?errors=' . urlencode(json_encode($errors)));
+    $formData = http_build_query($_POST);
+    header('Location: contact.php?errors=' . urlencode(json_encode($errors)) . '&' . $formData);
     exit;
 }
+
 
 // Insert into database
 $marketing = isset($_POST['marketing-preference']) ? 1 : 0;

@@ -1,8 +1,20 @@
 <?php
 $errors = [];
 if (isset($_GET['errors'])) {
-    $errors = json_decode(urldecode($_GET['errors']), true);
+  $errors = json_decode(urldecode($_GET['errors']), true);
 }
+
+$formData = [];
+if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+  $formData = $_GET;
+  // Remove 'errors' from the form data as it's not a field
+  unset($formData['errors']);
+  // Remove 'success' from the form data if it's there
+  if (isset($formData['success'])) {
+    unset($formData['success']);
+  }
+}
+
 
 ?>
 
@@ -1213,41 +1225,54 @@ if (isset($_GET['errors'])) {
           <!-- Contact Form -->
           <div class="col-lg-8 col-lg-pull-4">
 
+
             <form method="POST" action="process_form.php" accept-charset="UTF-8" id="contact-form" class="" novalidate="novalidate">
 
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="name" class="required">Your Name</label>
-                    <input class="form-control<?php echo isset($errors['name']) ? ' is-invalid' : '' ?>" name="name" type="text" value="" id="name">
+                    <?php if (isset($errors['name'])) : ?>
+                      <div class="alert text-danger">Name is required.</div>
+                    <?php endif; ?>
+                    <input class="form-control<?php echo isset($errors['name']) ? ' is-invalid' : '' ?>" name="name" type="text" value="<?php echo isset($formData['name']) ? htmlspecialchars($formData['name']) : ''; ?>" id="name">
                   </div>
                 </div>
 
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="company" class="">Company Name</label>
-                    <input class="form-control<?php echo isset($errors['company']) ? ' is-invalid' : '' ?>" name="company" type="text" value="" id="company">
+                    <input class="form-control" name="company" type="text" value="" id="company">
                   </div>
                 </div>
 
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="email" class="required">Your Email</label>
-                    <input class="form-control<?php echo isset($errors['email']) ? ' is-invalid' : '' ?>" name="email" type="email" value="" id="email">
+                    <?php if (isset($errors['email'])) : ?>
+                      <div class="alert text-danger">Please enter a valid email address.</div>
+                    <?php endif; ?>
+                    <input class="form-control<?php echo isset($errors['email']) ? ' is-invalid' : '' ?>" name="email" type="email" value="<?php echo isset($formData['email']) ? htmlspecialchars($formData['email']) : ''; ?>" id="email">
                   </div>
                 </div>
 
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="telephone" class="required">Your Telephone Number</label>
-                    <input class="form-control<?php echo isset($errors['telephone']) ? ' is-invalid' : '' ?>" name="telephone" type="text" value="" id="telephone">
+                    <?php if (isset($errors['telephone'])) : ?>
+                      <div class="alert text-danger">Please enter a valid telephone number.</div>
+                    <?php endif; ?>
+                    <input class="form-control<?php echo isset($errors['telephone']) ? ' is-invalid' : '' ?>" name="telephone" type="text" value="<?php echo isset($formData['telephone']) ? htmlspecialchars($formData['telephone']) : ''; ?>" id="telephone">
                   </div>
                 </div>
               </div>
 
               <div class="form-group">
                 <label for="message" class="required">Message</label>
-                <textarea class="form-control<?php echo isset($errors['message']) ? ' is-invalid' : '' ?>" name="message" cols="50" rows="10" id="message">Hi, I am interested in discussing a Our Offices solution, could you please give me a call or send an email?</textarea>
+                <?php if (isset($errors['message'])) : ?>
+                  <div class="alert text-danger">Please write a message.</div>
+                <?php endif; ?>
+                <textarea class="form-control<?php echo isset($errors['message']) ? ' is-invalid' : '' ?>" name="message" cols="50" rows="10" id="message"><?php echo isset($formData['message']) ? htmlspecialchars($formData['message']) : 'Hi, I am interested in discussing a Our Offices solution, could you please give me a call or send an email?'; ?></textarea>
               </div>
 
               <div class="form-group">
@@ -1258,8 +1283,13 @@ if (isset($_GET['errors'])) {
                     information on how we keep your data safe.</label>
                 </div>
               </div>
+              <!-- if the form is successfully submitted, display a success message -->
+              <?php if (isset($_GET['success']) && $_GET['success'] == 'true') : ?>
+                <div class="alert alert-success">
+                  Your message has been sent successfully! We'll get back to you soon.
+                </div>
+              <?php endif; ?>
 
-              <div class="my_name_wrap" style="display:none;"><input name="my_name" type="text" value="" id="my_name"><input name="my_time" type="text" value="eyJpdiI6ImpnazFSOFE4c0dnYldpS00xK2phSFE9PSIsInZhbHVlIjoiU0lna1pUVkNKUjlpcWphV05RMTdOZz09IiwibWFjIjoiZGQ0NTg5NTAyNTU5YWMwYmM4MmZkYzlkNjM2Njk1NDc5OTBhMDVkMzFlZDk5YWRjNmZjZGViNmUxNzUxYmIxYyJ9"></div>
               <div class="action-block">
                 <button name="submit" class="btn btn-primary">
                   Send Enquiry

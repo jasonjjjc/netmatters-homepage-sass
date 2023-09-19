@@ -656,6 +656,30 @@
           flex-direction: column-reverse;
         }
       }
+
+      /* Error styling */
+      .text-danger {
+        color: #d64541; 
+        font-size: 0.8rem;
+      }
+
+      .is-invalid {
+        border-color: #d64541; 
+        box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25); 
+      }
+
+      /* Success message styling */
+      .alert {
+        display: inline-block;
+        border: 1px solid transparent;
+        border-radius: 4px;
+      }
+
+      .alert-success {
+        color: #155724;
+        background-color: #d4edda;
+        border-color: #c3e6cb;
+      }
     }
 
     @media (min-width: 1260px) {
