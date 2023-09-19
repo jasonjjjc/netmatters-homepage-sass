@@ -32,7 +32,8 @@ if (!empty($errors)) {
 
 
 // Insert into database
-$marketing = isset($_POST['marketing-preference']) ? 1 : 0;
+$marketing = isset($_POST['marketing-preference']) && $_POST['marketing-preference'] == "1" ? 1 : 0;
+
 
 $stmt = $pdo->prepare("INSERT INTO contacts (name, company, email, telephone, message, marketing) VALUES (?, ?, ?, ?, ?, ?)");
 $stmt->execute([$_POST['name'], $_POST['company'], $_POST['email'], $_POST['telephone'], $_POST['message'], $marketing]);

@@ -1290,7 +1290,7 @@ if (isset($_GET['success']) && $_GET['success'] == 'true') {
 
               <div class="form-group">
                 <div class="signup-form-marketing">
-                  <input id="signup-form-marketing-checkbox" class="signup-form-marketing-checkbox" type="checkbox" value="marketing-preference" />
+                <input id="signup-form-marketing-checkbox" name="marketing-preference" class="signup-form-marketing-checkbox" type="checkbox" value="1" />
                   <label for="signup-form-marketing-checkbox" class="signup-form-marketing-label">Please tick this box if you wish to receive marketing
                     information from us. Please see our Privacy Policy for more
                     information on how we keep your data safe.</label>

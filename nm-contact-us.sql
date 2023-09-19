@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Sep 19, 2023 at 08:58 PM
+-- Generation Time: Sep 19, 2023 at 09:13 PM
 -- Server version: 5.7.39
 -- PHP Version: 7.4.33
 
@@ -52,7 +52,9 @@ INSERT INTO `contacts` (`id`, `name`, `company`, `email`, `telephone`, `message`
 (22, 'Will Smith', '', 'will@smith.com', 1111222333, 'Welcome to earth! (*pulls out a cigar*) Now that’s what I call a close encounter.', 0),
 (23, 'Whoopi Goldberg', '', 'whoopi@goldberg.com', 1111222333, 'You relax. You’re the dead guy.', 0),
 (24, 'Roy Scheider', '', 'roy@scheider.com', 1111222333, 'You’re gonna need a bigger boat.', 0),
-(25, 'Meryl Streep', '', 'meryl@streep.com', 1111222333, 'By all means move at a glacial pace, you know how that thrills me.', 0);
+(25, 'Meryl Streep', '', 'meryl@streep.com', 1111222333, 'By all means move at a glacial pace, you know how that thrills me.', 0),
+(27, 'John Rhys-Davies', '', 'john@rhys-davies.com', 1111222333, 'That still only counts as one!', 1),
+(28, 'John Rhys-Davies', '', 'john@rhys-davies.com', 1111222333, 'That still only counts as one!', 0);
 
 --
 -- Indexes for dumped tables
@@ -72,7 +74,7 @@ ALTER TABLE `contacts`
 -- AUTO_INCREMENT for table `contacts`
 --
 ALTER TABLE `contacts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
