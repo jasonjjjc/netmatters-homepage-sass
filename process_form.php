@@ -8,12 +8,17 @@ $errors = [];
 if (empty($_POST['name'])) {
     $errors['name'] = true;
 }
-if (empty($_POST['email'])) {
+
+$emailPattern = "/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/";
+if (empty($_POST['email']) || !preg_match($emailPattern, $_POST['email'])) {
     $errors['email'] = true;
 }
-if (empty($_POST['telephone'])) {
+
+$phonePattern = "/^\d+$/";
+if (empty($_POST['telephone']) || !preg_match($phonePattern, $_POST['telephone'])) {
     $errors['telephone'] = true;
 }
+
 if ($_POST['message'] == 'Hi, I am interested in discussing a Our Offices solution, could you please give me a call or send an email?') {
     $errors['message'] = true;
 }
