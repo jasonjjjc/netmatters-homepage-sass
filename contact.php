@@ -988,18 +988,25 @@ if ($conn->connect_error) {
     </header>
     <main id="main">
 
-
+      <!-- Breadcrumbs -->
+      <div class="hidden-xs breadcrumb-container ">
+        <div class="container">
+          <ul class="breadcrumb">
+            <li><a href="/">Home</a></li>
+            <li>Our Offices</li>
+          </ul>
+        </div>
+      </div>
 
       <!-- Page Head -->
       <div class='page-head'>
-        <div class='page-head-container'>
+        <div class='container'>
           <h1>Our Offices</h1>
         </div>
       </div>
 
 
       <!-- Page Body -->
-
       <div class="office-addresses">
         <div class="service-list container">
           <div class="row office-address-row">
@@ -1246,15 +1253,12 @@ if ($conn->connect_error) {
                     <input class="form-control" name="telephone" type="text" value="" id="telephone">
                   </div>
                 </div>
+              </div>
 
-                <div class="form-group">
+              <div class="form-group">
                   <label for="message" class="required">Message</label>
                   <textarea class="form-control" name="message" cols="50" rows="10" id="message">Hi, I am interested in discussing a Our Offices solution, could you please give me a call or send an email?</textarea>
                 </div>
-              </div>
-
-
-
 
               <div class="form-group">
                 <label class=" pretty-checkbox">

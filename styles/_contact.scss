@@ -1,21 +1,49 @@
-.page-head {
-  margin-bottom: 50px;
-  display: flex;
-  padding: 24px 0;
-  background-color: #333645;
-  color: #fff;
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 
-  &-container {
-    width: 100%;
-    max-width: 750px;
-    padding: 0 15px;
-    margin: 0 auto;
+  &:before {
+    content: " ";
+    display: table;
+  }
 
-    > h1 {
-      font-size: 2.25rem;
-      font-weight: 400;
-      line-height: 1.1;
-    }
+  &:after {
+    content: " ";
+    display: table;
+    clear: both;
+  }
+
+  @media (min-width: 768px) {
+    width: 750px;
+  }
+
+  @media (min-width: 992px) {
+    width: 970px;
+  }
+
+  @media (min-width: 1260px) {
+    width: 1200px;
+  }
+}
+
+.section {
+  padding-bottom: 50px;
+}
+
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+  &:before {
+    content: " ";
+    display: table;
+  }
+
+  &:after {
+    content: " ";
+    display: table;
+    clear: both;
   }
 }
 
@@ -24,24 +52,75 @@
 .breadcrumb-container {
   box-shadow: 0 5px 35px rgba(0, 0, 0, 0.1);
   padding: 14px 0 13px;
-}
 
-@media (max-width: 767px) {
-  .hidden-xs {
-    display: none !important;
+  .breadcrumb {
+    background: none;
+    color: #333645;
+    font-size: 0.8125rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-radius: 2px;
+
+    li {
+      color: #333645;
+      display: inline-block;
+
+      a {
+        color: #333645;
+        font-weight: 700;
+        text-decoration: none;
+        background-color: transparent;
+      }
+    }
+
+    li + li:before {
+      content: "/\A0";
+      padding: 0 5px;
+      color: #333645;
+    }
   }
-}
 
-@media (max-width: 991px) {
-  .breadcrumb-container {
+  @media (max-width: 767px) {
+    &.hidden-xs {
+      display: none;
+    }
+  }
+
+  @media (max-width: 991px) {
     border-top: 1px solid #333645;
   }
 }
 
-.row {
-  margin-left: -15px;
-  margin-right: -15px;
+// Page Title
+
+.page-head {
+  margin-bottom: 50px;
+  display: flex;
+  padding: 24px 0;
+  background-color: #333645;
+  color: #fff;
+
+  .container {
+    padding: 0 15px;
+
+    > h1 {
+      font-size: 2.25rem;
+      font-weight: 400;
+      line-height: 1.1;
+    }
+  }
+
+  @media (min-width: 992px) {
+    background-color: transparent;
+    color: #333645;
+    padding-top: 50px;
+    padding-bottom: 28px;
+    margin-bottom: 22px;
+  }
 }
+
+// List of office addresses
 
 .office-addresses {
   margin-bottom: 40px;
@@ -59,6 +138,11 @@
         min-height: 1px;
         padding-left: 15px;
         padding-right: 15px;
+
+        @media (min-width: 992px) {
+          width: 50%;
+          float: left;
+        }
       }
 
       a {
@@ -68,8 +152,9 @@
         cursor: pointer;
       }
 
-      .block.address.image {
+      .block.address .image {
         img {
+          width: 100%;
           vertical-align: middle;
           overflow-clip-margin: content-box;
           overflow: clip;
@@ -183,25 +268,24 @@
       font: 400 11px Roboto, Arial, sans-serif;
       text-decoration: none;
     }
+
+    iframe {
+      border: 0;
+      width: 100%;
+      height: 100%;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
   }
 }
 
-.section {
-  padding-bottom: 50px;
-}
-
-.container {
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-}
+// Contact Us section
 
 .section.bottom {
   padding-top: 0;
-  width: 100%;
   overflow: hidden;
 
+  // Contact details, business hours and out of hours IT support section
   .col-lg-4 {
     position: relative;
     min-height: 1px;
@@ -308,8 +392,19 @@
         }
       }
     }
+
+    @media (min-width: 1260px) {
+      width: 33.33333333%;
+      float: left;
+    }
   }
 
+  @media (min-width: 1260px) {
+    .col-lg-push-8 {
+      left: 66.66666667%;
+    }
+  }
+  // Contact us form section
   .col-lg-8 {
     position: relative;
     min-height: 1px;
@@ -329,6 +424,18 @@
       .row {
         margin-left: -15px;
         margin-right: -15px;
+
+        .col-md-6 {
+          position: relative;
+          min-height: 1px;
+          padding-left: 15px;
+          padding-right: 15px;
+
+          @media (min-width: 992px) {
+            width: 50%;
+            float: left;
+          }
+        }
 
         .form-group {
           margin-bottom: 15px;
@@ -393,11 +500,10 @@
 
         .form-control {
           padding: 5px 15px;
-          border-color: #ccc;
           width: 100%;
           background-color: #fff;
           background-image: none;
-          border: 1px solid #e5e5e5;
+          border: 1px solid #ccc;
           border-radius: 2px;
           box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
           transition: border-color 0.15s ease-in-out,
@@ -485,51 +591,63 @@
         }
       }
 
-      @media (max-width: 375px) {
-        .action-block {
-          display: flex;
-          flex-direction: column-reverse;
-          align-items: center;
-          justify-content: space-between;
+      .action-block {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
 
-          .btn {
-            display: inline-block;
-            margin-bottom: 0;
-            font-weight: 400;
-            text-align: center;
-            vertical-align: middle;
-            cursor: pointer;
-            background-image: none;
-            border: 1px solid transparent;
-            height: auto;
-            line-height: 35px;
-            padding: 5px 15px;
-            text-transform: uppercase;
-            font-size: 1.063rem;
-            border-radius: 3px;
-            white-space: normal;
-          }
+        .btn {
+          display: inline-block;
+          margin-bottom: 0;
+          font-weight: 400;
+          text-align: center;
+          vertical-align: middle;
+          cursor: pointer;
+          background-image: none;
+          border: 1px solid transparent;
+          height: auto;
+          line-height: 35px;
+          padding: 5px 15px;
+          text-transform: uppercase;
+          font-size: 1.063rem;
+          border-radius: 3px;
+          white-space: normal;
+        }
 
-          .btn-primary {
-            color: #fff;
-            background-color: #333645;
-            border-color: #333645;
-          }
+        .btn-primary {
+          color: #fff;
+          background-color: #333645;
+          border-color: #333645;
+        }
 
-          .helper-text {
-            .text-danger {
-              color: #a94442;
-            }
-          }
-
-          small {
-            font-size: 85%;
-            @media (max-width: 375px) {
-              margin-bottom: 10px;
-            }
+        .helper-text {
+          .text-danger {
+            color: #a94442;
           }
         }
+
+        small {
+          font-size: 85%;
+          @media (max-width: 375px) {
+            margin-bottom: 10px;
+          }
+        }
+
+        @media (max-width: 375px) {
+          flex-direction: column-reverse;
+        }
       }
+    }
+
+    @media (min-width: 1260px) {
+      width: 66.66666667%;
+      float: left;
+    }
+  }
+
+  @media (min-width: 1260px) {
+    .col-lg-pull-4 {
+      right: 33.33333333%;
     }
   }
 }
