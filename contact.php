@@ -1282,7 +1282,7 @@ if (isset($_GET['success']) && $_GET['success'] == 'true') {
               <div class="form-group">
                 <label for="message" class="required">Message</label>
                 <?php if (isset($errors['message'])) : ?>
-                  <div class="alert text-danger">Please write a message.</div>
+                  <div class="alert text-danger">Please write your message.</div>
                 <?php endif; ?>
                 <textarea class="form-control<?php echo isset($errors['message']) ? ' is-invalid' : '' ?>" name="message" cols="50" rows="10" id="message"><?php echo isset($formData['message']) ? htmlspecialchars($formData['message']) : 'Hi, I am interested in discussing a Our Offices solution, could you please give me a call or send an email?'; ?></textarea>
               </div>

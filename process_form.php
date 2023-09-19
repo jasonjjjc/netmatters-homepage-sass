@@ -26,7 +26,7 @@ if ($_POST['message'] == 'Hi, I am interested in discussing a Our Offices soluti
 // If there are validation errors, redirect back to the form with error messages and previously entered data
 if (!empty($errors)) {
     $formData = http_build_query($_POST);
-    header('Location: contact.php?errors=' . urlencode(json_encode($errors)) . '&' . $formData). '#contact-form';
+    header('Location: contact.php?errors=' . urlencode(json_encode($errors)) . '&' . $formData . '#contact-form');
     exit;
 }
 

@@ -325,6 +325,10 @@
         .text-web {
           font-weight: 600;
           color: #926fb1 !important;
+
+          &:hover {
+            text-decoration: underline;
+          }
         }
 
         .h3,
@@ -580,6 +584,7 @@
           margin-bottom: 2rem;
           font-weight: 600;
           line-height: 32px;
+          cursor: pointer;
 
           &-checkbox {
             /* Hide the default checkbox appearance */
@@ -593,6 +598,7 @@
             background-color: transparent;
             flex-shrink: 0;
             margin-right: 20px;
+            cursor: pointer;
 
             /* Add a custom checkmark when checked */
             &:checked {
@@ -611,6 +617,10 @@
                 border-width: 0 2px 2px 0;
               }
             }
+          }
+
+          &-label {
+            cursor: pointer;
           }
         }
 
@@ -651,6 +661,11 @@
             color: #fff;
             background-color: #333645;
             border-color: #333645;
+
+            &:hover {
+              background-color: #22242e;
+              border-color: #191a22;
+            }
           }
 
           .helper-text {
