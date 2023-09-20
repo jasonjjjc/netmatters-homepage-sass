@@ -1066,7 +1066,7 @@ if (isset($_GET['success']) && $_GET['success'] == 'true') {
               <div class="block address address-cambridge">
                 <div class="image">
                   <a href="#">
-                    <img src="/assets/thumbnails/cambridge.jpeg" alt="Cambridge Office" class="img-full">
+                    <img src="assets/thumbnails/cambridge.jpeg" alt="Cambridge Office" class="img-full">
                   </a>
                 </div>
                 <div class="content">
@@ -1107,7 +1107,7 @@ if (isset($_GET['success']) && $_GET['success'] == 'true') {
               <div class="block address address-wymondham">
                 <div class="image">
                   <a href="#">
-                    <img src="/assets/thumbnails/wymondham.jpeg" alt="Wymondham Office" class="img-full">
+                    <img src="assets/thumbnails/wymondham.jpeg" alt="Wymondham Office" class="img-full">
                   </a>
                 </div>
                 <div class="content">
@@ -1146,7 +1146,7 @@ if (isset($_GET['success']) && $_GET['success'] == 'true') {
               <div class="block address address-yarmouth">
                 <div class="image">
                   <a href="#">
-                    <img src="/assets/thumbnails/yarmouth-2.jpeg" alt="Great Yarmouth Office" class="img-full">
+                    <img src="assets/thumbnails/yarmouth-2.jpeg" alt="Great Yarmouth Office" class="img-full">
                   </a>
                 </div>
                 <div class="content">
