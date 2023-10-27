@@ -19,6 +19,10 @@
   font-family: 'Poppins', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .no-scroll {
     overflow: hidden;
     height: 100%;
