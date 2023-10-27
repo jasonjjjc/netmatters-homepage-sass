@@ -1,6 +1,11 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
 require 'db_connection.php';
+
+
 
 $errors = [];
 
@@ -19,7 +24,7 @@ if (empty($_POST['telephone']) || !preg_match($phonePattern, $_POST['telephone']
     $errors['telephone'] = true;
 }
 
-if ($_POST['message'] == 'Hi, I am interested in discussing a Our Offices solution, could you please give me a call or send an email?') {
+if ($_POST['message'] == 'Hi, I am interested in discussing an Our Offices solution, could you please give me a call or send an email?') {
     $errors['message'] = true;
 }
 
@@ -32,7 +37,7 @@ if (!empty($errors)) {
 
 
 // Insert into database
-$marketing = isset($_POST['marketing-preference']) && $_POST['marketing-preference'] == "1" ? 1 : 0;
+$marketing = isset($_POST['marketing']) && $_POST['marketing'] == "1" ? 1 : 0;
 
 
 $stmt = $pdo->prepare("INSERT INTO contacts (name, company, email, telephone, message, marketing) VALUES (?, ?, ?, ?, ?, ?)");

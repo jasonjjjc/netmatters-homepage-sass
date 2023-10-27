@@ -286,4 +286,19 @@ $(document).ready(function () {
 
  
   /////////////////////////////////////////////////////////////////////////////////////////////
+
+
+//   document.querySelector('#contact-form').addEventListener('submit', function(e) {
+//     e.preventDefault(); // prevent actual submission for testing
+//     console.log(document.querySelector('input[name="name"]').value);
+//     console.log(document.querySelector('input[name="email"]').value);
+//     console.log(document.querySelector('input[name="telephone"]').value);
+//     console.log(document.querySelector('textarea[name="message"]').value);
+//     console.log(document.querySelector('input[name="marketing"]').value);
+// });
+
+
+
+
+
 });

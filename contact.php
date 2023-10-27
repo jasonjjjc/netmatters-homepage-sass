@@ -1285,13 +1285,13 @@ if (isset($_GET['success']) && $_GET['success'] == 'true') {
                 <?php if (isset($errors['message'])) : ?>
                   <div class="alert text-danger">Please write your message.</div>
                 <?php endif; ?>
-                <textarea class="form-control<?php echo isset($errors['message']) ? ' is-invalid' : '' ?>" name="message" cols="50" rows="10" id="message"><?php echo isset($formData['message']) ? htmlspecialchars($formData['message']) : 'Hi, I am interested in discussing a Our Offices solution, could you please give me a call or send an email?'; ?></textarea>
+                <textarea class="form-control<?php echo isset($errors['message']) ? ' is-invalid' : '' ?>" name="message" cols="50" rows="10" id="message"><?php echo isset($formData['message']) ? htmlspecialchars($formData['message']) : 'Hi, I am interested in discussing an Our Offices solution, could you please give me a call or send an email?'; ?></textarea>
               </div>
 
               <div class="form-group">
-                <div class="signup-form-marketing">
-                <input id="signup-form-marketing-checkbox" name="marketing-preference" class="signup-form-marketing-checkbox" type="checkbox" value="1" />
-                  <label for="signup-form-marketing-checkbox" class="signup-form-marketing-label">Please tick this box if you wish to receive marketing
+                <div class="contact-form-marketing">
+                  <input id="contact-form-marketing-checkbox" name="marketing" class="contact-form-marketing-checkbox" type="checkbox" value=1 />
+                  <label for="contact-form-marketing-checkbox" class="contact-form-marketing-label">Please tick this box if you wish to receive marketing
                     information from us. Please see our Privacy Policy for more
                     information on how we keep your data safe.</label>
                 </div>

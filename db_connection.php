@@ -1,7 +1,7 @@
 <?php
 
 $host = 'localhost';
-$db   = 'nm-contact-us';
+$db   = 'netmatters';
 $user = 'root';
 $pass = 'root';
 $charset = 'utf8mb4';
