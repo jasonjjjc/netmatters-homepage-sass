@@ -13,7 +13,7 @@
                 </div>
             </div>
             <div class="signup-form-marketing">
-                <input class="signup-form-marketing-checkbox" type="checkbox" value="marketing-preference" />
+                <input id="signup-form-marketing-checkbox" class="signup-form-marketing-checkbox" type="checkbox" value="marketing-preference" />
                 <label for="signup-form-marketing-checkbox" class="signup-form-marketing-label">Please tick this box if you wish to receive marketing
                     information from us. Please see our Privacy Policy for more
                     information on how we keep your data safe.</label>
