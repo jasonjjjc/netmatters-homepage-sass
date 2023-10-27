@@ -1,7 +1,7 @@
 <header id="header">
     <div id="header-top">
         <div id="main-nav">
-            <a href="#" id="title"><img alt="netmatters logo" src="./assets/netmatters-logo.png" /></a>
+            <a href="/" id="title"><img alt="netmatters logo" src="./assets/netmatters-logo.png" /></a>
             <div id="support">
                 <a href="#"><svg height="23" version="1.1" viewbox="0 0 24 24" width="23" xmlns="http://www.w3.org/2000/svg">
                         <title>mouse</title>

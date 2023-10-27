@@ -61,9 +61,7 @@ if ($conn->connect_error) {
       <?php include 'partials/footer.php'; ?>
     </main>
     <?php include 'partials/crumb-overlay.php'; ?>
-    <button class="preference-btn" id="crumbPreferenceBtn">
-      Cookie Preferences
-    </button>
+    
   </div>
 </body>
 
