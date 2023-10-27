@@ -42,7 +42,7 @@
           <div class="col-lg-8 col-lg-pull-4">
 
 
-            <form method="POST" action="process_form.php" accept-charset="UTF-8" id="contact-form" class="" novalidate="novalidate">
+            <form method="POST" action="php/process_form.php" accept-charset="UTF-8" id="contact-form" class="" novalidate="novalidate">
 
               <!-- if the form is successfully submitted, display a success message -->
               <?php if ($success) : ?>

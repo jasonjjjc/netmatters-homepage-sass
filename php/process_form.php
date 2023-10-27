@@ -43,7 +43,7 @@ $marketing = isset($_POST['marketing']) && $_POST['marketing'] == "1" ? 1 : 0;
 $stmt = $pdo->prepare("INSERT INTO contacts (name, company, email, telephone, message, marketing) VALUES (?, ?, ?, ?, ?, ?)");
 $stmt->execute([$_POST['name'], $_POST['company'], $_POST['email'], $_POST['telephone'], $_POST['message'], $marketing]);
 
-header('Location: contact.php?success=true#contact-form');
+header('Location: ../contact.php?success=true#contact-form');
 
 exit;
 
