@@ -36,16 +36,6 @@
   .row {
     margin-left: -15px;
     margin-right: -15px;
-    &:before {
-      content: " ";
-      display: table;
-    }
-
-    &:after {
-      content: " ";
-      display: table;
-      clear: both;
-    }
   }
 
   // Breadcrumb displays on medium size screens and larger
@@ -457,16 +447,14 @@
           margin-left: -15px;
           margin-right: -15px;
 
+          display: flex;
+          flex-direction: column;
+
           .col-md-6 {
             position: relative;
             min-height: 1px;
             padding-left: 15px;
             padding-right: 15px;
-
-            @media (min-width: 992px) {
-              width: 50%;
-              float: left;
-            }
           }
 
           .form-group {
@@ -522,6 +510,11 @@
                 border-color: #d64541;
               }
             }
+          }
+
+          @media (min-width: 992px) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
           }
         }
 

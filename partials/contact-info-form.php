@@ -57,10 +57,10 @@
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="name" class="required">Your Name</label>
+                    <input class="form-control<?php echo isset($errors['name']) ? ' is-invalid' : '' ?>" name="name" type="text" value="<?php echo isset($formData['name']) ? htmlspecialchars($formData['name']) : ''; ?>" id="name">
                     <?php if (isset($errors['name'])) : ?>
                       <div class="alert text-danger">Name is required.</div>
                     <?php endif; ?>
-                    <input class="form-control<?php echo isset($errors['name']) ? ' is-invalid' : '' ?>" name="name" type="text" value="<?php echo isset($formData['name']) ? htmlspecialchars($formData['name']) : ''; ?>" id="name">
                   </div>
                 </div>
 
@@ -74,30 +74,30 @@
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="email" class="required">Your Email</label>
+                    <input class="form-control<?php echo isset($errors['email']) ? ' is-invalid' : '' ?>" name="email" type="email" value="<?php echo isset($formData['email']) ? htmlspecialchars($formData['email']) : ''; ?>" id="email">
                     <?php if (isset($errors['email'])) : ?>
                       <div class="alert text-danger">Please enter a valid email address.</div>
                     <?php endif; ?>
-                    <input class="form-control<?php echo isset($errors['email']) ? ' is-invalid' : '' ?>" name="email" type="email" value="<?php echo isset($formData['email']) ? htmlspecialchars($formData['email']) : ''; ?>" id="email">
                   </div>
                 </div>
 
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="telephone" class="required">Your Telephone Number</label>
+                    <input class="form-control<?php echo isset($errors['telephone']) ? ' is-invalid' : '' ?>" name="telephone" type="text" value="<?php echo isset($formData['telephone']) ? htmlspecialchars($formData['telephone']) : ''; ?>" id="telephone">
                     <?php if (isset($errors['telephone'])) : ?>
                       <div class="alert text-danger">Please enter a valid telephone number.</div>
                     <?php endif; ?>
-                    <input class="form-control<?php echo isset($errors['telephone']) ? ' is-invalid' : '' ?>" name="telephone" type="text" value="<?php echo isset($formData['telephone']) ? htmlspecialchars($formData['telephone']) : ''; ?>" id="telephone">
                   </div>
                 </div>
               </div>
 
               <div class="form-group">
                 <label for="message" class="required">Message</label>
+                <textarea class="form-control<?php echo isset($errors['message']) ? ' is-invalid' : '' ?>" name="message" cols="50" rows="10" id="message"><?php echo isset($formData['message']) ? htmlspecialchars($formData['message']) : 'Hi, I am interested in discussing an Our Offices solution, could you please give me a call or send an email?'; ?></textarea>
                 <?php if (isset($errors['message'])) : ?>
                   <div class="alert text-danger">Please write your message.</div>
                 <?php endif; ?>
-                <textarea class="form-control<?php echo isset($errors['message']) ? ' is-invalid' : '' ?>" name="message" cols="50" rows="10" id="message"><?php echo isset($formData['message']) ? htmlspecialchars($formData['message']) : 'Hi, I am interested in discussing an Our Offices solution, could you please give me a call or send an email?'; ?></textarea>
               </div>
 
               <div class="form-group">
